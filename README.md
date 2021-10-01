@@ -33,7 +33,7 @@ Example:
         return date.strftime("%Y_%m_%d_%H%M")
         
     #Show anns on the sample image
-    path="/home/u3148947/data/nmtl/train/"
+    path="/PATH_TO/train/"
     img =  cv2.imread(path + img_name) # If only for showing, BGR -> RGB , cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     #Check ann by cv2, comment if use cocoapi

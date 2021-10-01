@@ -21,7 +21,7 @@ A collection of sample code of OpenCV
 
 
 ## BGR2RGB
-- BGR是OpenCV惱人的預設色彩讀取順序，原因是發展OpenCV當下時代盛行的色彩是BGR格式，只是現在主流是RGB了。
+- BGR是OpenCV惱人的預設色彩讀取順序，原因是發展OpenCV當下時代盛行的色彩是BGR格式[1]，只是現在主流是RGB了。
 - cv2讀取時預設為BGR，如果處理過程跟色彩有關會需要先轉回RGB(或是把你的處理過程用BGR格式)。
 - cv2儲存時預設為RGB，即如果沒有做任何色彩處理的話，可直接存檔不需再轉換。
 
@@ -58,3 +58,5 @@ Example:
     timestamp = get_date()
     # plt.savefig(f'test_patchs/show_ann_with_image_{img_name}_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
     plt.savefig(f'test_patchs/show_ann_{img_name}_plt_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
+
+[1] 來源請求

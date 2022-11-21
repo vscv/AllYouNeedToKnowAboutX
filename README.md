@@ -65,3 +65,4 @@ Example:
 
 ## NOTE Markdowm
 ![file info](/temp_imgs/2.png)
+![file info](flow_sample_001.jpg)

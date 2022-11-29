@@ -12,7 +12,7 @@
 
 https://acemovi.tuneskit.com/review/best-ubuntu-video-editor.html
 
-Shotcut 轉場效果範例 https://forum.gamer.com.tw/C.php?bsn=60030&snA=542068
+Shotcut 轉場效果範例 (拖曳影片嵌入另一端內重疊，即可選轉場屬性。) https://forum.gamer.com.tw/C.php?bsn=60030&snA=542068
 
 Shotcut 自訂畫面比例 21:9 (3440x1440) OK
 

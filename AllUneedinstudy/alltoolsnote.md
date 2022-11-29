@@ -12,7 +12,9 @@
 
 https://acemovi.tuneskit.com/review/best-ubuntu-video-editor.html
 
+Shotcut 轉場效果範例 https://forum.gamer.com.tw/C.php?bsn=60030&snA=542068
 
+Shotcut 自訂畫面比例 21:9 (3440x1440) OK
 
 # Text editor
 直接開XCODE or VSCODE打字

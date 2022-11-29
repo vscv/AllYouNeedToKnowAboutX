@@ -3,7 +3,7 @@
 # Voideo editor
 有用過下面幾種，常用OpenShot來做臨時的短片。
 
-後來都用iMove來處理短片，但iMove對4K(>3440x1440以上)無法預覽使得特效、字幕、標註等無法當下確定時間與位置，且最終僅能輸出FHD（1920x1080）。只能找一台ubuntu裝Shotcut應急。
+後來都用iMove來處理短片，但iMove對4K(>3440x1440以上)無法預覽使得特效、字幕、標註等無法當下確定時間與位置，且最終僅能輸出FHD（1920x1080）。只能裝Shotcut應急。
 
 * Top 3. PiTiVi 視頻編輯器
 * Top 4. Shotcut 視頻編輯器 (4k)

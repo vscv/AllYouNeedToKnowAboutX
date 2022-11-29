@@ -6,9 +6,9 @@
 後來都用iMove來處理短片，但iMove對4K(>3440x1440以上)無法預覽使得特效、字幕、標註等無法當下確定時間與位置，且最終僅能輸出FHD（1920x1080）。只能找一台ubuntu裝OpenShot應急。
 
 * Top 3. PiTiVi 視頻編輯器
-* Top 4. Shotcut 視頻編輯器
+* Top 4. Shotcut 視頻編輯器 (4k)
 * Top 5. Blender 視頻編輯器
-* Top 6. OpenShot 視頻編輯器 (4k)
+* Top 6. OpenShot 視頻編輯器 
 
 https://acemovi.tuneskit.com/review/best-ubuntu-video-editor.html
 

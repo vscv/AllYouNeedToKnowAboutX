@@ -16,8 +16,10 @@ Shotcut 轉場效果範例 (拖曳影片嵌入另一端內重疊，即可選轉�
 
 Shotcut 自訂畫面比例 21:9 (3440x1440) OK
 
+Shotcut 加入線條、箭頭、任何其他圖案，可用去背的PNG圖檔加入另一個視訊軌。
 
-## 照片去除背景
+
+## 照片去除背景(PNG圖片)
 * Adobe Express (免費線上使用 自動選取) https://www.adobe.com/tw/express/feature/image/remove-background
 * PowerPoint (圖片格式->移除背景 半手動選取)
 

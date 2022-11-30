@@ -16,10 +16,17 @@ Shotcut 轉場效果範例 (拖曳影片嵌入另一端內重疊，即可選轉�
 
 Shotcut 自訂畫面比例 21:9 (3440x1440) OK
 
+
+## 照片去除背景
+* Adobe Express (免費線上使用 自動選取) https://www.adobe.com/tw/express/feature/image/remove-background
+* PowerPoint (圖片格式->移除背景 半手動選取)
+
+
 # Text editor
 直接開XCODE or VSCODE打字
 
 Linux下請用vim或內建文字編輯器
+
 
 # Code editor
 XCODE or VSCODE

@@ -84,6 +84,25 @@ Example:
     aug_f = oneof()
     output = aug_f(image) 
     
+TypeError: 'list' object is not callable： 如果list裡是一堆函數f1() f2()，返回使用時記得加上[0]。
+
+    def oneof():
+        list = [f1, f2, f3, f4, ]
+        return random.choices(list)[0]
+    
+    aug_f = oneof()
+    output = aug_f(image) 
+
+    或是
+    
+    def oneof():
+        list = [f1, f2, f3, f4, ]
+        return random.choices(list)
+    
+    aug_f = oneof()
+    output = aug_f[0](image) 
+    
+    
 ps.random.choices的weights參數是可以設定個別元素被選到的機率，但總和為100%。若要給一個是否會執行oneof的機率，就在預先產生一個p值在判斷要不要執行。
 
     #假設80%機率才執行oneof時

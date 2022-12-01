@@ -66,3 +66,15 @@ Example:
 ## NOTE Markdowm
 ![file info](/temp_imgs/2.png)
 ![file info](flow_sample_001.jpg)
+
+
+
+## 依機率選擇使用某個函數
+* 這在深度學習的數據集增強中常會用到，增強套件裡一定有幫你寫好這個功能，但總有例外不能直上的時候。
+
+
+
+
+
+
+    def get_date():

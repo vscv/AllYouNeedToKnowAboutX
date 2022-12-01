@@ -77,9 +77,20 @@ Example:
 
 多個函數中選擇一個，有時候也會配上p。如果需求是每次必選一個則p=1，最簡單就是用random.choices(list)來選
 
-
+    def oneof():
+        list = [f1, f2, f3, f4, ]
+        return random.choices(list)
+    
+    aug_f = oneof()
+    output = aug_f(image) 
+    
 ps.random.choices的weights參數是可以設定個別元素被選到的機率，但總和為100%。若要給一個是否會執行oneof的機率，就在預先產生一個p值在判斷要不要執行。
 
+    #假設80%機率才執行oneof時
+    p = random.uniform(0, 1)
+    if p >= 0.8:
+        do oneof()
+    
 * p
 
 執行該函數的機率

@@ -23,6 +23,19 @@ Shotcut 加入線條、箭頭、任何其他圖案，可用去背的PNG圖檔加
 * Adobe Express (免費線上使用 自動選取) https://www.adobe.com/tw/express/feature/image/remove-background
 * PowerPoint (圖片格式->移除背景 半手動選取)
 
+# Screen recorder
+# 螢幕錄製
+
+#### Ubuntu [Ctrl] + [Alt] + [Shift] + [R]
+Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
+
+修改錄影時間限制
+gsettings set org.gnome.settings-daemon.plugins.media-keys max- screencast-length 60  #僅能錄60秒
+gsettings set org.gnome.settings-daemon.plugins.media-keys max- screencast-length 0   #不限制時間
+
+
+#### MacOS
+內建QuickTime
 
 # Text editor
 直接開XCODE or VSCODE打字

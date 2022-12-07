@@ -29,7 +29,7 @@ Shotcut 加入線條、箭頭、任何其他圖案，可用去背的PNG圖檔加
 ### Ubuntu [Ctrl] + [Alt] + [Shift] + [R]
 Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
 
-  修改錄影時間限制
+  `修改錄影時間限制
   gsettings set org.gnome.settings-daemon.plugins.media-keys max- screencast-length 60  #僅能錄60秒
   gsettings set org.gnome.settings-daemon.plugins.media-keys max- screencast-length 0   #不限制時間
 

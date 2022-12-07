@@ -46,3 +46,11 @@ Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
 
 # Code editor
   XCODE or VSCODE
+
+# 簡易的網頁版UI工具
+Gradio, Streamlit
+
+只使用過Gradio，簡單好用，尤其今年加入Blocks功能使得佈局彈性以及input/oupt多層次串接都比較好寫了。缺點是預設的外觀很普通，如要漂亮的外觀似乎可以經過CSS方式修改，但未曾嘗試。
+
+
+

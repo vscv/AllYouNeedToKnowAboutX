@@ -48,9 +48,12 @@ Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
   XCODE or VSCODE
 
 # 簡易的網頁版UI工具
-Gradio, Streamlit
+Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 
-只使用過Gradio，簡單好用，尤其今年加入Blocks功能使得佈局彈性以及input/oupt多層次串接都比較好寫了。缺點是預設的外觀很普通，如要漂亮的外觀似乎可以經過CSS方式修改，但未曾嘗試。
-
+* Visdom 方便展示多圖、圖照片、影片、繪圖 
+* Plotly是Dash的企業版，Dash僅用過車輛偵測的範例，介面尚可。
+* 最近用過Gradio，簡單好用，尤其今年加入Blocks功能使得佈局彈性以及input/oupt多層次串接都比較好寫了。缺點是預設的外觀很普通，如要漂亮的外觀似乎可以經過theme/CSS方式修改，但未曾嘗試。
+* Flask 用來直接寫API endpoint，反而沒試web介面，因為像Flask/django介面要漂亮都是要套CSS或板模，非專業的人不可能自己寫出漂亮的介面。
+* Streamlit跟Gradio相同，主打AI模型的展示與線上互動demo，因此介面都幫你寫好了但就是不太美觀。
 
 

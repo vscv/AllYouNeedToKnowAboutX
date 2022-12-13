@@ -69,3 +69,59 @@ This is an H2 標題二
 
     > This is a blockquote
     > inside a list item.
+
+>如果要放程式碼區塊的話，該區塊就需要縮排兩次，也就是8個空白或是兩個tab：
+*   A list item with a code block:
+
+        <code goes here>
+
+
+## 程式碼區塊
+>縮排4個空白或是1個tab就可以
+This is a normal paragraph:
+
+    This is a code block.
+    
+## 程式碼段落
+Use the \`printf()\` function.
+
+Use the `printf()` function.
+
+
+## 分隔線
+    * * *
+
+    ***
+
+    *****
+
+    - - -
+
+    ---------------------------------------
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+
+
+## 強調
+    *single asterisks*
+        _single underscores_
+            **double asterisks**
+                __double underscores__
+*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+
+
+
+

@@ -201,6 +201,8 @@ ${\color{red}Red}$
 
 $${\color{blue}Blue}$$
 
+${\color{blue}Blue}$
+
 
 > 額外的
 

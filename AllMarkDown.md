@@ -214,6 +214,7 @@ GitHub contribution graph colors: `#C6E48B` `#7AC96F` `#249A3C` `#196127`
 > LaTeX公式
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 

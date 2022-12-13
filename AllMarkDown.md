@@ -173,6 +173,7 @@ __double underscores__
 
 ## 文字色彩
 >這在jupyter notebook可行，但在github仍不支援色彩文字。
+
 <span style="color:blue"> *Blue Italic.* </span>
 
 <font color='red'> Red HTML </font>
@@ -193,7 +194,7 @@ __double underscores__
 ```
 
 > 2022 年 5 月起，Github 可以接受Markdown 上的 LATEX 代碼，因此您可以使用\color{namecolor} inside the $$$$ Block，
->
+
 $${\color{red}Red}$$
 
 $${\color{blue}Blue}$$

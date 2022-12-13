@@ -200,6 +200,13 @@ $${\color{red}Red}$$
 $${\color{blue}Blue}$$
 
 
+> 額外的
+
+Press <kbd>W</kbd> to go up, and <kbd>A</kbd> to go down.
+If you can find the <kbd>ESC</kbd>, pressing that will fire missiles 
+
+
+
 ## Emoji
 >https://tw.piliapp.com/emoji/list/ 複製貼上
 

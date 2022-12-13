@@ -181,8 +181,9 @@ __double underscores__
 
 <font color=#0000FF>深藍色</font>
 
->其他方法
+>在github上顯示顏色的其他方法
 >https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file
+
 ```diff
 - text in red
 + text in green
@@ -191,6 +192,11 @@ __double underscores__
 @@ text in purple (and bold)@@
 ```
 
+> 2022 年 5 月起，Github 可以接受Markdown 上的 LATEX 代碼，因此您可以使用\color{namecolor} inside the $$$$ Block，
+>
+$${\color{red}Red}$$
+
+$${\color{blue}Blue}$$
 
 
 ## Emoji

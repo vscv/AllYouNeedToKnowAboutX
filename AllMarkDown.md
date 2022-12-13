@@ -108,7 +108,15 @@ Use the `printf()` function.
 
         <code goes here>
 
+> 也是程式碼區塊
 
+* 用\`\`\`將code前後包夾。
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
 
 
 ## 分隔線

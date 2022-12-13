@@ -205,7 +205,7 @@ $${\color{blue}Blue}$$
 Press <kbd>W</kbd> to go up, and <kbd>A</kbd> to go down.
 If you can find the <kbd>ESC</kbd>, pressing that will fire missiles 
 
-
+GitHub contribution graph colors: `#C6E48B` `#7AC96F` `#249A3C` `#196127`
 
 ## Emoji
 >https://tw.piliapp.com/emoji/list/ 複製貼上

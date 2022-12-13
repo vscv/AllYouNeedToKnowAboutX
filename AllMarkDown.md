@@ -129,3 +129,17 @@ __double underscores__
 \!\[Alt text](flow_sample_001.jpg "Optional title")
 
 ![Alt text](flow_sample_001.jpg "Optional title")
+
+
+## 文字色彩
+
+<span style="color:blue"> *Blue Italic.* </span>
+
+<font color='red'> Red HTML </font>
+
+<font color=#FF0000>紅色</font>
+
+<font color=#0000FF>深藍色</font>
+
+
+## emojo

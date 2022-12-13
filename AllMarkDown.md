@@ -125,4 +125,7 @@ __double underscores__
 
 
 ## 圖片
+
+\!\[Alt text](flow_sample_001.jpg "Optional title")
+
 ![Alt text](flow_sample_001.jpg "Optional title")

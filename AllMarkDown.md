@@ -120,6 +120,9 @@ function test() {
 
 > 程式碼語法高亮
 
+* 起頭用\`\`\` python，可替換成ruby python C++等等 
+* * https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
+
 ```python
 import numpy as np 
 data = np.arange(6).reshape((3, 2))

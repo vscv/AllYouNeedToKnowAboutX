@@ -182,6 +182,16 @@ __double underscores__
 <font color=#0000FF>深藍色</font>
 
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
+
+
 ## Emoji
 >https://tw.piliapp.com/emoji/list/ 複製貼上
 

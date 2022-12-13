@@ -132,6 +132,14 @@ Use the `printf()` function.
 ---------------------------------------
 
 
+## 表格
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Text1 | Text2 | Text3 |
+| Text4    | Text5    | Text6    |
+
+
+
 ## 強調
     *single asterisks*
         _single underscores_

@@ -214,6 +214,8 @@ __double underscores__
 ```
 
 > 支援LaTeX：2022 年 5 月起，Github 可以接受Markdown 上的 LATEX 代碼，因此您可以使用\color{namecolor} inside the $ $ Block，
+> https://github.blog/2022-05-19-math-support-in-markdown/
+
 
 $${\color{red}Red}$$
 

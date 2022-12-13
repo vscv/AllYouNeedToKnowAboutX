@@ -197,6 +197,8 @@ __double underscores__
 
 $${\color{red}Red}$$
 
+${\color{red}Red}$
+
 $${\color{blue}Blue}$$
 
 

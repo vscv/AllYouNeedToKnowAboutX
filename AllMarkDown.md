@@ -45,6 +45,18 @@ This is an H2 標題二
 2. 第二
 5. 第三
 
+>若使用**「階層式」的項目符號/編號**，只要記得空的格數要整齊即可。
++ 益者三友
+  + 友直
+  + 友諒
+  + 友多聞
+     + 益矣
++ 損者三友
+  + 友便辟
+  + 友善柔
+  + 友便佞
+     + 損矣
+
 >要讓清單看起來更漂亮，你可以把內容用固定的縮排整理好：
 *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
     Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
@@ -70,10 +82,14 @@ This is an H2 標題二
     > This is a blockquote
     > inside a list item.
 
->如果要放程式碼區塊的話，該區塊就需要縮排兩次，也就是8個空白或是兩個tab：
-*   A list item with a code block:
 
-        <code goes here>
+## 代辦事項
+>代辦事項的語法如下，若要在框框中打勾，則需在 [ ] 中輸入 x。
+- [ ] 高鐵
+- [x] 火車
+- [x] 捷運
+- [ ] 公車
+
 
 
 ## 程式碼區塊
@@ -86,6 +102,13 @@ This is a normal paragraph:
 Use the \`printf()\` function.
 
 Use the `printf()` function.
+
+>如果要放程式碼區塊的話，該區塊就需要縮排兩次，也就是8個空白或是兩個tab：
+*   A list item with a code block:
+
+        <code goes here>
+
+
 
 
 ## 分隔線

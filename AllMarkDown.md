@@ -193,7 +193,7 @@ __double underscores__
 @@ text in purple (and bold)@@
 ```
 
-> 2022 年 5 月起，Github 可以接受Markdown 上的 LATEX 代碼，因此您可以使用\color{namecolor} inside the $$$$ Block，
+> 支援LaTeX：2022 年 5 月起，Github 可以接受Markdown 上的 LATEX 代碼，因此您可以使用\color{namecolor} inside the $ $ Block，
 
 $${\color{red}Red}$$
 
@@ -204,12 +204,18 @@ $${\color{blue}Blue}$$
 ${\color{blue}Blue}$
 
 
-> 額外的
+> LaTeX額外的
 
 Press <kbd>W</kbd> to go up, and <kbd>A</kbd> to go down.
 If you can find the <kbd>ESC</kbd>, pressing that will fire missiles 
 
 GitHub contribution graph colors: `#C6E48B` `#7AC96F` `#249A3C` `#196127`
+
+> LaTeX公式
+
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
 
 ## Emoji
 >https://tw.piliapp.com/emoji/list/ 複製貼上

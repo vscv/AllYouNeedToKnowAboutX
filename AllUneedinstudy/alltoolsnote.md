@@ -47,6 +47,11 @@ Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
 # Code editor
   XCODE or VSCODE
 
+`xcode
+開啟專案
+File-New-Project-Command Line Tool
+`
+
 # 簡易的網頁版UI工具
 Gradio, Streamlit, Dash(Plotly), Flask, Visdom
   

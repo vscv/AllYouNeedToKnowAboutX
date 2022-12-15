@@ -51,6 +51,18 @@ Ubuntu內建的螢幕錄影ctrl+alt+shift+r預設只錄三十秒
 開啟專案
 File-New-Project-Command Line Tool
 `
+    
+    /** Making a Beep with "\a" in C++ not working in xcode on mac ??
+ 
+     Please go to Terminal to run you Beep code!
+
+
+     cout << "alarm sound.... '\a' \n" << endl;
+     cout << "alarm sound.... " << '\a' << endl;
+
+     g++ main.cpp -o beep.exe
+     ./beep.exe
+     **/
 
 # 簡易的網頁版UI工具
 Gradio, Streamlit, Dash(Plotly), Flask, Visdom

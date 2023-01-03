@@ -88,7 +88,10 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 # 自動滑鼠、鍵盤與視窗、螢幕控制
 
   AHK: autohotkey 用於微軟視窗作業系統中的腳本控制自動化滑鼠、鍵盤操作。跨平台上有AutoHotkey.py包了DLL來使用，最新在2021年。
+  
+    GT7 with AHK : 
+  
   PyAutoGUI: Python的腳本控制滑鼠、鍵盤與其他應用程序的自動化操作。PyAutoGUI 只能在 Windows、macOS 和 Linux 上運行，現在 PyAutoGUI 只處理主監視器。
-  pynput:自製熱鍵(停更)。
+  pynput:自製熱鍵(停更)。 
 
 * [python]依靠pynput和pyautogui替换ahk https://zhuanlan.zhihu.com/p/133096887

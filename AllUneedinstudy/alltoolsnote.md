@@ -94,5 +94,7 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
   
   PyAutoGUI: Python的腳本控制滑鼠、鍵盤與其他應用程序的自動化操作。PyAutoGUI 只能在 Windows、macOS 和 Linux 上運行，現在 PyAutoGUI 只處理主監視器。
   pynput:自製熱鍵(停更)。 
+    
+    自動網頁點按與隨機換頁導航
 
 * [python]依靠pynput和pyautogui替换ahk https://zhuanlan.zhihu.com/p/133096887

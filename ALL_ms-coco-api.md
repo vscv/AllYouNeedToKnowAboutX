@@ -19,3 +19,10 @@ https://cocodataset.org/#download
     python ---> python3 現在都改用py3了
     # 編譯
     make -j8 
+    
+  * 在cocoapi/PythonAPI/下這個腳本把使用方法都展示一遍
+  pycocoDemo.ipynb
+  
+  * 注意 他把trainn/val分開寫，請自行切換
+  * 注意 image captioning, instances(mask or segmentation), keypoints的annotations也是分開的
+  * 

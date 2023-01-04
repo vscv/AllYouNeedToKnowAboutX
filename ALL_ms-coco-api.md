@@ -26,5 +26,12 @@ https://cocodataset.org/#download
   * 注意 他把trainn/val分開寫，請自行切換
   * 注意 image captioning, instances(mask or segmentation), keypoints的annotations也是分開的
   * 
-![image](https://user-images.githubusercontent.com/18000764/210498855-e1a7d184-0bb0-4698-9314-462d8c0fda46.png)
-![file info](/temp_imgs/ms-coco-switch-anns.jpg)
+
+  * github md僅能用html設定影像尺寸與對齊位置
+  <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
+  
+  ![img](/temp_imgs/ms-coco-switch-anns.jpg)
+  
+  <p align="center">
+    <img width="460" height="300" src="/temp_imgs/ms-coco-switch-anns.jpg">
+  </p>

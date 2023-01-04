@@ -40,5 +40,5 @@ https://cocodataset.org/#download
 * 注意 image captioning, instances(mask or segmentation), keypoints的annotations也是分開的
 * 但任一個ann都可以讀取image
   <p align="center">
-    <img width=40% height=40% src="/temp_imags/ms-coco-all-anns-can-load-same-image.jpg">
+    <img width=40% height=40% src="/temp_imgs/ms-coco-all-anns-can-load-same-image.jpg">
   </p>

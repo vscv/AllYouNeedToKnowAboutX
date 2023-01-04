@@ -42,3 +42,9 @@ https://cocodataset.org/#download
   <p align="center">
     <img width=40% height=40% src="/temp_imgs/ms-coco-all-anns-can-load-same-image.jpg">
   </p>
+
+
+* 顯示image captioning的標記內容
+  <p align="center">
+    <img width=40% height=40% src="/temp_imgs/ms-coco-anns-image-captioning.jpg">
+  </p>

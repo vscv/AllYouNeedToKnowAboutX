@@ -24,9 +24,7 @@ https://cocodataset.org/#download
   pycocoDemo.ipynb
   
   * 注意 他把trainn/val分開寫，請自行切換
-  * 注意 image captioning, instances(mask or segmentation), keypoints的annotations也是分開的
-  * 
-
+  
   * github md僅能用html設定影像尺寸與對齊位置
   *![img](/temp_imgs/ms-coco-switch-anns.jpg) 不能設定尺寸與對齊
   * 
@@ -37,4 +35,10 @@ https://cocodataset.org/#download
    設定對齊中央
   <p align="center">
     <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">
+  </p>
+
+* 注意 image captioning, instances(mask or segmentation), keypoints的annotations也是分開的
+* 但任一個ann都可以讀取image
+  <p align="center">
+    <img width=40% height=40% src="ms-coco-all-anns-can-load-same-image.jpg">
   </p>

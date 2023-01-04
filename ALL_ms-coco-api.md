@@ -24,15 +24,6 @@ https://cocodataset.org/#download
   pycocoDemo.ipynb
   
   * 注意 他把trainn/val分開寫，請自行切換
-  
-  * github md僅能用html設定影像尺寸與對齊位置
-  *![img](/temp_imgs/ms-coco-switch-anns.jpg) 不能設定尺寸與對齊
-  * 
-  
-  設定影像大小
-  <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
-   
-   設定對齊中央
   <p align="center">
     <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">
   </p>

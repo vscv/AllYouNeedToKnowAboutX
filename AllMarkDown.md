@@ -190,6 +190,18 @@ __double underscores__
 
 ![Alt text](flow_sample_001.jpg "Optional title")
 
+* github md 預設的[]()不能設定尺寸與對齊，僅能用html設定影像尺寸與對齊位置
+![img](/temp_imgs/ms-coco-switch-anns.jpg) 不能設定尺寸與對齊
+ 
+  
+ * 設定影像大小 width="500" height="150"
+  <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
+   
+ *  設定對齊中央 width=40% height=40% 
+  <p align="center">
+    <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">
+  </p>
+
 
 ## 文字色彩
 >這在jupyter notebook可行，但在github仍不支援色彩文字。

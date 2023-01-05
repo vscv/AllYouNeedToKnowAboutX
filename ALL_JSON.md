@@ -9,13 +9,18 @@ Set ensure_ascii=False in json.dumps() to encode Unicode as-is into JSON
         "string2": u"\u4f53"
     }
     print("unicode Data is ", unicodeData)
+    print("unicode Data is ", unicodeData["string2"])
 
     encodedUnicode = json.dumps(unicodeData, ensure_ascii=False) # use dump() method to write it in file
     print("JSON character encoding by setting ensure_ascii=False", encodedUnicode)
 
     print("Decoding JSON", json.loads(encodedUnicode))
-
+    
+    
+    
     unicode Data is  {'string1': '體', 'string2': '体'}
+    unicode Data is  体
+
     JSON character encoding by setting ensure_ascii=False {"string1": "體", "string2": "体"}
     Decoding JSON {'string1': '體', 'string2': '体'}
     

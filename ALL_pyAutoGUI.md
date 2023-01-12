@@ -138,39 +138,39 @@
         # Sleep a while y may Ctrl-C this.
         time.sleep(2)
 
-    # TAable select
-    pyautogui.moveTo(2540, 25, duration = 1.5)
-    pyautogui.moveTo(2000, 1500, 2, pyautogui.easeInElastic)
-    pyautogui.moveTo(2540, 25, 2, pyautogui.easeInElastic)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
+        # TAable select
+        pyautogui.moveTo(2540, 25, duration = 1.5)
+        pyautogui.moveTo(2000, 1500, 2, pyautogui.easeInElastic)
+        pyautogui.moveTo(2540, 25, 2, pyautogui.easeInElastic)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
 
 
-    # Topic select
-    pyautogui.moveTo(1840, 315, duration = 1.5)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
+        # Topic select
+        pyautogui.moveTo(1840, 315, duration = 1.5)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
 
-    # T1 page
-    pyautogui.moveTo(2122, 770, duration = 1.5)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
-    Scroll_d(20)
-
-
-    # go-back one page
-    pyautogui.moveTo(1742, 57, duration = 1.5)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
+        # T1 page
+        pyautogui.moveTo(2122, 770, duration = 1.5)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
+        Scroll_d(20)
 
 
-    # T2 page
-    pyautogui.moveTo(2110, 890, duration = 1.5)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
-    Scroll_d(5)
+        # go-back one page
+        pyautogui.moveTo(1742, 57, duration = 1.5)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
 
-    # go-back one page
-    pyautogui.moveTo(1742, 57, duration = 1.5)
-    pyautogui.click(clicks=1, interval=0.5, button='left')
 
-    # Sleep a while y may Ctrl-C this.
-    time.sleep(10)
+        # T2 page
+        pyautogui.moveTo(2110, 890, duration = 1.5)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
+        Scroll_d(5)
+
+        # go-back one page
+        pyautogui.moveTo(1742, 57, duration = 1.5)
+        pyautogui.click(clicks=1, interval=0.5, button='left')
+
+        # Sleep a while y may Ctrl-C this.
+        time.sleep(10)
 
 
     while True:

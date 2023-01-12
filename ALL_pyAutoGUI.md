@@ -111,3 +111,71 @@
     """
     >>> im = pyautogui.screenshot()
     >>> im.getpixel((100, 200))"""
+
+
+ * * *
+ 
+ * * *
+ 
+ ### 一個規律點按範例
+ 
+    import pyautogui
+    print(pyautogui.__version__) # 0.9.53
+    import time
+    import random
+
+    def Scroll_d(n=4):
+        i=0
+        while i <= n:
+            pyautogui.scroll(-100)
+            i+=1
+        
+        # give it more randomly
+        time.sleep(random.randint(1,4))
+
+
+    def one_page_over():
+        # Sleep a while y may Ctrl-C this.
+        time.sleep(2)
+
+    # TAable select
+    pyautogui.moveTo(2540, 25, duration = 1.5)
+    pyautogui.moveTo(2000, 1500, 2, pyautogui.easeInElastic)
+    pyautogui.moveTo(2540, 25, 2, pyautogui.easeInElastic)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+
+
+    # Topic select
+    pyautogui.moveTo(1840, 315, duration = 1.5)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+
+    # T1 page
+    pyautogui.moveTo(2122, 770, duration = 1.5)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+    Scroll_d(20)
+
+
+    # go-back one page
+    pyautogui.moveTo(1742, 57, duration = 1.5)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+
+
+    # T2 page
+    pyautogui.moveTo(2110, 890, duration = 1.5)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+    Scroll_d(5)
+
+    # go-back one page
+    pyautogui.moveTo(1742, 57, duration = 1.5)
+    pyautogui.click(clicks=1, interval=0.5, button='left')
+
+    # Sleep a while y may Ctrl-C this.
+    time.sleep(10)
+
+
+    while True:
+        # give it more randomly
+        time.sleep(random.randint(2,5))
+        one_page_over()
+ 
+ 

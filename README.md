@@ -5,7 +5,7 @@
 * * *
 
 `JSON`
-https://github.com/vscv/Note_OpenCV/blob/main/ALL_JSON.md
+https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/ALL_JSON.md
 
 `MarkDown`
 https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/ALL_MarkDown.md

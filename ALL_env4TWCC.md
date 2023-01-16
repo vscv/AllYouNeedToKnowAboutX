@@ -16,6 +16,7 @@
       sudo pip3 install jupyternotify;
       sudo pip3 install pydot;
       sudo pip3 install albumentations augraphy;
+      sudo pip3 install paddlepaddle paddleocr;
 
 
 

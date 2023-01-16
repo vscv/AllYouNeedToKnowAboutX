@@ -57,5 +57,5 @@ mo -h
  * * * 
 #### 轉換Tensorflow SavedModel為vino可使用之IR格式
  `$ mo --saved_model_dir 64-128_640x640_16_0056_preAlbum6kColor/ --output_dir "model_v2"`
- 
+ ``` 給予資料夾即可  ```
  * * * 

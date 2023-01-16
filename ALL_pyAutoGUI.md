@@ -117,7 +117,7 @@
  
  * * *
  
- ### 一個規律點按範例
+ ### 範例：自動瀏覽論壇
  
     import pyautogui
     print(pyautogui.__version__) # 0.9.53

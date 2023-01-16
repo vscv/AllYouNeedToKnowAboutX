@@ -54,6 +54,13 @@ mo -h
     echo ''
     benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -d CPU
 
+
+<img width="415" alt="image" src="https://user-images.githubusercontent.com/18000764/212619805-d9405ac9-9420-4134-b938-9ad0048d63a2.png">
+
+<img width="415" alt="image" src="https://user-images.githubusercontent.com/18000764/212619827-7c365ecb-dea1-45cf-b610-048cf7307083.png">
+
+
+
  * * * 
 #### 轉換Tensorflow SavedModel為vino可使用之IR格式
  `$ mo --saved_model_dir tf-savedmodel-dir/ --output_dir "./model_v1"`

@@ -10,6 +10,7 @@ TensorFlow、PyTorch、MXNet、Caffe、Kaldi - 間接支持的格式，這意味
  * * * 
 
 ##### 安裝環境
+###### 在EdgeAI、PC、VM上通用
 
 sudo apt update
 sudo apt install python3-dev python3-pip python3-venv

@@ -20,6 +20,9 @@ sudo apt install python3-dev python3-pip python3-venv
 
 ###### into the venv
  source ./vvino/bin/activate
+
+###### leave from venv
+ deactive
  
 ###### pip install --upgrade pip
 python -m pip install --upgrade pip

@@ -41,6 +41,13 @@ mo -h
  * * * 
 
 ## 檢查VINO與EdgeAI硬體資訊
+
+ 本例採用Intel合作廠商ADLINK之MDS-510型號無風扇邊緣系統，處理器11th Gen Intel Core i5-1145G7E@2.6GHz x8，繪圖Intel Xe Graphics(TGL GT2)，16GB RAM，120GB SSD，作業系統Ubuntu 20.04 LTS，開發環境Intel® OpenVINO™ toolkit v2022.2、Tensorflow-21.11。
+ 將原始TensorFlow模型經過MO最佳化精煉為IR中繼表示格式。最後由Edge AI執行推論。
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/18000764/212621076-4b394ef5-8f07-409b-9608-576e0fb2f38e.png">
+
+
     #!/bin/bash
 
     # Check device

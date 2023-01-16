@@ -7,7 +7,7 @@ ONNX、PaddlePaddle - 直接支持的格式，這意味著它們無需任何事�
 TensorFlow、PyTorch、MXNet、Caffe、Kaldi - 間接支持的格式，這意味著它們需要在運行推理之前以mo轉換為 OpenVINO IR。
 
 
-
+ * * * 
 
 ##### 安裝環境
 
@@ -37,7 +37,7 @@ mo -h
 `正常印出help說明`
 
 
-
+ * * * 
 
 ## 檢查VINO與EdgeAI硬體資訊
     #!/bin/bash
@@ -53,3 +53,9 @@ mo -h
     echo '*****************************   [2] Check XML   ******************************'
     echo ''
     benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -d CPU
+
+ * * * 
+#### 轉換Tensorflow SavedModel為vino可使用之IR格式
+ `$ mo --saved_model_dir 64-128_640x640_16_0056_preAlbum6kColor/ --output_dir "model_v2"`
+ 
+ * * * 

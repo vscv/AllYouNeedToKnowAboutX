@@ -12,29 +12,36 @@ TensorFlow、PyTorch、MXNet、Caffe、Kaldi - 間接支持的格式，這意味
 ##### 安裝環境
 ###### 在EdgeAI、PC、VM上通用
 
+```ShellSession
 sudo apt update
 sudo apt install python3-dev python3-pip python3-venv
-
+```
 ###### Create a venv
-
+```ShellSession
  python3 -m venv --system-site-packages ./vvino
-
+```
 ###### into the venv
- source ./vvino/bin/activate
-
+```ShellSession
+source ./vvino/bin/activate
+```
 ###### leave from venv
- deactive
- 
+```ShellSession
+deactive
+``` 
 ###### upgrade pip 
+```ShellSession
 python -m pip install --upgrade pip
- 
+``` 
  
 ###### 安裝OpenVINO最新版
- pip install 'openvino-dev[onnx,tensorflow2]==2022.3.0'   "注意⚠️ OpenVINO改成新版了2022.3.0"
-
+```ShellSession
+pip install 'openvino-dev[onnx,tensorflow2]==2022.3.0'   "注意⚠️ OpenVINO改成新版了2022.3.0"
+```
 
 ###### test vino
+```ShellSession
 mo -h
+```
 `正常印出help說明`
 
 
@@ -76,25 +83,28 @@ mo -h
  * * * 
  
 #### 使用IR範例
-    from openvino.runtime import Core
-    from pathlib import Path
+    
+```python
+from openvino.runtime import Core
+from pathlib import Path
 
-    img_size=640
-    model_path_v1 = Path("model_v1/saved_model.xml")
-    ir_path_v1 = Path(model_path_v1).with_suffix(".xml")
+img_size=640
+model_path_v1 = Path("model_v1/saved_model.xml")
+ir_path_v1 = Path(model_path_v1).with_suffix(".xml")
 
-    ie_v1 = Core()
-    model_v1 = ie_v1.read_model(model=ir_path_v1, weights=ir_path_v1.with_suffix(".bin"))
-    compiled_model_v1 = ie_v1.compile_model(model=model_v1, device_name="CPU")
+ie_v1 = Core()
+model_v1 = ie_v1.read_model(model=ir_path_v1, weights=ir_path_v1.with_suffix(".bin"))
+compiled_model_v1 = ie_v1.compile_model(model=model_v1, device_name="CPU")
 
-    input_key_v1 = compiled_model_v1.input(0)
-    output_key_v1 = compiled_model_v1.output(0)
+input_key_v1 = compiled_model_v1.input(0)
+output_key_v1 = compiled_model_v1.output(0)
 
-    img = get_bHWC_image_from_gardio_gray(img)
-    out = compiled_model_v1([img])[output_key_v1]
-    out = tf.squeeze(out, axis=0, name=None)
-    out = out.numpy()
-    out = out.reshape(img_size, img_size)
+img = get_bHWC_image_from_gardio_gray(img)
+out = compiled_model_v1([img])[output_key_v1]
+out = tf.squeeze(out, axis=0, name=None)
+out = out.numpy()
+out = out.reshape(img_size, img_size)
+```
 
 
 

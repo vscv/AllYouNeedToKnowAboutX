@@ -15,7 +15,7 @@
       sudo pip3 install -q "tqdm>=4.36.1";
       sudo pip3 install jupyternotify;
       sudo pip3 install pydot;
-      sudo pip3 install albumentations;
+      sudo pip3 install albumentations augraphy;
 
 
 

@@ -108,3 +108,46 @@ ps.random.choices的weights參數是可以設定個別元素被選到的機率�
 * p
 
 執行該函數的機率
+
+* * * 
+
+### 舊版Tensorflow讀取影像範例耗時問題
+
+```Python
+def load_image_into_numpy_array(pil_image):
+    (im_width, im_height) = pil_image.size
+    data = pil_image.getdata()
+
+    data_array = np.array(data)
+
+    return data_array.reshape((im_height, im_width, 3)).astype(np.uint8)
+```
+`改成不要reshape了`
+```Python
+def load_image_into_numpy_array(path):
+    """Load an image from file into a numpy array.
+
+    Puts image into numpy array to feed into tensorflow graph.
+    Note that by convention we put it into a numpy array with shape
+    (height, width, channels), where channels=3 for RGB.
+
+    Args:
+    path: a file path (this can be local or on colossus)
+
+    Returns:
+    uint8 numpy array with shape (img_height, img_width, 3)
+    """
+    img_data = tf.io.gfile.GFile(path, 'rb').read()
+    image = Image.open(BytesIO(img_data))
+
+    return np.array(image)
+```
+
+`改成不要reshape了2`
+```Python
+def pil_image_to_numpy_array(pil_image):
+    return np.asarray(pil_image)  
+```
+
+
+* * *

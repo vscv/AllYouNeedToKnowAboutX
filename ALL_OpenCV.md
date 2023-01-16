@@ -82,7 +82,7 @@ def oneof():
 
 aug_f = oneof()
 output = aug_f(image) 
-    ```
+```
     
 TypeError: 'list' object is not callable： 如果list裡是一堆函數f1() f2()，返回使用時記得加上[0]。
 

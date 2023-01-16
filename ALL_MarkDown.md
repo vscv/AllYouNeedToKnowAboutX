@@ -123,13 +123,17 @@ function test() {
 * 起頭用\`\`\` python，可替換成ruby python C++等等 
 * * https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
 
+`python`
 ```python
 import numpy as np 
 data = np.arange(6).reshape((3, 2))
 print(np.average(data, axis=1, keepdims=True))
 ```
-
-
+`Shell`
+```ShellSession
+sudo apt update
+sudo apt install python3-dev python3-pip python3-venv
+```
 
 ## 分隔線
     * * *

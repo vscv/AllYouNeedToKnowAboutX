@@ -54,21 +54,21 @@ mo -h
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/18000764/212621076-4b394ef5-8f07-409b-9608-576e0fb2f38e.png">
 
+```Shell
+#!/bin/bash
 
-    #!/bin/bash
+# Check device
+echo ''
+echo '*****************************   [1] Check device   ***************************'
+echo ''
+python /opt/intel/openvino_2022/samples/python/hello_query_device/hello_query_device.py
 
-    # Check device
-    echo ''
-    echo '*****************************   [1] Check device   ***************************'
-    echo ''
-    python /opt/intel/openvino_2022/samples/python/hello_query_device/hello_query_device.py
-
-    # Check xml model
-    echo ''
-    echo '*****************************   [2] Check XML   ******************************'
-    echo ''
-    benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -d CPU
-
+# Check xml model
+echo ''
+echo '*****************************   [2] Check XML   ******************************'
+echo ''
+benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -d CPU
+```
 
 <img width="415" alt="image" src="https://user-images.githubusercontent.com/18000764/212619805-d9405ac9-9420-4134-b938-9ad0048d63a2.png">
 

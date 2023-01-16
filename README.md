@@ -26,4 +26,8 @@ https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/ALL_ms-coco-api.md
 https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/ALL_pyAutoGUI.md
 
 
+`常見語法錯誤`
+https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/AllERRORWEDID/AllErrorWeDid.md
 
+`常用輔助工具`
+https://github.com/vscv/AllYouNeedToKnowAboutX/blob/main/AllUneedinstudy/alltoolsnote.md

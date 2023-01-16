@@ -35,3 +35,21 @@ python -m pip install --upgrade pip
 ###### test vino
 mo -h
 `正常印出help說明`
+
+
+
+
+## 檢查VINO與EdgeAI硬體資訊
+    #!/bin/bash
+
+    # Check device
+    echo ''
+    echo '*****************************   [1] Check device   ***************************'
+    echo ''
+    python /opt/intel/openvino_2022/samples/python/hello_query_device/hello_query_device.py
+
+    # Check xml model
+    echo ''
+    echo '*****************************   [2] Check XML   ******************************'
+    echo ''
+    benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -d CPU

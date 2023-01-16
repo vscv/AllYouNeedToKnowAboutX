@@ -56,6 +56,37 @@ mo -h
 
  * * * 
 #### 轉換Tensorflow SavedModel為vino可使用之IR格式
- `$ mo --saved_model_dir 64-128_640x640_16_0056_preAlbum6kColor/ --output_dir "model_v2"`
+ `$ mo --saved_model_dir tf-savedmodel-dir/ --output_dir "./model_v1"`
  ``` 給予資料夾即可  ```
  * * * 
+ 
+#### 使用IR範例
+    from openvino.runtime import Core
+    from pathlib import Path
+
+    img_size=640
+    model_path_v1 = Path("model_v1/saved_model.xml")
+    ir_path_v1 = Path(model_path_v1).with_suffix(".xml")
+
+    ie_v1 = Core()
+    model_v1 = ie_v1.read_model(model=ir_path_v1, weights=ir_path_v1.with_suffix(".bin"))
+    compiled_model_v1 = ie_v1.compile_model(model=model_v1, device_name="CPU")
+
+    input_key_v1 = compiled_model_v1.input(0)
+    output_key_v1 = compiled_model_v1.output(0)
+
+    img = get_bHWC_image_from_gardio_gray(img)
+    out = compiled_model_v1([img])[output_key_v1]
+    out = tf.squeeze(out, axis=0, name=None)
+    out = out.numpy()
+    out = out.reshape(img_size, img_size)
+
+
+
+
+
+
+ * * * 
+ * * * 
+ * * * 
+ 

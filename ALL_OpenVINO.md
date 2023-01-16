@@ -81,7 +81,7 @@ benchmark_app -m ./model/saved_model.xml  -data_shape "[1,640,640,1]" -niter 1 -
  ```ShellSession
  $ mo --saved_model_dir tf-savedmodel-dir/ --output_dir "./model_v1"
  ```
- ``` 給予資料夾即可  ```
+ ` 給予資料夾即可  `
  * * * 
  
 #### 使用IR範例

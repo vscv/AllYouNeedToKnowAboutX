@@ -28,3 +28,5 @@ sudo apt install python3-dev python3-pip python3-venv
 python -m pip install --upgrade pip
  
  
+###### 安裝OpenVINO最新版
+ pip install 'openvino-dev[onnx,tensorflow2]==2022.3.0'   "注意⚠️ OpenVINO改成新版了2022.3.0"

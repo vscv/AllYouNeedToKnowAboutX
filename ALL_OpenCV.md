@@ -30,37 +30,39 @@ A collection of sample code of OpenCV
 
 Example:
 
-    #Util function
-    def get_date():
-        date= datetime.datetime.today()
-        return date.strftime("%Y_%m_%d_%H%M")
-        
-    #Show anns on the sample image
-    path="/PATH_TO/train/"
-    img =  cv2.imread(path + img_name) # If only for showing, BGR -> RGB , cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+```Python
+#Util function
+def get_date():
+    date= datetime.datetime.today()
+    return date.strftime("%Y_%m_%d_%H%M")
 
-    #Check ann by cv2, comment if use cocoapi
-    for a in ann:
-        #print(f'[A box]: {a}')
-        category_id = a['category_id']
-        txt = 'id:' + str(category_id)
-        x,y,w,h = a['bbox']
-        cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (255, 255, 0), 5)
-        cv2.putText(img=img, text=txt, org=(int(x)+20, int(y)-20), fontFace=font, fontScale=2.0, color=color, thickness=thickness, lineType=cv2.LINE_AA)
+#Show anns on the sample image
+path="/PATH_TO/train/"
+img =  cv2.imread(path + img_name) # If only for showing, BGR -> RGB , cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    fig = plt.figure()
-    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB)); plt.axis('off') #must after the every cv2 task
+#Check ann by cv2, comment if use cocoapi
+for a in ann:
+    #print(f'[A box]: {a}')
+    category_id = a['category_id']
+    txt = 'id:' + str(category_id)
+    x,y,w,h = a['bbox']
+    cv2.rectangle(img, (int(x), int(y)), (int(x+w), int(y+h)), (255, 255, 0), 5)
+    cv2.putText(img=img, text=txt, org=(int(x)+20, int(y)-20), fontFace=font, fontScale=2.0, color=color, thickness=thickness, lineType=cv2.LINE_AA)
 
-    #Show ann by cocoapi, comment if use cv2
-    coco.showAnns(ann, draw_bbox=True)
+fig = plt.figure()
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB)); plt.axis('off') #must after the every cv2 task
+
+#Show ann by cocoapi, comment if use cv2
+coco.showAnns(ann, draw_bbox=True)
 
 
-    #cannot save the ann on top of image, only save the original img
-    cv2.imwrite(f'test_patchs/show_ann_{img_name}_cv2_{timestamp}.jpg', img) #imwrite do BGR2RGB for you
-    #bcs it plot object, we should apply plt.save instead
-    timestamp = get_date()
-    # plt.savefig(f'test_patchs/show_ann_with_image_{img_name}_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
-    plt.savefig(f'test_patchs/show_ann_{img_name}_plt_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
+#cannot save the ann on top of image, only save the original img
+cv2.imwrite(f'test_patchs/show_ann_{img_name}_cv2_{timestamp}.jpg', img) #imwrite do BGR2RGB for you
+#bcs it plot object, we should apply plt.save instead
+timestamp = get_date()
+# plt.savefig(f'test_patchs/show_ann_with_image_{img_name}_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
+plt.savefig(f'test_patchs/show_ann_{img_name}_plt_{timestamp}.jpg', bbox_inches='tight', pad_inches=0)
+```
 
 [1] 來源請求
 

@@ -215,7 +215,7 @@ import piexif
 piexif.remove(filename)
 ```
 
-3. tf.io：只讀取圖像而不刪除任何圖像或 EXIF：
+3. tf.io：僅讀取圖像數據，因此不用刪除任何圖像或EXIF：
 ```Python
 file = tf.io.read_file(filename)
 image = tf.image.decode_jpeg(file)

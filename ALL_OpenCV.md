@@ -163,7 +163,7 @@ def pil_image_to_numpy_array(pil_image):
 ## OpenCV 舊版範例問題
 
 
-`舊版cv2.findContours例如cv2 2.x範例，使用_,contours，但4.x 5.x已經改成contours, hierarchy！`
+`舊版cv2.findContours例如cv2 2.x回傳順序為hierarchy,contours，但4.x 5.x已經改成contours, hierarchy！`
 
 ```Python
 def find_biggest_contour(image):

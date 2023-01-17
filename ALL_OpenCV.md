@@ -199,11 +199,27 @@ for cv2 4.x 5.x
         
         UnknownError: Graph execution error:
 
-其實再往回看源頭，這才是原因。
+其實再往回看源頭，這才是原因。因為其EXIF損壞(可交換圖檔格式Exchangeable image file format是專門為數位相機的相片設定的檔案格式，可以記錄數位相片的屬性資訊和拍攝資料。)
 
         UserWarning: Possibly corrupt EXIF data.
 
 
+方法：
+
+* PIL : 請先去除訓練集中損壞的圖片，例如PetImages/Cat/666.jpg, PetImages/Dog/11702.jpg。另請參閱     https://www.kaggle.com/code/sushovansaha9/cat-dog-classification-transferlearning-ipynb。
+
+* PIL ：刪除 EXIF 數據但保留圖像。
+
+```Python
+import piexif  
+piexif.remove(filename)
+```
+
+* tf.io：只讀取圖像而不刪除任何圖像或 EXIF：
+```Python
+file = tf.io.read_file(filename)
+image = tf.image.decode_jpeg(file)
+```
 * * *
 
 

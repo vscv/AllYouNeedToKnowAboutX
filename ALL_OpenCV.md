@@ -23,7 +23,7 @@ thickness = 2
 
 cv2.putText(img=img, text=txt, org=(int(x)+20, int(y)-20), fontFace=font, fontScale=2.0, color=color, thickness=thickness, lineType=cv2.LINE_AA)
 ```
-
+* * *
 ## BGR2RGB
 - BGR是OpenCV惱人的預設色彩讀取順序，原因是發展OpenCV當下時代盛行的色彩是BGR格式[1]，只是現在主流是RGB了。
 - cv2讀取時預設為BGR，如果處理過程跟色彩有關會需要先轉回RGB(或是把你的處理過程用BGR格式)。
@@ -67,6 +67,7 @@ plt.savefig(f'test_patchs/show_ann_{img_name}_plt_{timestamp}.jpg', bbox_inches=
 
 [1] 來源請求
 
+* * *
 ## 依機率選擇使用某個函數
 * 這在深度學習的數據集增強中常會用到，增強套件裡一定有幫你寫好這個功能，但總有例外不能直上的時候。
 之前有寫過，但懶得找了。因此重新寫在這裡...
@@ -117,7 +118,6 @@ if p >= 0.8:
 * p `執行該函數的機率`
 
 * * * 
-
 ### 舊版Tensorflow範例 讀取影像耗時問題
 `當初沒考量reshape對於大圖會非常耗時，改用numpy處理即可解決。`
 
@@ -161,7 +161,6 @@ def pil_image_to_numpy_array(pil_image):
 
 * * *
 ## OpenCV 舊版範例問題
-
 
 `舊版cv2.findContours例如cv2 2.x回傳順序為hierarchy,contours，但4.x 5.x已經改成contours, hierarchy！`
 
@@ -222,4 +221,4 @@ image = tf.image.decode_jpeg(file)
 ```
 * * *
 
-
+* * *

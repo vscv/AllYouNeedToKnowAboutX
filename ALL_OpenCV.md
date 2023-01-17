@@ -204,18 +204,18 @@ for cv2 4.x 5.x
         UserWarning: Possibly corrupt EXIF data.
 
 
-方法：
+三種方法：
 
-* PIL : 請先去除訓練集中損壞的圖片，例如PetImages/Cat/666.jpg, PetImages/Dog/11702.jpg。另請參閱     https://www.kaggle.com/code/sushovansaha9/cat-dog-classification-transferlearning-ipynb。
+1. PIL : 請先去除訓練集中損壞的圖片，例如PetImages/Cat/666.jpg, PetImages/Dog/11702.jpg。另請參閱     https://www.kaggle.com/code/sushovansaha9/cat-dog-classification-transferlearning-ipynb。
 
-* PIL ：刪除 EXIF 數據但保留圖像。
+2. PIL ：刪除 EXIF 數據但保留圖像。
 
 ```Python
 import piexif  
 piexif.remove(filename)
 ```
 
-* tf.io：只讀取圖像而不刪除任何圖像或 EXIF：
+3. tf.io：只讀取圖像而不刪除任何圖像或 EXIF：
 ```Python
 file = tf.io.read_file(filename)
 image = tf.image.decode_jpeg(file)

@@ -195,9 +195,9 @@ for cv2 4.x 5.x
 
 * * *
 ## Cat-Dog 貓狗資料集EXIF錯誤
-首先trace錯誤訊息 找到可能的原因 大部分應該找最源頭而不是最後的Error!
-例如看到這個會以為TF又出包了
-UnknownError: Graph execution error:
+    首先trace錯誤訊息 找到可能的原因 大部分應該找最源頭而不是最後的Error!
+    例如看到這個會以為TF又出包了
+    UnknownError: Graph execution error:
 
 其實再往回看源頭，這才是原因。
 UserWarning: Possibly corrupt EXIF data.

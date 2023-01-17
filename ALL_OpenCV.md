@@ -158,4 +158,43 @@ def pil_image_to_numpy_array(pil_image):
 ```
 
 
+
 * * *
+## OpenCV 舊版範例問題
+
+
+`舊版cv2.findContours例如cv2 2.x範例，使用_,contours，但4.x 5.x已經改成contours, hierarchy！`
+
+```Python
+def find_biggest_contour(image):
+
+# Copy to prevent modification
+image = image.copy()
+
+_,contours  = cv2.findContours(image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+
+#get contour sizes and return the biggest contour
+max_area = -1
+for i in range(len(contours)):
+    area = cv2.contourArea(contours[i])
+    if area>max_area:
+        biggest_contour = contours[i]
+        max_area = area
+
+#create an empty mask
+mask = np.zeros(image.shape, np.uint8)
+
+#draw the biggest contour on it
+cv2.drawContours(mask, [biggest_contour], -1, 255, -1)
+
+return mask
+```
+for cv2 4.x 5.x
+
+`contours, hierarchy = cv2.findContours()`
+
+* * *
+
+* * *
+
+

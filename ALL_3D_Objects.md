@@ -56,6 +56,28 @@ Show single slice
 
 
 
+`PyVista voxelize 由mesh建立voxel(體素)，這樣使內部填充了立體網格，再進行切片。`
+
+```Python
+import pyvista as pv
+"""使用voxel當作內部填充 不是經濟做法 且體素粗細度直接影像輪廓的精確度。"""
+
+#創建邊界表面的體素模型
+voxels = pv.voxelize(mesh, density=mesh.length / 100)
+
+#顯示體素
+p = pv.Plotter()
+p.add_mesh(voxels, color=True, show_edges=True, opacity=0.5)
+p.add_mesh(mesh, color="lightblue", opacity=0.5)
+p.show(cpos='xy')
+
+#切片體素
+#slices = voxels.slice_along_axis(n=20, axis='z', progress_bar=True)  #, contour=True
+#顯示切片
+#slices[15].plot(cpos=[0, 1, 1], line_width=5, parallel_projection=True,) # set cpos
+```
+
+
 
 2. 以VTK為例
 

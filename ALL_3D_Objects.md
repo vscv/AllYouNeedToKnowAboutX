@@ -253,10 +253,17 @@ if __name__ == '__main__':
 * * *
 3. 以3D slicer為例
 
-3D slicer有提供UI介面與API工具，優點有提供完整的雲端虛擬機讓你使用，是可以使用jupyter notebook開啟它的介面，非常方便連安裝clinet端都不需要。也可以自己建立一個notebook共享服務器，滿適合給實驗室小組習作。
+3D slicer有提供UI介面與API工具，優點有提供完整的雲端虛擬機讓你使用[SlicerWeb](https://mybinder.org/v2/gh/Slicer/SlicerNotebooks/master?filepath=SlicerWeb.ipynb)，是可以使用jupyter notebook開啟它的介面，非常方便連安裝clinet端都不需要。也可以自己建立一個notebook共享服務器，滿適合給實驗室小組習作。
 
 ![try-3_3D_SlicerWeb_ok_s](https://user-images.githubusercontent.com/18000764/216756993-ed28cfbf-21cb-4331-80fc-0f8c7c076a39.jpg)
 這是jupyter notebook的實際截圖，不是client端程式！僅是用來顯示讀取的模型是正確的，並沒有用來操作切片任務！
+
+
+`用3D Slicer切片`
+
+```Python
+
+```
 
 
 

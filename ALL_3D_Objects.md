@@ -33,7 +33,7 @@ slices = mesh.slice_along_axis(n=20, axis='z', progress_bar=True)
 ```
 
 Show model
-![3D_mesh](https://user-images.githubusercontent.com/18000764/216743564-3012ed8a-a9d8-4efc-8243-9c0c5c49f614.jpg)
+![sample_object_haus_s](https://user-images.githubusercontent.com/18000764/216750189-353560ab-2bb3-4aa2-9a12-755276bea61f.jpg)
 
 
 

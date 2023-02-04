@@ -45,7 +45,65 @@ Show single slice
 ![sample_object_haus_slice15_but_only_contour_s](https://user-images.githubusercontent.com/18000764/216743747-923aae0a-256a-4843-9be6-eb046a800df1.jpg)
 
 
-3. 以VTK為例
+
+
+2. 以VTK為例
+
+```Python
+from vtkmodules.vtkCommonColor import vtkNamedColors
+from vtkmodules.vtkIOGeometry import vtkSTLReader
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkPolyDataMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer
+)
+
+def main():
+    colors = vtkNamedColors() 
+    filename = './haus.stl'
+  
+    reader = vtkSTLReader()
+    reader.SetFileName(filename)
+    reader.Update()
+    
+    # STL
+    mapper = vtkPolyDataMapper()
+    mapper.SetInputConnection(reader.GetOutputPort())
+
+    actor = vtkActor()
+    actor.SetMapper(mapper)
+    actor.GetProperty().SetDiffuse(0.8)
+    actor.GetProperty().SetDiffuseColor(colors.GetColor3d('LightSteelBlue'))
+    actor.GetProperty().SetSpecular(0.3)
+    actor.GetProperty().SetSpecularPower(60.0)
+
+    # Create a rendering window and renderer
+    ren = vtkRenderer()
+    renWin = vtkRenderWindow()
+    renWin.AddRenderer(ren)
+    renWin.Render()
+    renWin.SetWindowName('ReadSTL [haus]')
+
+    # Create a renderwindowinteractor
+    iren = vtkRenderWindowInteractor()
+    iren.SetRenderWindow(renWin)
+
+    # Assign actor to the renderer
+    ren.AddActor(actor)
+    ren.SetBackground(colors.GetColor3d('DarkOliveGreen'))
+
+    # Enable user interface interactor
+    iren.Initialize()
+    iren.Start()    
+    
+if __name__ == '__main__':
+    main()
+```
+
+show model
+![VTK_read_show_STL_s](https://user-images.githubusercontent.com/18000764/216752118-45e60be1-c9f8-4d0f-9a0d-a0de0ff2edd0.jpg)
 
 
 

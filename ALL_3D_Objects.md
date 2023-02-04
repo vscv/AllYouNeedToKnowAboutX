@@ -213,13 +213,10 @@ imageWriter.Write()
 if __name__ == '__main__':
     main()
  ```
- ![labelImage_-10_b](https://user-images.githubusercontent.com/18000764/216753345-8809e2f8-2646-44bb-a292-df56a38d0e42.png)
+
+![labelImage_-10_b_200](https://user-images.githubusercontent.com/18000764/216753841-4da96e36-43b3-4ef3-926a-8545931f9c56.png)
 
  PS.原本的VTK語法太冗長了。😰
-
-![labelImage_-10_b_big](https://user-images.githubusercontent.com/18000764/216753770-bdfa03b0-383c-4f48-9dec-61cf62cda946.png)
-
-
 
 
 * * *

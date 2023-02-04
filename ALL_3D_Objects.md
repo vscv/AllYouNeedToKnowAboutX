@@ -7,7 +7,36 @@
  
 
  
- 
+#### 交換切片影像的WB
+```Python
+import imageio
+import matplotlib.pyplot as plt
+
+img_path = './image_134.jpg'
+
+def inverted_color(img_path):
+    img = imageio.imread(img_path)
+    print("org dtype", img.shape, img.dtype)
+    #img = img.astype('float32') # its ok but get float32 image
+    img = 255 - img
+    print("inv dtype", img.shape, img.dtype)
+    return img
+    
+
+img_org = imageio.imread(img_path)
+img_inv = inverted_color(img_path)
+
+imageio.imwrite("inv_img.jpg", img_inv)
+
+plt.figure(figsize=(10,10))
+plt.subplot(121)
+plt.title("org")
+plt.imshow(img_org, cmap='gray')
+plt.subplot(122)
+plt.title("inv")
+plt.imshow(img_inv, cmap='gray')
+plt.show()
+```
  
 * * *
   

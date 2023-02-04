@@ -169,7 +169,7 @@ print("check origin ", origin)
 whiteImage.SetOrigin(origin)
 whiteImage.AllocateScalars(VTK_UNSIGNED_CHAR, 1)
 
-# fill the image with foreground voxels:
+# fill the image with foreground voxels: (to set up the inner/outer gray scale.)
 inval = 0
 outval = 255
 count = whiteImage.GetNumberOfPoints()
@@ -213,7 +213,8 @@ imageWriter.Write()
 if __name__ == '__main__':
     main()
  ```
- 
+ ![labelImage_-10_b](https://user-images.githubusercontent.com/18000764/216753345-8809e2f8-2646-44bb-a292-df56a38d0e42.png)
+
  
  
 #### 交換切片影像的BW

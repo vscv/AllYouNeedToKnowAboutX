@@ -274,7 +274,7 @@ slicernb.AppWindow(contents='full')
 
 
 ![try-3_3D_SlicerWeb_ok_s](https://user-images.githubusercontent.com/18000764/216756993-ed28cfbf-21cb-4331-80fc-0f8c7c076a39.jpg)
-這是jupyter notebook的實際截圖，不是client端程式！僅是用來顯示讀取的模型是正確的，並沒有用來操作切片任務！
+這是jupyter notebook的實際截圖，非client端程式，僅是用來顯示讀取的模型是正確的，並沒有用來操作切片任務。
 
 
 `用3D Slicer切片` 修改自[Rasterize a model and save it to a series of image files](https://slicer.readthedocs.io/en/latest/developer_guide/script_repository/models.html#rasterize-a-model-and-save-it-to-a-series-of-image-files)

@@ -118,6 +118,102 @@ show model
 PS.這也是為何有好多基於VTK重新開發的工具出現，原本的VTK語法太冗長了。😰
 
  
+ VTK切片 修改自https://kitware.github.io/vtk-examples/site/Python/PolyData/PolyDataContourToImageData
+ 
+ ```Python
+import vtk
+
+filename = './haus.stl'
+reader = vtkSTLReader()
+reader.SetFileName(filename)
+reader.Update()
+    
+stlMapper = vtk.vtkPolyDataMapper()
+stlMapper.SetInputConnection(reader.GetOutputPort())
+
+polydata = stlMapper
+print("Get GetOrigin", polydata.GetCenter())
+sphereSource = reader 
+
+circleCutter = vtkCutter()
+circleCutter.SetInputConnection(sphereSource.GetOutputPort())
+cutPlane = vtkPlane() 
+
+circle = stripper.GetOutput()    
+    
+# prepare the binary image's voxel grid
+whiteImage = vtkImageData()
+bounds = [0] * 6
+circle.GetBounds(bounds) 
+spacing = [0] * 3  # desired volume spacing
+spacing[0] = 0.5
+spacing[1] = 0.5
+spacing[2] = 0.5
+whiteImage.SetSpacing(spacing)    
+
+# compute dimensions
+dim = [0] * 3
+for i in range(3):
+    dim[i] = int(math.ceil((bounds[i * 2 + 1] - bounds[i * 2]) / spacing[i])) + 1
+    if dim[i] < 1:
+        dim[i] = 1
+
+whiteImage.SetDimensions(dim) 
+whiteImage.SetExtent(0, dim[0] - 1, 0, dim[1] - 1, 0, dim[2] - 1)
+origin = [0] * 3
+# NOTE: I am not sure whether or not we had to add some offset!
+origin[0] = bounds[0]  # + spacing[0] / 2
+origin[1] = bounds[2]  # + spacing[1] / 2
+origin[2] = bounds[4]  # + spacing[2] / 2
+print("check origin ", origin)
+whiteImage.SetOrigin(origin)
+whiteImage.AllocateScalars(VTK_UNSIGNED_CHAR, 1)
+
+# fill the image with foreground voxels:
+inval = 0
+outval = 255
+count = whiteImage.GetNumberOfPoints()
+
+#for i in range(count):
+#  whiteImage.GetPointData().GetScalars().SetTuple1(i, inval)
+whiteImage.GetPointData().GetScalars().Fill(inval) # use Fill faster than for loop setup.
+
+# sweep polygonal data (this is the important thing with contours!)
+extruder = vtkLinearExtrusionFilter()
+extruder.SetInputData(circle)
+extruder.SetScaleFactor(1.0)
+# extruder.SetExtrusionTypeToNormalExtrusion()
+extruder.SetExtrusionTypeToVectorExtrusion()
+extruder.SetVector(0, 0, 1)
+extruder.Update()
+    
+# polygonal data -. image stencil:
+pol2stenc = vtkPolyDataToImageStencil()
+pol2stenc.SetTolerance(0)  # important if extruder.SetVector(0, 0, 1) !!!
+pol2stenc.SetInputConnection(extruder.GetOutputPort())
+pol2stenc.SetOutputOrigin(origin)
+pol2stenc.SetOutputSpacing(spacing)
+pol2stenc.SetOutputWholeExtent(whiteImage.GetExtent())
+pol2stenc.Update()
+
+# cut the corresponding white image and set the background:
+imgstenc = vtkImageStencil()
+imgstenc.SetInputData(whiteImage)
+imgstenc.SetStencilConnection(pol2stenc.GetOutputPort())
+imgstenc.ReverseStencilOff()
+imgstenc.SetBackgroundValue(outval)
+imgstenc.Update()    
+
+imageWriter = vtkPNGWriter()
+imageWriter.SetFileName('vtk_slice_test_case.png')
+imageWriter.SetInputConnection(imgstenc.GetOutputPort())
+imageWriter.Write()
+
+
+if __name__ == '__main__':
+    main()
+ ```
+ 
  
  
 #### 交換切片影像的BW

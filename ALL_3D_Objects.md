@@ -217,6 +217,11 @@ if __name__ == '__main__':
 
  PS.原本的VTK語法太冗長了。😰
 
+![labelImage_-10_b_big](https://user-images.githubusercontent.com/18000764/216753770-bdfa03b0-383c-4f48-9dec-61cf62cda946.png)
+
+
+
+
 * * *
  
 #### 交換切片影像的BW

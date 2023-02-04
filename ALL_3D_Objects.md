@@ -251,6 +251,17 @@ if __name__ == '__main__':
 
 
 * * *
+3. 以3D slicer為例
+
+3D slicer有提供UI介面與API工具，有優點是可以使用jupyter notebook開啟它的介面，而且有提供完整的雲端虛擬機讓你使用，非常方便連安裝clinet端都不需要。
+
+![try-3_3D_SlicerWeb_ok_s](https://user-images.githubusercontent.com/18000764/216756993-ed28cfbf-21cb-4331-80fc-0f8c7c076a39.jpg)
+
+這是jupyter notebook的實際截圖，不是client端程式！
+
+
+
+* * *
  
 #### 交換切片影像的BW
 若拿到的原始切片是黑白相反時，可以簡單交換回來。反之亦然。

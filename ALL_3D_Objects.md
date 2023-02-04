@@ -255,14 +255,81 @@ if __name__ == '__main__':
 
 3D slicer有提供UI介面與API工具，優點有提供完整的雲端虛擬機讓你使用[SlicerWeb](https://mybinder.org/v2/gh/Slicer/SlicerNotebooks/master?filepath=SlicerWeb.ipynb)，是可以使用jupyter notebook開啟它的介面，非常方便連安裝clinet端都不需要。也可以自己建立一個notebook共享服務器，滿適合給實驗室小組習作。
 
+`在jupyter notebook中啟用Slicer介面`
+
+```Python
+import JupyterNotebooksLib as slicernb
+import slicer
+import ipywidgets
+
+# Run this cell (Shift+Enter) to show application here
+slicernb.AppWindow(contents='full')
+
+# # Show viewers only
+# slicernb.AppWindow(contents='viewers');
+
+# # Show full application window
+# slicernb.AppWindow(contents='full');
+```
+
+
 ![try-3_3D_SlicerWeb_ok_s](https://user-images.githubusercontent.com/18000764/216756993-ed28cfbf-21cb-4331-80fc-0f8c7c076a39.jpg)
 這是jupyter notebook的實際截圖，不是client端程式！僅是用來顯示讀取的模型是正確的，並沒有用來操作切片任務！
 
 
-`用3D Slicer切片`
+`用3D Slicer切片` 修改自[Rasterize a model and save it to a series of image files](https://slicer.readthedocs.io/en/latest/developer_guide/script_repository/models.html#rasterize-a-model-and-save-it-to-a-series-of-image-files)
 
 ```Python
+import JupyterNotebooksLib as slicernb
+import slicer
+import ipywidgets
+import vtk
+from slicer.util import pip_install
 
+# This example shows how to generate a stack of image files from an STL file:
+inputModelFile = "./data/haus.stl"
+outputDir = "./outputs/"
+outputVolumeLabelValue = 100
+outputVolumeSpacingMm = [0.5, 0.5, 0.5]   #調整 outputVolumeSpacingMm 值來設置任何分辨率（前兩個值是切片內的圖像間距，第三個值是切片之間的圖像間距）
+outputVolumeMarginMm = [10.0, 10.0, 10.0]
+
+# Read model
+inputModel = slicer.util.loadModel(inputModelFile)
+
+# Determine output volume geometry and create a corresponding reference volume
+import math
+import numpy as np
+bounds = np.zeros(6)
+inputModel.GetBounds(bounds)
+imageData = vtk.vtkImageData()
+imageSize = [ int((bounds[axis*2+1]-bounds[axis*2]+outputVolumeMarginMm[axis]*2.0)/outputVolumeSpacingMm[axis]) for axis in range(3) ]
+imageOrigin = [ bounds[axis*2]-outputVolumeMarginMm[axis] for axis in range(3) ]
+imageData.SetDimensions(imageSize)
+imageData.AllocateScalars(vtk.VTK_UNSIGNED_CHAR, 1)
+imageData.GetPointData().GetScalars().Fill(0)
+referenceVolumeNode = slicer.mrmlScene.AddNewNodeByClass("vtkMRMLScalarVolumeNode")
+referenceVolumeNode.SetOrigin(imageOrigin)
+referenceVolumeNode.SetSpacing(outputVolumeSpacingMm)
+referenceVolumeNode.SetAndObserveImageData(imageData)
+referenceVolumeNode.CreateDefaultDisplayNodes()
+
+# Convert model to labelmap
+seg = slicer.mrmlScene.AddNewNodeByClass("vtkMRMLSegmentationNode")
+seg.SetReferenceImageGeometryParameterFromVolumeNode(referenceVolumeNode)
+slicer.modules.segmentations.logic().ImportModelToSegmentationNode(inputModel, seg)
+seg.CreateBinaryLabelmapRepresentation()
+outputLabelmapVolumeNode = slicer.mrmlScene.AddNewNodeByClass("vtkMRMLLabelMapVolumeNode")
+slicer.modules.segmentations.logic().ExportVisibleSegmentsToLabelmapNode(seg, outputLabelmapVolumeNode, referenceVolumeNode)
+outputLabelmapVolumeArray = (slicer.util.arrayFromVolume(outputLabelmapVolumeNode) * outputVolumeLabelValue).astype("int8")
+
+# Write labelmap volume to series of TIFF files
+pip_install("imageio")
+
+import imageio
+# for i in range(len(outputLabelmapVolumeArray)):
+#   imageio.imwrite(f"{outputDir}/image_{i:03}.jpg", outputLabelmapVolumeArray[i])
+for i in range(80,140, 10):
+  imageio.imwrite(f"{outputDir}/image_{i:03}.jpg", 255 - outputLabelmapVolumeArray[i]) # Inverting Colors
 ```
 
 

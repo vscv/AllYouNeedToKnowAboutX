@@ -105,7 +105,7 @@ if __name__ == '__main__':
 show model
 ![VTK_read_show_STL_s](https://user-images.githubusercontent.com/18000764/216752118-45e60be1-c9f8-4d0f-9a0d-a0de0ff2edd0.jpg)
 
-
+PS.這也是為何有好多基於VTK重新開發的工具出現，原本的VTK語法太冗長了。😰
 
  
  

@@ -5,7 +5,39 @@
 * * *
 ## 對於 3D 打印，我們將數字對象切成圖像堆棧，以便使用 3D 打印機逐層堆疊它們。切片完成後，如何標記內部/外部以設置實體部分？ 
  
+#### 讀取與檢查3D模型
 
+1. 以pyVista為例
+
+```Python
+import pyvista as pv
+
+mesh = pv.read('./haus.stl') 
+print("bounds=", mesh.bounds) 
+
+# show model
+#mesh.plot()
+
+# set slice, n = how many slice
+slices = mesh.slice_along_axis(n=20, axis='z', progress_bar=True) 
+
+# show slice
+#slices.plot(line_width=5)
+
+# get slice points
+#slice_points = slices[4].points 
+
+# show single slice with camera setting
+#slices[15].plot(cpos=[0, 1, 1], line_width=5, parallel_projection=True,)
+
+```
+
+3. 以VTK為例
+
+
+
+ 
+ 
  
 #### 交換切片影像的BW
 有時別人的切片是黑白相反時，可以簡單交換回來。

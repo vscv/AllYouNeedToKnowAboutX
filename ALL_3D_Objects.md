@@ -7,7 +7,7 @@
  
 #### 讀取與檢查3D模型
 
-1. 以pyVista為例
+1. 以pyVista為例: 讀取STL、顯示模型、取得切片。
 
 ```Python
 import pyvista as pv
@@ -29,6 +29,16 @@ slices = mesh.slice_along_axis(n=20, axis='z', progress_bar=True)
 
 # show single slice with camera setting
 #slices[15].plot(cpos=[0, 1, 1], line_width=5, parallel_projection=True,)
+
+# take 10 slice images
+for i in range(10):
+    p = pv.Plotter(off_screen=True)
+    p.add_mesh(slices[i])
+    p.camera_position = 'zy'
+    p.enable_parallel_projection()
+    #p.show()
+    im_name = "im_slice_" + str(i) + ".jpg"
+    p.screenshot(im_name)
 
 ```
 

@@ -78,6 +78,14 @@ p.show(cpos='xy')
 ```
 
 
+Show Voxel
+![try-1_pyvista__voxelize_+mesh_s](https://user-images.githubusercontent.com/18000764/216754089-66ad538d-0c78-42b7-87b1-68ab3b3468f6.jpg)
+
+
+Show slice of voxel
+
+
+
 
 2. 以VTK為例
 

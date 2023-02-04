@@ -83,6 +83,7 @@ Show Voxel
 
 
 Show slice of voxel
+![try-1_pyvista__voxelize_slice_dense500_s_crop](https://user-images.githubusercontent.com/18000764/216756669-fd48624c-7e61-48a4-a857-fc57938f2225.jpg)
 
 
 

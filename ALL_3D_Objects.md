@@ -220,7 +220,8 @@ if __name__ == '__main__':
 * * *
  
 #### 交換切片影像的BW
-若拿到的原始切片是黑白相反時，可以簡單交換回來。
+若拿到的原始切片是黑白相反時，可以簡單交換回來。反之亦然。
+
 
 ![Figure_inv_color_image_s](https://user-images.githubusercontent.com/18000764/216742696-05ded5d7-d336-45c4-a95b-31916acdee29.jpg)
 

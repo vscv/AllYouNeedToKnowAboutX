@@ -32,6 +32,16 @@ slices = mesh.slice_along_axis(n=20, axis='z', progress_bar=True)
 
 ```
 
+Show model
+![3D_mesh](https://user-images.githubusercontent.com/18000764/216743564-3012ed8a-a9d8-4efc-8243-9c0c5c49f614.jpg)
+
+
+
+Show slice
+![sample_object_haus_slices_s](https://user-images.githubusercontent.com/18000764/216743709-b813f911-c822-43f4-b12f-ffdc3875c6d9.jpg)
+
+
+
 3. 以VTK為例
 
 

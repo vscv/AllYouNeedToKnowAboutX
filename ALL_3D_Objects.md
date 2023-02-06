@@ -390,7 +390,7 @@ plt.show()
   
 1. ImageJ : [Descriptor-based registration (2d/3d)](https://imagej.net/plugins/descriptor-based-registration-2d-3d)  
 
-I uploaded two HowTos to YouTube that illustrate the basic usage of the plugin, which makes use of the algorithms implemented in BigStitcher.
+Two `HowTos` to YouTube that illustrate the basic usage of the plugin, which makes use of the algorithms implemented in BigStitcher.
 
 Video 1: [Using the Descriptor-based Registration and automate it through macro-recording](https://www.youtube.com/watch?v=SKW1xwhsxdo)
 
@@ -403,7 +403,7 @@ Video 2: [Calling the Descriptor-based Registration Fiji macro from the command 
 
 2. ImageJ : [BigWarp](https://imagej.net/plugins/bigwarp)
 
-BigWarp is a tool for manual, interactive, landmark-based deformable image alignment. It uses the BigDataViewer for visualization and navigation, and uses a Thin Plate Spline implemented in Java to build a deformation from point correspondences.
+`BigWarp` is a tool for manual, interactive, landmark-based deformable image alignment. It uses the BigDataViewer for visualization and navigation, and uses a Thin Plate Spline implemented in Java to build a deformation from point correspondences.
 
 The interface enables landmark pair placement and displays the effects of the warp on-the-fly.
 

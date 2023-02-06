@@ -394,12 +394,11 @@ I uploaded two HowTos to YouTube that illustrate the basic usage of the plugin, 
 
 Video 1: [Using the Descriptor-based Registration and automate it through macro-recording](https://www.youtube.com/watch?v=SKW1xwhsxdo)
 
-[![Final video of fixing issues in your code in VS Code]
-(https://img.youtube.com/vi/JLMbpiywVxQ/maxresdefault.jpg)]
-(https://www.youtube.com/watch?v=JLMbpiywVxQ)
-
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/SKW1xwhsxdo/maxresdefault.jpg)](https://www.youtube.com/watch?v=SKW1xwhsxdo))
 
 Video 2: [Calling the Descriptor-based Registration Fiji macro from the command line](https://www.youtube.com/watch?v=5qL0jR-hqNs)
+
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/5qL0jR-hqNs/maxresdefault.jpg)](https://www.youtube.com/watch?v=5qL0jR-hqNs)
 
 
 2. ImageJ : [BigWarp](https://imagej.net/plugins/bigwarp)

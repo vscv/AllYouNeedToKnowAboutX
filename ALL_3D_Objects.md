@@ -334,12 +334,15 @@ for i in range(80,140, 10):
 
 * * *
 4. 以vedo為例
+
 `1. mesh to cut_with_plane`
 
 `2. mesh.binarize to vol then vol.slicePlane or vol.tonumpy`
 
+
 * * *
 5. 以ImageJ為例
+
 `https://forum.image.sc/t/converting-stl-file-into-stack-of-images/1721/12`
 
 

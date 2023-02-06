@@ -332,6 +332,9 @@ for i in range(80,140, 10):
   imageio.imwrite(f"{outputDir}/image_{i:03}.jpg", 255 - outputLabelmapVolumeArray[i]) # Inverting Colors
 ```
 
+* * *
+3. 以vedo為例
+
 
 
 * * *

@@ -412,6 +412,6 @@ The interface enables landmark pair placement and displays the effects of the wa
 
 `3D volume registration for better match the overlap`
 
-
+* [How do I initialize/align images with very different orientations and no overlap?](https://www.slicer.org/wiki/Documentation/Nightly/FAQ/Registration)
 
 * * *

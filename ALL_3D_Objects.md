@@ -386,7 +386,7 @@ plt.show()
  
 * * *
 # 3D image stack registration
-### 由于實驗取得2D影像序列的時間、設置不同，使得不同組的2D影像序列不在相同的空間原點上，使得後續無法互相比對與分析。
+### 由于實驗取得2D影像序列的時間、設置不同，使得目標樣本在2D影像上的位置有些位移，使得後續無法互相比對與分析。
   
 1. ImageJ : [Descriptor-based registration (2d/3d)](https://imagej.net/plugins/descriptor-based-registration-2d-3d)  
 
@@ -406,5 +406,12 @@ Video 2: [Calling the Descriptor-based Registration Fiji macro from the command 
 `BigWarp` is a tool for manual, interactive, landmark-based deformable image alignment. It uses the BigDataViewer for visualization and navigation, and uses a Thin Plate Spline implemented in Java to build a deformation from point correspondences.
 
 The interface enables landmark pair placement and displays the effects of the warp on-the-fly.
+
+### 由于實驗取得2D影像序列的時間、設置不同，使得不同組的2D影像序列不在相同的空間位置上，使得後續無法互相比對與分析。
+#### 例如：原本是直角度拍攝，後續變動了角度造成斜切。
+
+`3D volume registration for better match the overlap`
+
+
 
 * * *

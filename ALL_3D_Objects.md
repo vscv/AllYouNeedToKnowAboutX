@@ -414,4 +414,6 @@ The interface enables landmark pair placement and displays the effects of the wa
 
 * [How do I initialize/align images with very different orientations and no overlap?](https://www.slicer.org/wiki/Documentation/Nightly/FAQ/Registration)
 
+* [Tutorial: Re-orientation of 3D volumes in 3DSlicer by Dr Jeremy Shaw
+](https://www.youtube.com/watch?v=GkPHEsB9rOI)
 * * *

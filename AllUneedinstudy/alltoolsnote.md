@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=wb-6vKk3MJg
 
 `youtube-dl --extract-audio --audio-format mp3  -a 彩虹小馬列表_url_only.txt`
 
-
+* * *
 
 # Voideo editor
 有用過下面幾種，常用OpenShot來做臨時的短片。

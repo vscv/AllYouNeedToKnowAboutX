@@ -6,14 +6,14 @@
 
 `-F` 查詢有什麼格式可以下載
 
-`-f` 下載指定的格式號碼
+`-f` 下載指定的格式
 
 `-a` 由檔案中的列表下載
 
 `--extract-audio --audio-format mp3` youtube沒有mp3格式，會自動轉檔一次(mac/linux預設用ffmpeg)
 
 
-例如：
+例如：僅下載mp3音訊
 
 彩虹小馬列表_url_only.txt  
 

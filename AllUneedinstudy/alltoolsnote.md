@@ -1,5 +1,32 @@
 收集一些輔助工具的筆記
 
+# Youtube 下載工具
+
+`youtube-dl https://www.youtube.com/watch?v=rkAfWfZkfyo`
+
+`-F` 查詢有什麼格式可以下載
+`-f` 下載指定的格式號碼
+`-a` 由檔案中的列表下載
+`--extract-audio --audio-format mp3` youtube沒有mp3格式，會自動轉檔一次(mac/linux預設用ffmpeg)
+
+
+例如：
+
+彩虹小馬列表_url_only.txt  
+
+```Python
+https://www.youtube.com/watch?v=mrjXQp3f4Uo
+https://www.youtube.com/watch?v=n8miGs6-zKo
+https://www.youtube.com/watch?v=wjsv-6wfqyg
+https://www.youtube.com/watch?v=wb-6vKk3MJg
+```
+
+下載
+
+`youtube-dl --extract-audio --audio-format mp3  -a 彩虹小馬列表_url_only.txt`
+
+
+
 # Voideo editor
 有用過下面幾種，常用OpenShot來做臨時的短片。
 

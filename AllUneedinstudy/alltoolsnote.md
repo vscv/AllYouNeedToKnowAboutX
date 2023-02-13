@@ -1,5 +1,29 @@
 收集一些輔助工具的筆記
 
+# Chrome remotedesttop 遠端桌面
+
+* host/client 僅需要安裝chrome瀏覽器以及google帳號。
+
+`host` 進入remotedesktop 直接輸入https://remotedesktop.google.com/
+
+登入host google帳號
+
+遠端存取-> 設定遠端存取功能 -> （下載plugin）-> 設定好名稱pin碼 -> OK
+
+
+`client` 使用host google帳號登入 chrome
+
+進入remotedesktop
+
+遠端存取-> 遠端裝置 （此帳號分享的裝置）-> 第一次連線要輸入pin碼
+
+操作設定：進入遠端桌面畫面後，右側有個箭頭，點開可以設定解析度等等，也可以中斷連線。直接關閉分頁也可以中斷連線。
+
+
+
+* * *
+
+
 # Youtube 下載工具
 
 `youtube-dl https://www.youtube.com/watch?v=rkAfWfZkfyo`

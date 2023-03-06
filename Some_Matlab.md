@@ -6,7 +6,7 @@
 
 #### Matlab的內建檔案比較功能
 
-* 在Current Folder中選擇要比較的檔案或目錄即可
+* 在Current Folder中選擇要比較的檔案或目錄，再按右鍵選擇"Compare Selected Files/Folders"
 
 ![image](https://user-images.githubusercontent.com/18000764/223026565-abb6ea48-6a02-4290-8228-b21c0391decb.png)
 

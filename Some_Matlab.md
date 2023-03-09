@@ -34,7 +34,7 @@ Ref:https://zhuanlan.zhihu.com/p/600265985/, https://www.mathworks.com/matlabcen
     % 例如，根據ASCII碼的順序，字符串1到20的順序是：1，10，11，12，13，14，15，16，17，18，19，2，20，3，4，5，6，7，8，9
     % 所以在進行字符串排序的時候，需要把字符串中的數字轉換為數字類型，然後進行排序，得到的才是正確的順序。
     % 這一操作在MATLAB中，已有現成的輪子，natsort函數：請自行下載https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort
-    % 改用natsortfiles 直接在 dir檔名列表時即做好排序。或是natsort對列表進行排序。
+    % 改用natsortfiles 直接在 dir檔名列表時即做好排序。
 
 
 ```Matlab

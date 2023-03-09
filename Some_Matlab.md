@@ -21,7 +21,17 @@
 * * *
 #### Legend 圖說位置
 
-`legend(no_posfix_sum_of_legend, 'Location','best')` 通常只要選`best`就會自動避掉繪圖區。
+`legend(no_posfix_sum_of_legend, 'Location','best')` 通常只要選`best`就會自動避掉繪圖區。最糟就畫在圖框之外，但不建議，可以用縮放大小、微調lcn位置或把lcn背景反白等手法，減少覆蓋的繪圖資訊。
 
 ![image](https://user-images.githubusercontent.com/18000764/223908119-4f40b762-f691-4825-9dae-cea1d893d1f4.png)
 
+***
+#### Matlab的字串排序
+Ref:https://zhuanlan.zhihu.com/p/600265985/
+
+    % bubble_list is a 1×2 cell array  and sort is not work for cell array!! %
+    % 由於字符串是ASCII編碼的，字符串中的數字對應的是ASCII碼中的順序。如果在MATLAB中如果直接利用sort函數，對超過10的字符串進行排序，得到的結果並非是自然排序：%
+    % 例如，根據ASCII碼的順序，字符串1到20的順序是：1，10，11，12，13，14，15，16，17，18，19，2，20，3，4，5，6，7，8，9
+    % 所以在進行字符串排序的時候，需要把字符串中的數字轉換為數字類型，然後進行排序，得到的才是正確的順序。
+    % 這一操作在MATLAB中，已有現成的輪子，natsort函數：請自行下載https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort
+    % 改用natsortfiles 直接在 dir檔名列表時即做好排序。

@@ -109,3 +109,6 @@ exportgraphics(f,'0306_Spectrum_plot.png')
 `no_posfix_sum_of_legend = strrep(sum_of_legend, '.mat', '')`
 replace all '.mat' in list by "".
 
+
+#### 各種參數清理
+`clear;clc ; clear all; close all;`

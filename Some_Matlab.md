@@ -14,3 +14,14 @@
 * 比較視窗，相異處會幫你高亮顯示。
 
 ![image](https://user-images.githubusercontent.com/18000764/223026837-46f5932d-2f73-4bc7-b82f-b7be1b1ef283.png)
+
+
+
+
+* * *
+#### Legend 圖說位置
+
+`legend(no_posfix_sum_of_legend, 'Location','best')` 通常只要選`best`就會自動避掉繪圖區。
+
+![image](https://user-images.githubusercontent.com/18000764/223908119-4f40b762-f691-4825-9dae-cea1d893d1f4.png)
+

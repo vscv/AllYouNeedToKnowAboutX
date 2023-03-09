@@ -27,7 +27,7 @@
 
 ***
 #### Matlab的字串排序
-Ref:https://zhuanlan.zhihu.com/p/600265985/
+Ref:https://zhuanlan.zhihu.com/p/600265985/, https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort
 
     % bubble_list is a 1×2 cell array  and sort is not work for cell array!! %
     % 由於字符串是ASCII編碼的，字符串中的數字對應的是ASCII碼中的順序。如果在MATLAB中如果直接利用sort函數，對超過10的字符串進行排序，得到的結果並非是自然排序：%
@@ -35,3 +35,17 @@ Ref:https://zhuanlan.zhihu.com/p/600265985/
     % 所以在進行字符串排序的時候，需要把字符串中的數字轉換為數字類型，然後進行排序，得到的才是正確的順序。
     % 這一操作在MATLAB中，已有現成的輪子，natsort函數：請自行下載https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort
     % 改用natsortfiles 直接在 dir檔名列表時即做好排序。
+
+
+```Matlab
+%% Parse water/bubble files
+water_dir = dir('*water.mat')
+water_dir = natsortfiles(water_dir);
+water_list = {water_dir.name}
+% water_list(1)
+numel(water_list)
+for i = 1:numel(water_list)
+    disp(water_list(i));
+end
+
+```

@@ -103,3 +103,9 @@ ylabel(['dB']);
 f = gcf;
 exportgraphics(f,'0306_Spectrum_plot.png')
 ```
+
+#### 去除檔名列表中的特定字符
+
+`no_posfix_sum_of_legend = strrep(sum_of_legend, '.mat', '')`
+replace all '.mat' in list by "".
+

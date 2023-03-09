@@ -52,3 +52,54 @@ end
 ![image](https://user-images.githubusercontent.com/18000764/223909114-8405aea7-f9bc-4b89-9f41-9094bf96c2bb.png)
  ➩
 ![image](https://user-images.githubusercontent.com/18000764/223909049-7b82f502-6205-4602-b6f6-2e3517b8e5d9.png)
+
+
+
+#### 繪圖存檔
+
+```Matlab
+%% ADD figure obj
+figure('Name','Spectrum Data');
+
+for i = 1:numel(bubble_list)
+    disp(bubble_list(i));
+    load(bubble_list{i})
+
+    R2=reshape(data,[recordLength fastFrameCount]);
+    fs=1/sampleInterval;
+    faxis2 = [0:recordLength-1]/(recordLength-1)*fs/1E6;
+    for ii=1:fastFrameCount
+        ft2=abs(fft(R2(:,ii)));
+        spectrum_before2=20*log10((ft2));
+        spectrum2(:,ii)=spectrum_before2-noise_level;
+    end
+
+    s2=mean(spectrum2, 2)-0.5;
+    
+    plot(faxis2(:),s2(:,1),'linewidth',3);
+    hold on;
+end
+
+%% Figure out
+Xi = [0]  ; 
+Xe = [60]; 
+Yi = [-inf]; 
+Ye = [inf]; 
+
+sum_of_legend= [water_list, bubble_list]
+no_posfix_sum_of_legend = strrep(sum_of_legend, '.mat', '')
+no_posfix_sum_of_legend
+
+legend(no_posfix_sum_of_legend, 'Location','best')
+
+axis([Xi Xe Yi Ye]);
+set(gca,'linewidth',2);
+set(gca,'fontsize',15,'fontweight','bold');
+title('Spectrum','fontsize',20);
+xlabel(['Frequency(MHz)']);
+ylabel(['dB']);
+
+%% Export the Spectrum_plot to png
+f = gcf;
+exportgraphics(f,'0306_Spectrum_plot.png')
+```

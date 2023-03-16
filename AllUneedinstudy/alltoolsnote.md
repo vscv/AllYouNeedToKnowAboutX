@@ -159,6 +159,7 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 
 Pandoc is the swiss-army knife of converting documents between various formats. While being able to deal with heavy-weight formats like docx and epub, we will need it for the more lightweight markdown. To be able to generate PDF files, we need LaTeX. On OSX, the solution of choice is usually MacTeX.
 
+### 把markdown (md)轉成pdf
 `注意 若有中文字、符、空格 報錯 ex: ! LaTeX Error: Unicode character 關 (U+95DC) not set up for use with LaTeX.` 請去研究latex中文支援問題。不然轉兩次，先轉成docx再用word輸出pdf。
 
     $ brew update

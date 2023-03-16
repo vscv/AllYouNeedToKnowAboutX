@@ -77,7 +77,7 @@ Shotcut 加入線條、箭頭、任何其他圖案，可用去背的PNG圖檔加
 轉語音檔的方法有兩種，先講麻煩一點、但可以做細部設定的。
 1.
 首先要做點準備動作。打開「系統偏好設定」，找到「輔助使用」。
-￼
+![Pasted Graphic 1](https://user-images.githubusercontent.com/18000764/225552403-795080c5-d56c-4e0e-ad44-f9eb9cba8194.jpg)
 然後在「輔助使用」中找到「語音內容」：
 
 如果是要轉換中文文章，「系統聲音」選單中只有三種語音可以選：「Mei-Jia」（台灣）、「Ting-Ting」（中國）、「Sin-ji」（香港，廣東話）。
@@ -86,15 +86,14 @@ Shotcut 加入線條、箭頭、任何其他圖案，可用去背的PNG圖檔加
 最下面的「按下按鍵時朗讀所選的文字」如果打勾，就可以在閱讀文章時選取段落、再按下指定的按鍵組合（預設是Option+Esc，可以改），即時收聽閱讀語音。
 
 2. 開啟Safari 這邊用google翻譯當作文字介面。
-￼
+![Pasted Graphic 2](https://user-images.githubusercontent.com/18000764/225552442-8124a0bd-55fa-4af6-ab34-4690c22a7064.jpg)
 設定好之後，如果想將文字段落存成聲音檔，則可以在選取文字段落之後，在應用軟體的「服務」選單中，選「加入iTunes做為語音軌」。
-￼
+![Pasted Graphic 3](https://user-images.githubusercontent.com/18000764/225552472-facabe06-f68a-4e04-997b-1f67198eaa32.jpg)
 在出現的對話框中，先確認系統聲音是講中文的（如果是中文文章），然後指定存檔位置；按「繼續」，就會自動轉檔了。
 Mac系統轉存出來的是「m4a」（MP4聲音檔）的格式，大多數平台和播放器應該都收。至於細部的停頓、語調等部分就別太要求了；如果想要剪接的話，可以用Mac上內建的QuickTime或其他工具。
 
 剛轉出的語音
-￼
-
+![Pasted Graphic](https://user-images.githubusercontent.com/18000764/225552492-8334678f-f7e2-4e9e-9a78-cbb08f671374.jpg)
 
 把講稿打在PPT下面的筆記中，在用語音轉換每頁的講稿。
 製作視訊簡報時 再把語音檔案放上去即可！

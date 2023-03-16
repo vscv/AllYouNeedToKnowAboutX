@@ -152,3 +152,10 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
     自動網頁點按與隨機換頁導航
 
 * [python]依靠pynput和pyautogui替换ahk https://zhuanlan.zhihu.com/p/133096887
+
+
+
+# `pandoc` .
+
+Pandoc is the swiss-army knife of converting documents between various formats. While being able to deal with heavy-weight formats like docx and epub, we will need it for the more lightweight markdown. To be able to generate PDF files, we need LaTeX. On OSX, the solution of choice is usually MacTeX.
+

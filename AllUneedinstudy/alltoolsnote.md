@@ -167,4 +167,4 @@ Pandoc is the swiss-army knife of converting documents between various formats. 
     
 
 # `Overleaf` 寫paper的好幫手，研究生必備！
-TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺點是必須聯網使用。一開始也是為了在mac裝Letex、中文支援、Bibtex等花了很多時間，編譯次數太頻繁對筆電來說太耗電。而且MacTeX檔案之大加上其他套件都會狠狠吃掉你珍貴的SSD，好處是可以獨立運行，也可以稍微保密的你研究工作。
+TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺點是必須聯網使用。一開始也是為了在mac裝LaTex、中文支援、Bibtex等花了很多時間，編譯次數太頻繁對筆電來說太耗電。而且MacTeX檔案之大加上其他套件都會狠狠吃掉你珍貴的SSD，好處是可以獨立運行，也可以稍微保密的你研究工作。

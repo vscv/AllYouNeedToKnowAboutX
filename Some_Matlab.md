@@ -115,8 +115,24 @@ replace all '.mat' in list by "".
 
 
 * * *
-# 你確定用Matlab跑出來的計算是對的？真的？你確定？
+### 排列figure視窗
+https://www.mathworks.com/matlabcentral/fileexchange/55468-align-figures-without-overlap
 
-![image](https://user-images.githubusercontent.com/18000764/225796788-caeefc5d-48f7-4227-b7d6-31d7c1d4cef0.png)
+![image](https://user-images.githubusercontent.com/18000764/225803703-cf85aa0d-9666-4069-8530-73b1fe5d1c53.png)
+
+
+```Matalb
+if if_set_figs_vertical_true 
+    figs = [fig_1, fig_2, fig_3, fig_4]
+    nfig = length(figs);
+    for K = 1 : nfig
+      old_pos = get(figs(K), 'Position')
+      set(figs(K), 'Position', [(K-1)*old_pos(3) old_pos(2) old_pos(3) old_pos(4)]);
+    end
+end
+```
+
+
+
 
 ***

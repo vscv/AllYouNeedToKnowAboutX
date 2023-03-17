@@ -112,3 +112,10 @@ replace all '.mat' in list by "".
 
 #### 各種參數清理
 `clear;clc ; clear all; close all;`
+
+
+* * *
+# 你確定Matlab跑出來的數據是對的？真的？你確定？
+
+
+***

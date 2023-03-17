@@ -117,5 +117,6 @@ replace all '.mat' in list by "".
 * * *
 # 你確定Matlab跑出來的數據是對的？真的？你確定？
 
+![image](https://user-images.githubusercontent.com/18000764/225796788-caeefc5d-48f7-4227-b7d6-31d7c1d4cef0.png)
 
 ***

@@ -121,7 +121,7 @@ https://www.mathworks.com/matlabcentral/fileexchange/55468-align-figures-without
 ![image](https://user-images.githubusercontent.com/18000764/225803703-cf85aa0d-9666-4069-8530-73b1fe5d1c53.png)
 
 
-```Matalb
+```Matlab
 if if_set_figs_vertical_true 
     figs = [fig_1, fig_2, fig_3, fig_4]
     nfig = length(figs);

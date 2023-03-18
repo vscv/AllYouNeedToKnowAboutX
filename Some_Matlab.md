@@ -120,8 +120,15 @@ https://www.mathworks.com/matlabcentral/fileexchange/55468-align-figures-without
 
 ![image](https://user-images.githubusercontent.com/18000764/225803703-cf85aa0d-9666-4069-8530-73b1fe5d1c53.png)
 
+```Matlab
+% Position — Location and size of drawable area : [left bottom width height]
+% OuterPosition — Location and size of drawable area : [left bottom width height] 注意 這是對整個外框
+```
 
 ```Matlab
+%
+% Reset the figure window location. Horizontal
+%
 if if_set_figs_vertical_true 
     figs = [fig_1, fig_2, fig_3, fig_4]
     nfig = length(figs);
@@ -132,7 +139,34 @@ if if_set_figs_vertical_true
 end
 ```
 
+![image](https://user-images.githubusercontent.com/18000764/226075598-b6d2b33f-fbdb-4909-a19e-66b84181e28f.png)
 
+```Matlab
+%
+% Reset the figure window location. Grid
+%
 
+% fake figs
+fig_1 = figure();fig_2 = figure();fig_3 = figure();fig_4 = figure();
+
+if if_set_figs_vertical_true 
+    figs = [fig_1, fig_2, fig_3, fig_4]
+    nfig = length(figs);
+    
+    % grid-line 1
+    for K = 1 : 2                              % OuterPosition 注意 這是對整個外框
+      old_pos = get(figs(K), 'OuterPosition')  % 這裡抓的是預設位置 中央上方，故old_pos(2)就沿用為頂排button
+      set(figs(K), 'OuterPosition', [(K-1)*old_pos(3) old_pos(2) old_pos(3) old_pos(4)]);
+      get(figs(K), 'OuterPosition')
+    end
+    % grid-line 2
+    for K = 3 : 4
+      old_pos = get(figs(K), 'OuterPosition') %第二排位置應該是 old_pos(2) - old_pos(4) 才對，即第一排底往下減一個height高度
+      set(figs(K), 'OuterPosition', [(K-3)*old_pos(3) (old_pos(2) - old_pos(4)) old_pos(3) old_pos(4)]);
+      get(figs(K), 'OuterPosition')
+    end
+
+end
+```
 
 ***

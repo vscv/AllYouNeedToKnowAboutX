@@ -223,7 +223,17 @@ cv.convert(docx_file)      # all pages by default
 cv.close()
 ```
 * 若是AttributeError: partially initialized module 'cv2' has no attribute '_registerMatType' (most likely due to a circular import) 是因為cv2版本過舊，請更新opencv-contrib-python，並把opencv-python移除，或保留其中一個即可。
+***
+### 實驗影像轉成動畫
+Use `Imagemagick convert` to convert the still images to GIF is the best choice!
 
+```Shell
+convert -resize 65% -delay 30 -loop 3 `ls -v ./zhuyin_encoder_48-128_ckpt_cleanGT/*.jpg` ZhuYin_64-128_ckpt_cleanGT_evl_results_convert_2k_0.65_epoch.gif 
 
+convert -resize 100% -delay 30 -loop 3 `ls -v ./zhuyin_encoder_48-128_ckpt_cleanGT/*.jpg` ZhuYin_64-128_ckpt_cleanGT_evl_results_convert_2k_1.00_epoch_22.gif 
+
+```
+
+***
 # `Overleaf` 寫paper的好幫手，研究生必備！
 TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺點是必須聯網使用。一開始也是為了在mac裝LaTex、中文支援、Bibtex等花了很多時間，編譯次數太頻繁對筆電來說太耗電。而且MacTeX檔案之大加上其他套件都會狠狠吃掉你珍貴的SSD，好處是可以獨立運行，也可以稍微保密的你研究工作。

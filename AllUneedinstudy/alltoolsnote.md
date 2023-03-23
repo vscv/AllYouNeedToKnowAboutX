@@ -204,5 +204,26 @@ Pandoc is the swiss-army knife of converting documents between various formats. 
 ![image](https://user-images.githubusercontent.com/18000764/225554176-80750d62-2bb6-4d56-875f-c6347999b1df.png)
 
 
+
+### pdf2docx
+pdf是一種layout描述不是格式，需要解析後轉換，例如轉成html txt等，再用`pandoc`轉成docx。
+`pdf2docx`就是利用解析pdf內的文字、圖片（by PyMuPDF），也可以當作內容的擷取工具，讀取出內容物後再幫你轉成docx格式（by python-docx）。
+https://github.com/dothinking/pdf2docx
+
+
+```Python
+from pdf2docx import Converter
+
+pdf_file = '/path/to/sample.pdf'
+docx_file = 'path/to/sample.docx'
+
+# convert pdf to docx
+cv = Converter(pdf_file)
+cv.convert(docx_file)      # all pages by default
+cv.close()
+```
+* 若是AttributeError: partially initialized module 'cv2' has no attribute '_registerMatType' (most likely due to a circular import) 是因為cv2版本過舊，請更新opencv-contrib-python，並把opencv-python移除，或保留其中一個即可。
+
+
 # `Overleaf` 寫paper的好幫手，研究生必備！
 TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺點是必須聯網使用。一開始也是為了在mac裝LaTex、中文支援、Bibtex等花了很多時間，編譯次數太頻繁對筆電來說太耗電。而且MacTeX檔案之大加上其他套件都會狠狠吃掉你珍貴的SSD，好處是可以獨立運行，也可以稍微保密的你研究工作。

@@ -205,7 +205,7 @@ __double underscores__
   <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
    
  *  設定對齊中央 width=40% height=40% 
- *  `<img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">`
+ *  `<p align="center"> <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg"> </p>`
   <p align="center">
     <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">
   </p>
@@ -263,7 +263,22 @@ When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 
+## markdown 註解 comment
 
+```HTML
+<!-- markdown 註解 comment  單行-->
+
+<!-- markdown 註解 comment  多行
+markdown 註解 comment 
+markdown 註解 comment 
+-->
+```
+<!-- markdown 註解 comment  單行-->
+
+<!-- markdown 註解 comment  多行
+markdown 註解 comment 
+markdown 註解 comment 
+-->
 
 ## Emoji
 >https://tw.piliapp.com/emoji/list/ 複製貼上

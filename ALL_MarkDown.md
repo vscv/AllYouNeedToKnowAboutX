@@ -195,6 +195,7 @@ __double underscores__
 ![Alt text](flow_sample_001.jpg "Optional title")
 
 * github md 預設的[]()不能設定尺寸與對齊，僅能用html設定影像尺寸與對齊位置
+* `![img](/temp_imgs/ms-coco-switch-anns.jpg) `
 ![img](/temp_imgs/ms-coco-switch-anns.jpg) 不能設定尺寸與對齊
  
   

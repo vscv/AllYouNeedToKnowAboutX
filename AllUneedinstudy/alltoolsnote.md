@@ -183,8 +183,8 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 
 ***
 ## Streamlit example
-<!-- ![image](https://user-images.githubusercontent.com/18000764/227431454-f52d8ed5-236f-43cc-b8de-0ede88236907.png) -->
-<img src="https://user-images.githubusercontent.com/18000764/227431454-f52d8ed5-236f-43cc-b8de-0ede88236907.png" width="600" class="center">
+<!-- ![image](https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png) -->
+<img src="https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png" width="600" class="center">
 
 
 ### 自動播放音效gTTs

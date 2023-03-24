@@ -170,6 +170,82 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 * Streamlit跟Gradio相同，主打AI模型的展示與線上互動demo，因此高階介面都能夠直接呼叫，但同樣自由度與美觀度就有限制。
 * Gradio，與Streamlit都簡單好用但更高階，尤其今年加入Blocks功能使得佈局彈性以及input/oupt多層次串接都比較好寫了。缺點是預設的外觀很普通，如要漂亮的外觀似乎可以經過theme/CSS方式修改。
 
+***
+## Streamlit 自動播放音效gTTs
+
+自動播放沒有作用，請打開網頁瀏覽器的允許播放音效設定。把該APP網址加入允許列表。
+![image](https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png)
+
+
+```Python3
+import streamlit as st
+from rembg import remove
+from PIL import Image
+from io import BytesIO
+import base64
+
+def autoplay_audio(file_path: str):
+    with open(file_path, "rb") as f:
+        data = f.read()
+        b64 = base64.b64encode(data).decode()
+        md = f"""
+         <audio controls autoplay="true">
+         <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+         </audio>
+         """
+        st.markdown(
+         md,
+         unsafe_allow_html=True,
+     )
+     
+# # gTTS ##
+from gtts import gTTS
+sound_file = BytesIO()
+tts = gTTS('森山小姐，我相信你。Add text-to-speech to your app', lang='zh-TW')
+tts.write_to_fp(sound_file)
+tts.save("speech.mp3")
+# # gTTS ##
+
+# # Stresmlit web app ##
+st.set_page_config(layout="wide", page_title="gTTs")
+st.write("## gTTs from your image")
+st.sidebar.write("## Upload and download :gear:")
+
+# Download the fixed image
+def convert_image(img):
+    buf = BytesIO()
+    img.save(buf, format="PNG")
+    byte_im = buf.getvalue()
+    return byte_im
+
+
+def fix_image(upload):
+    image = Image.open(upload)
+    col1.write("Original Image :camera:")
+    col1.image(image)
+
+    fixed = remove(image)
+    col2.write("Fixed Image :wrench:")
+    col2.image(fixed)
+    st.sidebar.markdown("\n")
+    st.sidebar.download_button("Download fixed image", convert_image(fixed), "fixed.png", "image/png")
+    
+col1, col2 = st.columns(2)
+my_upload = st.sidebar.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
+
+# # gTTS ##
+# tell someingin here #
+st.write("# Auto-playing Audio!")
+autoplay_audio("speech.mp3")
+#st.audio(sound_file)
+
+if my_upload is not None:
+    fix_image(upload=my_upload)
+else:
+    fix_image("./40469519171_fa183b8d38_z.jpg")
+```
+
+***
 
 
 # 自動滑鼠、鍵盤與視窗、螢幕控制

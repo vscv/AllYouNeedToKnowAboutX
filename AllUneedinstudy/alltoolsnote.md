@@ -171,8 +171,17 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 * Gradio，與Streamlit都簡單好用但更高階，尤其今年加入Blocks功能使得佈局彈性以及input/oupt多層次串接都比較好寫了。缺點是預設的外觀很普通，如要漂亮的外觀似乎可以經過theme/CSS方式修改。
 
 ***
-## Streamlit 自動播放音效gTTs
 
+## Gradio example
+![image](https://user-images.githubusercontent.com/18000764/227428694-dfb910fe-46f3-4a0b-8430-25b6dd9515eb.png)
+`範例`
+
+***
+## Streamlit example
+![image](https://user-images.githubusercontent.com/18000764/227431454-f52d8ed5-236f-43cc-b8de-0ede88236907.png)
+
+
+### 自動播放音效gTTs
 自動播放沒有作用，請打開網頁瀏覽器的允許播放音效設定。把該APP網址加入允許列表。
 ![image](https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png)
 

@@ -191,7 +191,7 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 自動播放沒有作用，請打開網頁瀏覽器的允許播放音效設定。把該APP網址加入允許列表。
 <!-- ![image](https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png) -->
 <img src="https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png" width="600" class="center">
-
+<!--  
 ```Python3
 import streamlit as st
 from rembg import remove
@@ -259,6 +259,7 @@ if my_upload is not None:
 else:
     fix_image("./40469519171_fa183b8d38_z.jpg")
 ```
+-->
 
 ```Bash
 $streamlit run bg_remove_tell-gTTS.py --server.address 0.0.0.0 --server.port 5000

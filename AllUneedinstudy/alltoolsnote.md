@@ -245,6 +245,15 @@ else:
     fix_image("./40469519171_fa183b8d38_z.jpg")
 ```
 
+```Bash
+$streamlit run bg_remove_tell-gTTS.py --server.address 0.0.0.0 --server.port 5000
+```
+
+For client users, public IP:Port. 
+http://203.145.211.221:521011/
+
+![image](https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png)
+
 ***
 
 
@@ -309,16 +318,6 @@ convert -resize 65% -delay 30 -loop 3 `ls -v ./zhuyin_encoder_48-128_ckpt_cleanG
 convert -resize 100% -delay 30 -loop 3 `ls -v ./zhuyin_encoder_48-128_ckpt_cleanGT/*.jpg` ZhuYin_64-128_ckpt_cleanGT_evl_results_convert_2k_1.00_epoch_22.gif 
 
 ```
-
-
-```Bash
-$streamlit run bg_remove_tell-gTTS.py --server.address 0.0.0.0 --server.port 5000```
-
-For client users, public IP:Port. 
-http://203.145.211.221:521011/
-
-![image](https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png)
-
 
 ***
 # `Overleaf` 寫paper的好幫手，研究生必備！

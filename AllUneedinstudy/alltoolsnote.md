@@ -268,7 +268,7 @@ For client users, public IP:Port.  And we need to set host IP to any.
 http://203.145.211.221:55416/
 
 <!-- ![image](https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png) -->
-<img src="https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png" width="00" class="center">
+<img src="https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png" width="300" class="center">
 ***
 
 
@@ -301,8 +301,8 @@ Pandoc is the swiss-army knife of converting documents between various formats. 
     
 ### 把文件轉成EPUB(電子書)
 除了pandoc，max內建工具可以轉。
-![image](https://user-images.githubusercontent.com/18000764/225554176-80750d62-2bb6-4d56-875f-c6347999b1df.png)
-
+<!-- ![image](https://user-images.githubusercontent.com/18000764/225554176-80750d62-2bb6-4d56-875f-c6347999b1df.png) -->
+<img src="https://user-images.githubusercontent.com/18000764/225554176-80750d62-2bb6-4d56-875f-c6347999b1df.png" width="600" class="center">
 
 
 ### pdf2docx

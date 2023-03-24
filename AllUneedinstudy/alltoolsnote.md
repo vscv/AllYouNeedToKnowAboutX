@@ -249,7 +249,7 @@ else:
 $streamlit run bg_remove_tell-gTTS.py --server.address 0.0.0.0 --server.port 5000
 ```
 
-For client users, public IP:Port. 
+For client users, public IP:Port.  And we need to set host IP to any.
 http://203.145.211.221:55416/
 
 ![image](https://user-images.githubusercontent.com/18000764/227427917-4f4e8673-c6ee-4d64-8d9c-b1dc56271a61.png)

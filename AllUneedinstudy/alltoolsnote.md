@@ -188,8 +188,8 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 <img src="https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png" width="600" class="center">
 
 
-### 自動播放音效gTTs
-自動播放沒有作用，請打開網頁瀏覽器的允許播放音效設定。把該APP網址加入允許列表。
+### 自動播放gTTS合成語音
+若自動播放沒有作用，請打開網頁瀏覽器的允許播放音效設定。把該APP網址加入允許列表。
 <!-- ![image](https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png) -->
 <img src="https://user-images.githubusercontent.com/18000764/227427014-c3775e0a-fc5f-46da-a02a-04d153baf8b8.png" width="600" class="center">
 <!--  

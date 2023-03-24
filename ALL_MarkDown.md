@@ -199,9 +199,11 @@ __double underscores__
  
   
  * 設定影像大小 width="500" height="150"
+ * `<img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">`
   <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
    
  *  設定對齊中央 width=40% height=40% 
+ *  `<img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">`
   <p align="center">
     <img width=40% height=40% src="/temp_imgs/ms-coco-switch-anns.jpg">
   </p>

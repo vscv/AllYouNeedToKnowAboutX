@@ -200,7 +200,7 @@ __double underscores__
 ![img](/temp_imgs/ms-coco-switch-anns.jpg) 不能設定尺寸與對齊
  
   
- * 設定影像大小 width="500" height="150"
+ * 設定影像大小 width="500" height="150" ，此處center無作用。
  * `<img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">`
   <img src="/temp_imgs/ms-coco-switch-anns.jpg" width="500" height="150" class="center">
    

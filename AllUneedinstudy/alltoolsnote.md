@@ -183,7 +183,7 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 
 ***
 ## Streamlit example
-`範例`
+`範例` ppocr+gTTS
 <!-- ![image](https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png) -->
 <img src="https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png" width="600" class="center">
 

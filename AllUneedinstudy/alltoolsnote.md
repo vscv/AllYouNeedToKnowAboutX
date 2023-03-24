@@ -176,6 +176,8 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 ![image](https://user-images.githubusercontent.com/18000764/227428694-dfb910fe-46f3-4a0b-8430-25b6dd9515eb.png)
 `範例`
 
+<img src="[/temp_imgs/ms-coco-switch-anns.jpg](https://user-images.githubusercontent.com/18000764/227428694-dfb910fe-46f3-4a0b-8430-25b6dd9515eb.png)" width="500" height="150" class="center">
+
 ***
 ## Streamlit example
 ![image](https://user-images.githubusercontent.com/18000764/227431454-f52d8ed5-236f-43cc-b8de-0ede88236907.png)

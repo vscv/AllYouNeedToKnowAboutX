@@ -178,7 +178,7 @@ note: 因是將已經繪出在螢幕的視窗重新調整位置，所以會看�
 ***
 
 # Matlab array, cell不能互轉
-`建議把所有陣列、列表都用cell表示，cell也是matalb預設的陣列格式。`
+`建議實作一開始時就把所有陣列、列表都用cell表示，免得後面程式債越積越多，cell也是matalb預設的陣列格式。`
 
 ```Matlab
 icd_arr = [];

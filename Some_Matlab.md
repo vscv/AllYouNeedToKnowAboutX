@@ -176,3 +176,18 @@ note: 因是將已經繪出在螢幕的視窗重新調整位置，所以會看�
 
 
 ***
+
+# Matlab array, cell不能互轉
+
+```Matlab
+icd_arr = [];
+no_posfix_sum_of_legend = {};
+icd_arr(end+1,:) = no_posfix_sum_of_legend; % cannot assign a cell array to a numeric array.
+
+icd_arr = {};
+no_posfix_sum_of_legend = {};
+ICD_dose = [];
+icd_arr(end+1,:) = ICD_dose; % Conversion to cell from double is not possible.
+```
+
+***

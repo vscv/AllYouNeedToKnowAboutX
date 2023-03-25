@@ -187,6 +187,8 @@ Gradio, Streamlit, Dash(Plotly), Flask, Visdom
 <!-- ![image](https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png) -->
 <img src="https://user-images.githubusercontent.com/18000764/227437874-409098b3-9f60-444f-87db-5365c4991187.png" width="600" class="center">
 
+`範例` Image Captioning + 雅婷TTS
+
 `基於中文圖像描述系統開發時之先導性展示平台，用以測試現有系統性能以及未來改善之用，需將生成的中文描述句子直接朗讀出來，以供視障閱讀者聽取圖片內容。`
 
 ### 自動播放gTTS合成語音

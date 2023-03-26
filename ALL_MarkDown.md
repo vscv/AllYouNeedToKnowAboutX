@@ -215,6 +215,15 @@ __double underscores__
 ## 文字色彩
 >這在jupyter notebook可行，但在github仍不支援色彩文字。
 
+```Html
+<span style="color:blue"> *Blue Italic.* </span>
+
+<font color='red'> Red HTML </font>
+
+<font color=#FF0000>紅色</font>
+
+<font color=#0000FF>深藍色</font>
+```
 <span style="color:blue"> *Blue Italic.* </span>
 
 <font color='red'> Red HTML </font>
@@ -225,6 +234,7 @@ __double underscores__
 
 >在github上顯示顏色的其他方法
 >https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file
+
 
 ```diff
 - text in red

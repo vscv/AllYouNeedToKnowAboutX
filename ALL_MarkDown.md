@@ -299,6 +299,6 @@ markdown 註解 comment
 
 文字區域中點滑鼠右鍵
 
-<img src="https://user-images.githubusercontent.com/18000764/228112230-83b3aca9-7fe2-4d9a-9d03-016861e54fc2.png" width="00" height="150">
+<img src="https://user-images.githubusercontent.com/18000764/228112230-83b3aca9-7fe2-4d9a-9d03-016861e54fc2.png" width="200" height="150">
 
 <img src="https://user-images.githubusercontent.com/18000764/228112329-073c2975-99cc-4e3f-a7be-08b6d1a93689.png" width="500" height="150">

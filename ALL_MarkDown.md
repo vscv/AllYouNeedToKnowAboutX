@@ -259,7 +259,9 @@ ${\color{blue}Blue}$
 
 $k = {\color{red}x} \mathbin{\color{blue}-} 2$
 
+
 ## <font color=#0fb503>other color</font>
+`<font color=#0fb503>other color</font> only work for ipynb`
 
 > LaTeX額外的
 

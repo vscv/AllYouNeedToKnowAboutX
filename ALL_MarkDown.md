@@ -263,6 +263,7 @@ $k = {\color{red}x} \mathbin{\color{blue}-} 2$
 ## <font color=#0fb503>other color</font>
 `<font color=#0fb503>other color</font> only work for ipynb`
 
+## LaTex 
 > LaTeX額外的
 
 Press <kbd>W</kbd> to go up, and <kbd>A</kbd> to go down.

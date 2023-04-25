@@ -21,6 +21,7 @@
 
 1. 首先把實驗錄影中的ROI儲存為PNG檔。
 <p align="center"> <img width=40% height=40% src="https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg"> </p>
+<p align="center"> <img width=40% height=40% src="https://user-images.githubusercontent.com/18000764/234157081-1acbf2f2-ff69-48a4-a126-566ec1c544c3.png"> </p>
 
 2. 將目錄下所有原始錄影轉成序列影像。
 

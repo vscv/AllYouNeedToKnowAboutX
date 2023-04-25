@@ -20,9 +20,9 @@
 ## workflow
 
 1. 首先把實驗錄影中的ROI儲存為PNG檔。
-2. <p align="center"> <img width=40% height=40% src="https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg"> </p>
+<p align="center"> <img width=40% height=40% src="https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg"> </p>
 
-3. 將目錄下所有原始錄影轉成序列影像。
+2. 將目錄下所有原始錄影轉成序列影像。
 
 `使用指令列印，再貼上termial執行`
 
@@ -46,3 +46,147 @@ for file in os.listdir(dir_root):
 
         print(f"ffmpeg -i {dir_root + '/' + file} -vf fps=1 -qscale 0 {dir_root + '/' + mp4_dir_name}/{mp4_dir_name}_%05d.jpg")
 ```
+
+
+3. 計算每個子資料夾下序列影像之ROI灰階
+```Python3
+# Usage: $python3 Compute_pixel_mean_in_RoI.py 20230406 
+#
+# ex:
+# Compute_pixel_mean_in_RoI.py
+# 02030406/
+#         /100_cycle
+#         /101_cycle
+#         /102_cycle
+#
+
+"""
+1. imageio to imageio.v3 as iio
+2. up-level the output files.
+"""
+
+import os
+import sys
+import numpy as np
+import imageio.v3 as iio
+import matplotlib.pyplot as plt
+import natsort
+import pandas as pd
+from tqdm import tqdm
+
+def get_filename_from_dir(data_Dir):
+
+    file_name_list = []
+    #FV_val_list = []
+
+    for file in os.listdir(data_Dir): #FD_img
+        #print(file)
+        #print(os.path.splitext(file))
+        
+        if file.endswith(".jpg"):
+            file_name = os.path.splitext(file)[0] # to remove the .jpg postfix
+            file_name_list.append(file_name)
+        
+    return natsort.natsorted(file_name_list) # make it ordered.
+
+
+def get_gray_intensity_in_roi(dir_root, dir_name):
+    
+    # All set as default name #
+    roi_img = dir_root + "/" + dir_name + "/" + dir_name + "_Mask.png"
+    #print(f"Q {roi_img}")
+    RG = iio.imread(roi_img)
+    RGBin = RG > 200
+    RGBinMasked = np.ma.masked_where(RGBin == 0, RGBin)
+    
+    filename_list = get_filename_from_dir(dir_root + "/" + dir_name + "/")
+    #print(f"Q {filename_list}")
+    
+    #csv_name = dir_root + "/" + dir_name + "/" + dir_name + "_CSV.csv"
+    csv_name = dir_root + "/" + dir_name + "_CSV.csv"
+    #print(f"Q {csv_name}")
+    #plt_name = dir_root + "/" + dir_name + "/" + dir_name + "_Plot.png"
+    plt_name = dir_root + "/" + dir_name + "_Plot.png"
+    # All set as default name #
+    
+    compute_val_list = []
+    for jpg_name in tqdm(filename_list):
+        img = iio.imread(dir_root + "/" + dir_name + "/" + str(jpg_name) + ".jpg")
+        img = np.dot(img, [0.2989, 0.5870, 0.1140]) # comvert to gray scale
+        
+        new_roi_img = img[:,:][RGBinMasked]
+        g_mean=np.mean(new_roi_img)
+        g_max=np.max(new_roi_img)
+        g_min=np.min(new_roi_img)
+        g_std=np.std(new_roi_img)
+        g_area=len(new_roi_img)
+        #print(f"Q mean: {g_mean}, max: {g_max}, min: {g_min}, std: {g_std}, area: {g_area}")
+        compute_val_list.append([g_mean,g_max,g_min,g_std,g_area])
+
+    data_n_v = []
+    for n,v in zip(filename_list, compute_val_list): # here, n=str, v=int
+        v = [float(vv) for vv in v]
+        #print(f"Q {n,v}")
+        joint_list_n_v = [n] + v
+        data_n_v.append(joint_list_n_v)
+        
+    
+    # Create the pandas DataFrame
+    df = pd.DataFrame(data_n_v, columns=['image', 'mean', "max",  "min",  "std", "area"])
+
+    df.to_csv(csv_name, index=False)
+
+    #print(f"Q {data_n_v[1]}")
+    
+    # plot the every one #
+    df.plot(subplots=True, figsize=(10,20))
+    plt.savefig(plt_name)
+    
+    
+# One dir by one dir in the root dir #
+def main():
+    """
+    # Usage: $python3 Compute_pixel_mean_in_RoI_MacOS.py 20230406 100_cycle
+    """
+    try:
+        if len(sys.argv) != 3: # 0 1 2 = 3
+            raise ValueError('The path and target of directory not giving!')
+        # OK GO
+        dir_root = sys.argv[1]
+        dir_name = sys.argv[2]
+        get_gray_intensity_in_roi(dir_root, dir_name)
+
+    except ValueError as e:
+        print("Error:", e)
+
+
+# Compute all dirs in the root dir #
+def main_do_all():
+    """
+    # Usage: $python3 Compute_pixel_mean_in_RoI_MacOS.py 20230406
+    """
+    try:
+        if len(sys.argv) != 2: # 0 1 = 2
+            raise ValueError('The path and target of directory not giving!')
+        # OK GO
+        print(f"Q")
+        dir_root = sys.argv[1]
+
+        for dir_name in os.listdir(dir_root):
+            print(f"Q {os.path.abspath(dir_root + '/' + dir_name)}")
+            if os.path.isdir(os.path.abspath(dir_root + "/" + dir_name)):
+                print(f"Q name.........{dir_name}")
+                get_gray_intensity_in_roi(dir_root, dir_name)
+            else:
+                print(f"Q not the dir?")
+
+    except ValueError as e:
+        print("Error:", e)
+        
+
+if __name__ == '__main__':
+    #main()
+    main_do_all()
+```
+
+

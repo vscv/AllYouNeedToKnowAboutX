@@ -20,7 +20,7 @@
 ## workflow
 
 1. 首先把實驗錄影中的ROI儲存為PNG檔。
-2. ![把MASK存成png檔](https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg)
+2. <p align="center"> <img width=40% height=40% src="[/temp_imgs/ms-coco-switch-anns.jpg](https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg)"> </p>
 
 3. 將目錄下所有原始錄影轉成序列影像。
 

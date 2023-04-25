@@ -191,3 +191,8 @@ if __name__ == '__main__':
 ```
 
 
+4. 觀察ROI範圍下的時間變化。
+
+<p align="center"> <img width=40% height=40% src="https://user-images.githubusercontent.com/18000764/234157386-2ebaea70-ab10-4117-bfbb-51d2fde925de.png"> </p>
+
+

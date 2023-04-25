@@ -21,3 +21,28 @@
 
 1. 首先把實驗錄影中的ROI儲存為PNG檔。
 2. ![把MASK存成png檔](https://user-images.githubusercontent.com/18000764/234156216-116f6996-0a34-4dca-9838-52ac423c5210.jpg)
+
+3. 將目錄下所有原始錄影轉成序列影像。
+
+`使用指令列印，再貼上termial執行`
+
+```Python3
+"""
+ ▶ py Print_the_name_based_commands_for_FFMPEG_video2images.py 20230411_Video
+"""
+import os
+import sys
+
+
+dir_root = sys.argv[1]
+
+for file in os.listdir(dir_root):
+    if file.endswith(".mp4"):
+        mp4_dir_name = os.path.splitext(file)[0]
+        mp4_dir_path = dir_root + '/' + mp4_dir_name
+        
+        os.mkdir(mp4_dir_path)
+        print(f"Q make jpgoutput dir {mp4_dir_path}")
+
+        print(f"ffmpeg -i {dir_root + '/' + file} -vf fps=1 -qscale 0 {dir_root + '/' + mp4_dir_name}/{mp4_dir_name}_%05d.jpg")
+```

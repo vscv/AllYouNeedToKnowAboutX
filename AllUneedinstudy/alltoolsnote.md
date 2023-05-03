@@ -57,7 +57,8 @@ https://www.youtube.com/watch?v=wb-6vKk3MJg
 ERROR: Unable to extract uploader id; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.   
 ```
 
-目前無解中https://github.com/ytdl-org/youtube-dl/issues/31530
+目前master已經修正，但Mac的homebrew仍然是舊版無解中。https://github.com/ytdl-org/youtube-dl/issues/31530
+可以改用pypy版本使用： pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git" 
 
 * * *
 

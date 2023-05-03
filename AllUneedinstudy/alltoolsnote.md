@@ -52,6 +52,13 @@ https://www.youtube.com/watch?v=wb-6vKk3MJg
 
 `youtube-dl --extract-audio --audio-format mp3  -a 彩虹小馬列表_url_only.txt`
 
+[2024-05-03]
+```Bash
+ERROR: Unable to extract uploader id; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.   
+```
+
+目前無解中https://github.com/ytdl-org/youtube-dl/issues/31530
+
 * * *
 
 # Voideo editor

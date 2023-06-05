@@ -391,3 +391,12 @@ ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -
 ***
 # `Overleaf` 寫paper的好幫手，研究生必備！
 TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺點是必須聯網使用。一開始也是為了在mac裝LaTex、中文支援、Bibtex等花了很多時間，編譯次數太頻繁對筆電來說太耗電。而且MacTeX檔案之大加上其他套件都會狠狠吃掉你珍貴的SSD，好處是可以獨立運行，也可以稍微保密的你研究工作。
+
+
+***
+# SSH 長時間連線無操作斷線
+`client_loop: send disconnect: Broken pipe`
+尤其是遠端連進VM後是跑背景服務，如開容器、網頁、jupyter之類，當下的連線其實只有下子系統的工作指令，然後為了維持服務而保持連線。
+
+
+

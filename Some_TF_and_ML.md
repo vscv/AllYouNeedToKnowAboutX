@@ -69,6 +69,16 @@ e.g. "TPU v3-8" 8核心 128GB memory
       Epoch 156: val_loss did not improve from 55.49997
       4/4 [==============================] - 4s 1s/step - loss: 39.4206 - mean_squared_error: 39.4083 - mean_absolute_error: 4.6351 - root_mean_squared_error: 6.2776 - val_loss: 80.0362 - val_mean_squared_error: 80.0239 - val_mean_absolute_error: 6.6511 - val_root_mean_squared_error: 8.9456 - lr: 1.0000e-09
 
+
+* download model/data from kaggle working
+
+`!tar cvf best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar /kaggle/working/best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU/`
+
+```Python3
+from IPython.display import FileLink
+FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')```
+
+  
 * * *
 
 ### 2023-03-25 ⚠ Bug Trace ⚠

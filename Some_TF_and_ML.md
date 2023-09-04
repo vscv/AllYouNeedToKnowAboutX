@@ -60,14 +60,14 @@ e.g. "TPU v3-8" 8核心 128GB memory
 * log
 
     
-Epoch 1: val_loss improved from inf to 229.27214, saving model to best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU/saved_weight
-4/4 [==============================] - 714s 101s/step - loss: 449.7910 - mean_squared_error: 449.7810 - mean_absolute_error: 18.9748 - root_mean_squared_error: 21.2080 - val_loss: 229.2721 - val_mean_squared_error: 229.2620 - val_mean_absolute_error: 14.2356 - val_root_mean_squared_error: 15.1414 - lr: 0.0010
-Epoch 2/1000
-4/4 [==============================] - ETA: 0s - loss: 269.9185 - mean_squared_error: 269.9084 - mean_absolute_error: 14.9394 - root_mean_squared_error: 16.4289
-...
-...
-Epoch 156: val_loss did not improve from 55.49997
-4/4 [==============================] - 4s 1s/step - loss: 39.4206 - mean_squared_error: 39.4083 - mean_absolute_error: 4.6351 - root_mean_squared_error: 6.2776 - val_loss: 80.0362 - val_mean_squared_error: 80.0239 - val_mean_absolute_error: 6.6511 - val_root_mean_squared_error: 8.9456 - lr: 1.0000e-09
+      Epoch 1: val_loss improved from inf to 229.27214, saving model to best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU/saved_weight
+      4/4 [==============================] - 714s 101s/step - loss: 449.7910 - mean_squared_error: 449.7810 - mean_absolute_error: 18.9748 - root_mean_squared_error: 21.2080 - val_loss: 229.2721 - val_mean_squared_error: 229.2620 - val_mean_absolute_error: 14.2356 - val_root_mean_squared_error: 15.1414 - lr: 0.0010
+      Epoch 2/1000
+      4/4 [==============================] - ETA: 0s - loss: 269.9185 - mean_squared_error: 269.9084 - mean_absolute_error: 14.9394 - root_mean_squared_error: 16.4289
+      ...
+      ...
+      Epoch 156: val_loss did not improve from 55.49997
+      4/4 [==============================] - 4s 1s/step - loss: 39.4206 - mean_squared_error: 39.4083 - mean_absolute_error: 4.6351 - root_mean_squared_error: 6.2776 - val_loss: 80.0362 - val_mean_squared_error: 80.0239 - val_mean_absolute_error: 6.6511 - val_root_mean_squared_error: 8.9456 - lr: 1.0000e-09
 
 * * *
 

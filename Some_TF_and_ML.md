@@ -14,13 +14,19 @@ GPU:
 (transfer learning可以跑，fine tuneing就OOM？ 問題一樣，fine tune會`真的`啟用所有參數因此需要的GPU記憶體會更多！)
 
 近年GPU記憶體規格：
+
 V100 32GB
+
 A100 80GB
+
 H100 80GB
+
+⭕️ 至少V100就跑不了EfficientNet-V2-XL的fine tuning!!!
+
 
 TPU: e.g. "TPU v3-8" 8核心 128GB memory。
 
-沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
+⭕️ 沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
 
 
 

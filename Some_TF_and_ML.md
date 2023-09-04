@@ -79,6 +79,7 @@ from IPython.display import FileLink
 FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
 ```
 
+* 產生一個下載連結
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/f662f950-ceea-40ec-807a-55999800ae1d)
 
 

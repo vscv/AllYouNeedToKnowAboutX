@@ -54,7 +54,7 @@ e.g. "TPU v3-8" 8核心 128GB memory
     Number of accelerators:  8
 
 
-
+    model_pruner failed: INVALID_ARGUMENT: Graph does not contain terminal node AssignAddVariableOp. `這個目前無解，僅是警告還是可以訓練的。`
 
 
 * * *

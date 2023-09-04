@@ -27,10 +27,11 @@
 
 * 最好先利用colab打包成一個檔案之後再下載。
 
+* https://stackoverflow.com/questions/25010369/wget-curl-large-file-from-google-drive
+* 
 `gdown`
 pip install gdown
-`
-gdown https://drive.google.com/uc?id=<file_id>  # for files
+`gdown https://drive.google.com/uc?id=<file_id>  # for files
 gdown <file_id>                                 # alternative format
 gdown --folder https://drive.google.com/drive/folders/<file_id>  # for folders
 gdown --folder --id <file_id>                                   # this format works for folders too`

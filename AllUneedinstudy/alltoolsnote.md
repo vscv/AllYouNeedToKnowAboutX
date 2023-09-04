@@ -23,6 +23,27 @@
 
 * * *
 
+# Google Driver 大量檔案下載
+
+* 最好先利用colab打包成一個檔案之後再下載。
+
+`gdown`
+pip install gdown
+`
+gdown https://drive.google.com/uc?id=<file_id>  # for files
+gdown <file_id>                                 # alternative format
+gdown --folder https://drive.google.com/drive/folders/<file_id>  # for folders
+gdown --folder --id <file_id>                                   # this format works for folders too`
+
+The gdrive folder with url: https://drive.google.com/drive/folders/144
+	sdf has more than 50 files, gdrive
+	can't download more than this limit, if you are ok with this, please
+	run again with --remaining-ok flag. 
+
+只能50檔案！
+
+* * *
+
 
 # Youtube 下載工具
 

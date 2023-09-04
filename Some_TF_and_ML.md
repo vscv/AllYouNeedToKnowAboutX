@@ -74,10 +74,13 @@ e.g. "TPU v3-8" 8核心 128GB memory
 
 `!tar cvf best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar /kaggle/working/best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU/`
 
-'''python
+```python
 from IPython.display import FileLink
 FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
-'''
+```
+
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/f662f950-ceea-40ec-807a-55999800ae1d)
+
 
   
 * * *

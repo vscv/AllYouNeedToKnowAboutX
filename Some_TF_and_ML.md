@@ -1,6 +1,29 @@
 * * *
 [OOM]
 
+OOM有兩種，host CPU與GPU。
+
+CPU: 
+
+不要直接將dataset載入記憶體中使用，最好用tf.data、tfrecord來處理。
+
+GPU:
+
+減少batch size，減少輸入影像的解析度，使用混合精度。
+
+(transfer learning可以跑，fine tuneing就OOM？ 問題一樣，fine tune會`真的`啟用所有參數因此需要的GPU記憶體會更多！)
+
+近年GPU記憶體規格：
+V100 32GB
+A100 80GB
+H100 80GB
+
+TPU: e.g. "TPU v3-8" 8核心 128GB memory。
+
+沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
+
+
+
 * * *
 
 ### 2023-03-25 ⚠ Bug Trace ⚠

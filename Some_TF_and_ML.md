@@ -24,7 +24,9 @@ H100 80GB
 ⭕️ 至少V100就跑不了EfficientNet-V2-XL的fine tuning!!!
 
 
-TPU: e.g. "TPU v3-8" 8核心 128GB memory。
+TPU: 
+
+e.g. "TPU v3-8" 8核心 128GB memory。
 
 ⭕️ 沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
 

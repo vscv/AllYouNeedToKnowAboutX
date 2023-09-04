@@ -26,7 +26,9 @@ H100 80GB
 
 TPU: 
 
-e.g. "TPU v3-8" 8核心 128GB memory。
+e.g. "TPU v3-8" 8核心 128GB memory
+
+  EfficientNet-V2-XL: Fine-tune, bs=64 <-- BATCH_SIZE = 8 * strategy.num_replicas_in_sync 
 
 ⭕️ 沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
 

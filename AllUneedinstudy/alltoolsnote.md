@@ -49,6 +49,14 @@ The gdrive folder with url: https://drive.google.com/drive/folders/144
 vim ~/[your_venv]/lib/python3.9/site-packages/gdown/download_folder.py
 MAX_NUMBER_FILES = 50 # set to large number eg. 10000
 
+* 某些檔案的權限沒設分享或下載次數太多被封
+  Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses. 
+
+You may still be able to access the file from the browser:
+
+	 https://drive.google.com/uc?id=1Z0ykjS0r-D8InbdkUF5RdIzBRTvVy0Yt 
+
 * * *
 
 

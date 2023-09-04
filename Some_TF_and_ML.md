@@ -30,6 +30,26 @@ e.g. "TPU v3-8" 8核心 128GB memory
 
   EfficientNet-V2-XL: Fine-tune, bs=64 <-- BATCH_SIZE = 8 * strategy.num_replicas_in_sync 
 
+    INFO:tensorflow:Deallocate tpu buffers before initializing tpu system.
+    INFO:tensorflow:Initializing the TPU system: local
+    INFO:tensorflow:Finished initializing TPU system.
+    INFO:tensorflow:Found TPU system:
+    INFO:tensorflow:*** Num TPU Cores: 8
+    INFO:tensorflow:*** Num TPU Workers: 1
+    INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+    INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+    /QK/ TPU!
+    Number of accelerators:  8
+
 ⭕️ 沒資源的話可以上kaggle註冊，一週有20小時的TPU可以使用。
 
 

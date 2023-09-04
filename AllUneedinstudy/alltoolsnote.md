@@ -44,7 +44,10 @@ The gdrive folder with url: https://drive.google.com/drive/folders/144
 	can't download more than this limit, if you are ok with this, please
 	run again with --remaining-ok flag. 
 
-只能50檔案！
+預設只能下載50個檔案！
+
+vim ~/[your_venv]/lib/python3.9/site-packages/gdown/download_folder.py
+MAX_NUMBER_FILES = 50 # set to large number eg. 10000
 
 * * *
 

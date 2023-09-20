@@ -98,3 +98,27 @@ FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
 [ToDo]計算MAE MSE PSNR SSIM時 必須把scale轉回[0,255]之後才能正確地計算！
 
 
+
+* * *
+## 已經終止的GPU進程無法根據nvidia-smi命令的PID殺死的問題解決方案
+
+  ```python
+  https://zhuanlan.zhihu.com/p/506686899
+  首先使用linux中的fuser庫，這個庫在我的環境中不是自帶的庫，所以需要下載。
+  下載命令如下：
+  apt install psmisc
+  安裝之後使用如下命令：
+  fuser -v /dev/nvidia*
+  在結果中發現，在不同的GPU上都有同一個進程，進程號為"53940"。
+  為了確定這個進程是不是我們運行的程序，我們使用如下的方式來查看一下這個進程的信息。
+  ps -ef|grep 53940
+  最後使用上述提到的刪除進程的方法。
+  kill -9 53940
+  更新：
+  從別人的博客裡面看到的，批量刪除進程的code
+  sudo fuser -v /dev/nvidia* |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
+  或者針對某一個GPU刪除進程的code
+  sudo fuser -v /dev/nvidia2 |awk '{for(i=1;i<=NF;i++)print "kill -9 " $i;}' | sudo sh
+  參考： {不要加sudo!}
+  ```
+

@@ -422,12 +422,36 @@ ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -
 
 ```
 
+### 靜態影像轉成影片
+
+```shell
+ffmpeg -i  5000_cycle.mp4  -vf fps=1 -qscale 0 5000_cycle/5000_cycle_%05d.jpg
+```
+```shell
+ffmpeg -y -framerate 1/5 -i img_%02d.jpg -r 20 -qscale 0 vid.mpg
+-framerate 1/5 強制輸入為五秒一張圖, fps = 0.2
+-r 20 輸出為20fps，因為是靜態圖了因此可以省略，能減少大小
+-qscale 0 輸出為原始畫質
+小缺點是畫面大小會有調整現象，造成畫面跳動，將輸出改成avi即可解決。
+```
+
+當檔案沒有預先製作成name_%05d.jpg格式時，要讀list檔名列表再改名，或複製一份。
+
+
+
 OS排序問題：不同系統或工具產生的檔案列表的排序不盡相同，
+
+Python: natsort 排序套件，重新將取得的list排序。
+
 
 
 ***
 # `FFMPEG` 影片轉換工具
 
+#### 切割影片段落
+```shell
+▶ ffmpeg -i Input_video.mp4 -ss 00:07:40 -to 00:09:19 -acodec copy -vcodec copy Output_cut.mp4   
+```
 
 
 ***

@@ -438,9 +438,28 @@ ffmpeg -y -framerate 1/5 -i img_%02d.jpg -r 20 -qscale 0 vid.mpg
 #### 當檔案沒有預先製作成name_%05d.jpg格式時:
 
 * Python產生list檔名列表再排序後改名，Python: natsort 排序套件，重新將取得的list排序。
+```python
+import os
+from natsort import natsorted
 
+file_list = os.listdir(dir)
+file_list = [x for x in file_list if x.endswith(".jpg")]
+file_list = natsorted(file_list)
 
-* 利用循序讀取檔案列表.txt，注意檔名排序，適合檔名本身就有包含數字排序時。
+print(file_list)
+
+# moving
+#shutil.move('test.txt', dest_dir)
+
+# rename
+#os.rename(dir + src, dir + dst)
+
+# or save as list.txt for ffmpeg
+with open('list.txt', 'w') as f:
+  f.writelines(file_list)
+```
+
+* 利用ls產生檔案列表.txt，注意檔名排序，適合檔名本身就有包含數字排序時。
 ```shell
 https://stackoverflow.com/questions/30121222/convert-all-images-in-directory-to-mp4-using-ffmpeg-and-a-timestamp-order
 

@@ -435,9 +435,12 @@ ffmpeg -y -framerate 1/5 -i img_%02d.jpg -r 20 -qscale 0 vid.mpg
 小缺點是畫面大小會有調整現象，造成畫面跳動，將輸出改成avi即可解決。
 ```
 
-當檔案沒有預先製作成name_%05d.jpg格式時，要讀list檔名列表再改名，或複製一份。
+#### 當檔案沒有預先製作成name_%05d.jpg格式時:
 
-* 或列表檔案.txt
+* Python產生list檔名列表再排序後改名，Python: natsort 排序套件，重新將取得的list排序。
+
+
+* 利用循序讀取檔案列表.txt，注意檔名排序，適合檔名本身就有包含數字排序時。
 ```shell
 https://stackoverflow.com/questions/30121222/convert-all-images-in-directory-to-mp4-using-ffmpeg-and-a-timestamp-order
 
@@ -447,9 +450,9 @@ $ffmpeg -r 20 -f concat -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yuv420p out.
 ```
 
 
-OS排序問題：不同系統或工具產生的檔案列表的排序不盡相同，
+`影像排序問題：不同OS系統或工具產生的檔案列表的檔名排序不盡相同，若輸出的影片出現跳格、插格現象，請檢查排序。`
 
-Python: natsort 排序套件，重新將取得的list排序。
+
 
 
 

@@ -396,8 +396,10 @@ cv.convert(docx_file)      # all pages by default
 cv.close()
 ```
 * 若是AttributeError: partially initialized module 'cv2' has no attribute '_registerMatType' (most likely due to a circular import) 是因為cv2版本過舊，請更新opencv-contrib-python，並把opencv-python移除，或保留其中一個即可。
+
+
 ***
-### 實驗影像轉成動畫
+### 實驗影像轉成GIF動畫
 Use `Imagemagick convert` to convert the still images to GIF is the best choice!
 
 ```Shell
@@ -419,6 +421,10 @@ ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
 ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y $2
 
 ```
+
+OS排序問題：不同系統或工具產生的檔案列表的排序不盡相同，
+
+
 ***
 # `FFMPEG` 影片轉換工具
 

@@ -422,7 +422,7 @@ ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -
 
 ```
 
-### 靜態影像轉成影片
+### 靜態影像轉成影片;影片轉影像
 
 ```shell
 ffmpeg -i  5000_cycle.mp4  -vf fps=1 -qscale 0 5000_cycle/5000_cycle_%05d.jpg
@@ -437,6 +437,14 @@ ffmpeg -y -framerate 1/5 -i img_%02d.jpg -r 20 -qscale 0 vid.mpg
 
 當檔案沒有預先製作成name_%05d.jpg格式時，要讀list檔名列表再改名，或複製一份。
 
+* 或列表檔案.txt
+```shell
+https://stackoverflow.com/questions/30121222/convert-all-images-in-directory-to-mp4-using-ffmpeg-and-a-timestamp-order
+
+$ls test_out/*.jpg | sort -V | xargs -I {} echo "file '{}'" > jpg_list.txt
+
+$ffmpeg -r 20 -f concat -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yuv420p out.mp4
+```
 
 
 OS排序問題：不同系統或工具產生的檔案列表的排序不盡相同，

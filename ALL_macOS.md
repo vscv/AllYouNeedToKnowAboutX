@@ -101,6 +101,8 @@ iconutil -c icns icons.iconset -o icon.icns
 ```
 不要急，icns不會馬上更新要等一會。
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e9ec97bd-9d13-46c0-b205-8f993ef2d636)
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/0b0cb56e-c901-4c32-9a28-1da25e7eca30)
+
 
 若要換成新icns，一樣自訂工具列，把舊的拉下，新的拖曳上去就好了。
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/073ed15a-32c6-4862-ac70-659375bc3122)

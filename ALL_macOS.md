@@ -76,7 +76,7 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 用Inkscape製作一個1024x1024的png圖片，或是下載現成的SVG或png來改都可以。這裡是用https://upload.wikimedia.org/wikipedia/commons/3/31/U%2B1F02A_MJbaida.svg來放大。
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/45dae621-50cc-4860-bdfe-d1bf94989e58)
 
-#### 開啟終端機指令： 
+#### 開啟終端機指令： 資料夾名稱不能改要同範例一致
 
 ```shell
 mkdir icons.iconset

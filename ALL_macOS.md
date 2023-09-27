@@ -96,3 +96,6 @@ iconutil -c icns icons.iconset -o icon.icns
 
 #### 取代原本app/Contents/Resources/applet.icns： 
 
+```shell
+▶ cp -rf icon.icns ../Finder新增檔案.app/Contents/Resources/applet.icns 
+```

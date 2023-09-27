@@ -68,6 +68,7 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 ### 加入Finder工具列
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/068f53c7-e670-41a5-a4ab-f71d16b742c8)
 這時候把`Finder新增檔案.app`拖曳到Finder即可。
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/2b12e1f4-c402-4037-8814-ab68d9986ad1)
 
 
 ### icns製作

@@ -54,12 +54,16 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 ## Finder自製新增檔案工具與icns製作
 
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/f03f7fc4-e31b-43ea-a5a3-8b162495387b)
-開啟工序編輯，新增檔案，AppleScript處填入`tell application "Finder" to make new file at (the target of the front window) as alias`
+### 開啟工序編輯
+新增檔案，AppleScript處填入`tell application "Finder" to make new file at (the target of the front window) as alias`
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/bfb0e753-b902-4cf8-a1b3-93929806c1d4)
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e3b87508-fd4d-472b-ab51-d31a63b97729)
-存檔選應用程式
+
+### 存檔選應用程式
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/98472d37-343d-473c-8ed1-972b9d824507)
-預設的icon是scirpt圖示![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/67fd1bb5-d3fd-4a75-b32a-64a6f9f1ce6f)
+
+### 預設的icon是scirpt圖示
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/67fd1bb5-d3fd-4a75-b32a-64a6f9f1ce6f)
 
 ### 加入Finder工具列
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/068f53c7-e670-41a5-a4ab-f71d16b742c8)

@@ -108,3 +108,9 @@ iconutil -c icns icons.iconset -o icon.icns
 若要換成新icns，一樣自訂工具列，把舊的拉下，新的拖曳上去就好了。
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/073ed15a-32c6-4862-ac70-659375bc3122)
 
+### 範例檔案
+
+[icns](temp_imgs/icon_BaiDa_百搭.icns)
+[Finder新增檔案.app](temp_imgs/Finder新增檔案.app)
+
+* * *

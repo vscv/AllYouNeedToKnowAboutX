@@ -47,3 +47,40 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 * 重置字體：再去設定，進階，『重置字體』。發現.last resort並不是預設字體，所以不會重新下載。
 * 
 ![Pasted Graphic 4](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/cfd7f8de-ba34-4f19-a28c-89cbab2b244d)
+
+
+* * *
+
+## Finder自製新增檔案工具與icns製作
+
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/f03f7fc4-e31b-43ea-a5a3-8b162495387b)
+開啟工序編輯，新增檔案，AppleScript處填入`tell application "Finder" to make new file at (the target of the front window) as alias`
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/bfb0e753-b902-4cf8-a1b3-93929806c1d4)
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e3b87508-fd4d-472b-ab51-d31a63b97729)
+存檔選應用程式
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/98472d37-343d-473c-8ed1-972b9d824507)
+預設的icon是scirpt圖示
+
+
+### icns製作
+
+用Inkscape製作一個1024x1024的png圖片，或是下載現成的SVG或png來改都可以。
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/45dae621-50cc-4860-bdfe-d1bf94989e58)
+
+#### 開啟終端機指令： 
+
+```shell
+Sips -z 16 16 icon.png -o icons.iconset/icon_16x16.png
+Sips -z 32 32 icon.png -o icons.iconset/icon_16x16@2x.png
+Sips -z 32 32 icon.png -o icons.iconset/icon_32x32.png
+Sips -z 64 64 icon.png -o icons.iconset/icon_32x32@2x.png
+Sips -z 128 128 icon.png -o icons.iconseticon_128x128.png
+Sips -z 256 256 icon.png -o icons.iconset/icon_128x128@2x.png
+Sips -z 256 256 icon.png -o icons.iconset/icon_256x256.png
+Sips -z 512 512 icon.png -o icons.iconset/icon_256x256@2x.png
+Sips -z 512 512 icon.png -o icons.iconset/icon_512x512.png
+Sips -z 1024 1024 icon.png -o icons.iconseticon_512x512@2x.png
+```
+
+
+

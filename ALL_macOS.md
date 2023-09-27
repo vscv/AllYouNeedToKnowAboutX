@@ -111,6 +111,7 @@ iconutil -c icns icons.iconset -o icon.icns
 ### 範例檔案
 
 [icns](temp_imgs/icon_BaiDa_百搭.icns)
+
 [Finder新增檔案.app](temp_imgs/Finder新增檔案.app)
 
 * * *

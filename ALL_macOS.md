@@ -59,7 +59,11 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e3b87508-fd4d-472b-ab51-d31a63b97729)
 存檔選應用程式
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/98472d37-343d-473c-8ed1-972b9d824507)
-預設的icon是scirpt圖示
+預設的icon是scirpt圖示![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/67fd1bb5-d3fd-4a75-b32a-64a6f9f1ce6f)
+
+### 加入Finder工具列
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/068f53c7-e670-41a5-a4ab-f71d16b742c8)
+這時候把`Finder新增檔案.app`拖曳到Finder即可。
 
 
 ### icns製作
@@ -70,17 +74,21 @@ MP3位置：/Users/NAME/Music/iTunes/2023_02_02_MP3
 #### 開啟終端機指令： 
 
 ```shell
-Sips -z 16 16 icon.png -o icons.iconset/icon_16x16.png
-Sips -z 32 32 icon.png -o icons.iconset/icon_16x16@2x.png
-Sips -z 32 32 icon.png -o icons.iconset/icon_32x32.png
-Sips -z 64 64 icon.png -o icons.iconset/icon_32x32@2x.png
-Sips -z 128 128 icon.png -o icons.iconseticon_128x128.png
-Sips -z 256 256 icon.png -o icons.iconset/icon_128x128@2x.png
-Sips -z 256 256 icon.png -o icons.iconset/icon_256x256.png
-Sips -z 512 512 icon.png -o icons.iconset/icon_256x256@2x.png
-Sips -z 512 512 icon.png -o icons.iconset/icon_512x512.png
-Sips -z 1024 1024 icon.png -o icons.iconseticon_512x512@2x.png
+mkdir icons.iconset
+
+sips -z 16 16 icon.png -o icons.iconset/icon_16x16.png
+sips -z 32 32 icon.png -o icons.iconset/icon_16x16@2x.png
+sips -z 32 32 icon.png -o icons.iconset/icon_32x32.png
+sips -z 64 64 icon.png -o icons.iconset/icon_32x32@2x.png
+sips -z 128 128 icon.png -o icons.iconseticon_128x128.png
+sips -z 256 256 icon.png -o icons.iconset/icon_128x128@2x.png
+sips -z 256 256 icon.png -o icons.iconset/icon_256x256.png
+sips -z 512 512 icon.png -o icons.iconset/icon_256x256@2x.png
+sips -z 512 512 icon.png -o icons.iconset/icon_512x512.png
+sips -z 1024 1024 icon.png -o icons.iconseticon_512x512@2x.png
+
+iconutil -c icns icons.iconset -o icon.icns
 ```
 
-
+#### 取代原本app/Contents/Resources/applet.icns： 
 

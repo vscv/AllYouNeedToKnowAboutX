@@ -260,6 +260,9 @@ labels_cht = [
 ```
 
 * 設定楷體字型與大小
+
+把font給予每個子函數就好了
+
 ```Python
 from PIL import ImageFont
 font = ImageFont.turepytpe("edukai-4.0.ttf", 80, encoding="utf-8")

@@ -262,10 +262,32 @@ labels_cht = [
 * 設定楷體字型與大小
 ```Python
 from PIL import ImageFont
-font = ImageFont.turepytpe("edukai-4.0.ttf", 36, encoding="utf-8")
+font = ImageFont.turepytpe("edukai-4.0.ttf", 80, encoding="utf-8")
 ```
+```Python
+#JCK ADD Font control
+def imagedraw_textsize_c(draw, text, font):
+    if int(PIL.__version__.split('.')[0]) < 10:
+        #JCK yep, we use PIL '9.5.0' version
+        tw, th = draw.textsize(text, font)
+    else:
+        left, top, right, bottom = draw.textbbox((0, 0), text)
+        tw, th = right - left, bottom - top
 
-
+    return tw, th
+```
+```Python
+def draw_box(im, np_boxes, labels, threshold=0.5):
+.
+.
+.
+        # draw label
+        text = "{} {:.4f} {}".format(labels[clsid], score, labels_cht[clsid])
+        tw, th = imagedraw_textsize_c(draw, text, font)
+        draw.rectangle(
+            [(xmin + 1, ymin - th), (xmin + tw + 1, ymin)], fill=color)
+        draw.text((xmin + 1, ymin - th), text, fill=(255, 255, 255), font=font)
+```
 
 * * *
 

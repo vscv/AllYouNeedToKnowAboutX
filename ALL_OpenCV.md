@@ -226,9 +226,10 @@ image = tf.image.decode_jpeg(file)
 * * *
 ## 繪出標註框修改字型與支援繁體中文
 #### visualize -> visualize_box_mask -> draw_box
+* edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00)  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
 * 增加字體並控制大小
 from PIL import ImageFont
-font = ImageFont.turepytpe("symbol.tff", 36, encoding="utf-8")
+font = ImageFont.turepytpe("edukai-4.0.ttf", 36, encoding="utf-8")
 * * *
 
 * * *

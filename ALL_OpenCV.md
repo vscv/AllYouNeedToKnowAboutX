@@ -225,8 +225,37 @@ image = tf.image.decode_jpeg(file)
 
 * * *
 ## 繪出標註框修改字型與支援繁體中文
-#### visualize -> visualize_box_mask -> draw_box
+#### infer_LSW.py ---> visualize -> visualize_box_mask -> draw_box
 * edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00)  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
+
+sudo cp -rf deploy/python/font_local /usr/share/fonts/truetype/
+* 中文標籤
+```Shell
+#JCK 中文標籤顯示
+labels_cht = [
+                "寶特瓶",
+                "塑膠瓶蓋",
+                "其他飲料瓶與食物容器",
+                "非食物的瓶罐與容器",
+                "塑膠提袋",
+                "食品包裝袋",
+                "吸管",
+                "外帶飲料杯",
+                "免洗餐具",
+                "鐵鋁罐",
+                "鋁箔包或利樂包",
+                "玻璃瓶",
+                "釣魚用具",
+                "漁業浮球/浮筒/漁船防碰墊",
+                "漁網與繩子",
+                "菸蒂",
+                "牙刷",
+                "針筒/針頭",
+                "打火機",
+                "其他",
+            ]
+```
+
 * 增加字體並控制大小
 from PIL import ImageFont
 font = ImageFont.turepytpe("edukai-4.0.ttf", 36, encoding="utf-8")

@@ -222,3 +222,13 @@ image = tf.image.decode_jpeg(file)
 * * *
 
 * * *
+
+* * *
+## 繪出標註框修改字型與支援繁體中文
+#### visualize -> visualize_box_mask -> draw_box
+* 增加字體並控制大小
+from PIL import ImageFont
+font = ImageFont.turepytpe("symbol.tff", 36, encoding="utf-8")
+* * *
+
+* * *

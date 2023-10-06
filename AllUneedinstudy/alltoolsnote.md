@@ -467,9 +467,10 @@ $ls test_out/*.jpg | sort -V | xargs -I {} echo "file '{}'" > jpg_list.txt
 
 $ffmpeg -r 20 -f concat -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yuv420p out.mp4
 ```
-* 注意！[concat @ 0x7ff131004300] Unsafe file name 'test_imgs/20230914_somename(1).JPG'
-jpg_list.txt: Operation not permitted
+* 注意！[concat @ 0x7ff131004300] Unsafe file name 'test_imgs/20230914_somename(1).JPG' jpg_list.txt: Operation not permitted
+
 * -safe 0 before -i
+
 $ffmpeg -r 20 -f concat `-safe 0` -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yuv420p out.mp4
 
 

@@ -291,6 +291,7 @@ def draw_box(im, np_boxes, labels, threshold=0.5):
             [(xmin + 1, ymin - th), (xmin + tw + 1, ymin)], fill=color)
         draw.text((xmin + 1, ymin - th), text, fill=(255, 255, 255), font=font)
 ```
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/913eac07-d849-4217-a238-2bbe3d92e15d)
 
 * * *
 

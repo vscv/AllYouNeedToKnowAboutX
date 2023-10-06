@@ -229,8 +229,11 @@ image = tf.image.decode_jpeg(file)
 * edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00)  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
 * 然後拷貝到系統預設字型路徑下
 sudo cp -rf deploy/python/font_local /usr/share/fonts/truetype/
+
+
+### 在visualize.py中，增加字體並控制大小
 * 中文標籤
-```Shell
+```Python
 #JCK 中文標籤顯示
 labels_cht = [
                 "寶特瓶",
@@ -256,9 +259,14 @@ labels_cht = [
             ]
 ```
 
-* 增加字體並控制大小
+* 設定楷體字型與大小
+```Python
 from PIL import ImageFont
 font = ImageFont.turepytpe("edukai-4.0.ttf", 36, encoding="utf-8")
+```
+
+
+
 * * *
 
 * * *

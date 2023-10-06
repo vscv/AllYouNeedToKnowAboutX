@@ -227,7 +227,7 @@ image = tf.image.decode_jpeg(file)
 ## 繪出標註框修改字型與支援繁體中文
 #### infer_LSW.py ---> visualize -> visualize_box_mask -> draw_box
 * edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00)  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
-
+* 然後拷貝到系統預設字型路徑下
 sudo cp -rf deploy/python/font_local /usr/share/fonts/truetype/
 * 中文標籤
 ```Shell

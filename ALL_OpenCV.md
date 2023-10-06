@@ -261,7 +261,7 @@ labels_cht = [
 
 * 設定楷體字型與大小
 
-把font給予每個子函數就好了
+把中文標籤labels_cht[clsid]加入，再把font給予textsize, draw.text函數就好了。
 
 ```Python
 from PIL import ImageFont

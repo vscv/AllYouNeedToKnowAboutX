@@ -228,8 +228,9 @@ image = tf.image.decode_jpeg(file)
 #### deploy/python/infer_LSW.py ---> visualize -> visualize_box_mask -> draw_box
 * edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00)  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
 * 然後拷貝到系統預設字型路徑下
+```Shell
 sudo cp -rf deploy/python/font_local /usr/share/fonts/truetype/
-
+```
 
 ### 在visualize.py中，增加字體並控制大小
 * 中文標籤

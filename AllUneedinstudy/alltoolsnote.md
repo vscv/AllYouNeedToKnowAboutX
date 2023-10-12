@@ -397,6 +397,13 @@ cv.close()
 ```
 * 若是AttributeError: partially initialized module 'cv2' has no attribute '_registerMatType' (most likely due to a circular import) 是因為cv2版本過舊，請更新opencv-contrib-python，並把opencv-python移除，或保留其中一個即可。
 
+`pdf2docx - Command line interface for ``pdf2docx``.`
+
+```shell
+ ▶ pdf2docx convert YourPDFfile.pdf
+YourPDFfile.docx
+```
+
 
 ***
 ### 實驗影像轉成GIF動畫

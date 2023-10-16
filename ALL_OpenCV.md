@@ -295,5 +295,39 @@ def draw_box(im, np_boxes, labels, threshold=0.5):
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/913eac07-d849-4217-a238-2bbe3d92e15d)
 
 * * *
+## OpenCV與Numpy座標轉換
+
+```Shell
+    0/0---column--->
+     |
+     |
+    row
+     |
+     |
+     v
+     (Numpy)
+     
+     
+     0/0---X--->
+     |
+     |
+     Y
+     |
+     |
+     v
+     (OpenCV)
+```
+
+```Python
+#draw bounding box
+# 左上、右下點座標
+image = cv2.rectangle(image, (xmin,ymin), (xmax, ymax), color, border_thickness)
+
+#crop box from image
+# [str_row:end_row, star_col:end_col]
+box_img = image[ymin:ymax,  xmin:xmax]
+
+```
+
 
 * * *

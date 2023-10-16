@@ -304,7 +304,7 @@ def draw_box(im, np_boxes, labels, threshold=0.5):
     row
      |
      |
-     v
+     ˅
      (Numpy)
      
      
@@ -314,7 +314,7 @@ def draw_box(im, np_boxes, labels, threshold=0.5):
      Y
      |
      |
-     v
+     ˅
      (OpenCV)
 ```
 

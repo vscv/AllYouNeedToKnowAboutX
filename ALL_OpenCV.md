@@ -330,7 +330,7 @@ box_img = image[ymin:ymax,  xmin:xmax]
 ```
 
 
-* * *
+### 交換box_xy與np Row_Col位置
 
 ```python
 >>> arr = np.zeros((4,5))

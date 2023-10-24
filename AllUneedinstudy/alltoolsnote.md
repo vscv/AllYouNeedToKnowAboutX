@@ -1,3 +1,28 @@
+
+
+* * *
+
+《DARPA 八問》George H. Heilmeier
+ 
+	1	你想做什麼？用一般人看得懂的語言，清晰表述你的目標，而非用專業術語。
+	2	What are you trying to do? Articulate your objectives using absolutely no jargon.
+	3	現狀如何？現行做法的侷限是什麼？為什麼是現在要做？
+	4	How is it done today, and what are the limits of current practice?
+	5	為什麼是你？你的研究有什麼不同之處，你相信它能成功的理由是什麼？
+	6	What is new in your approach and why do you think it will be successful?
+	7	誰會受益？如果你成功了，會帶來什麼改變？
+	8	Who cares? If you are successful, what difference will it make?
+	9	風險有哪些？效益又有哪些？
+	10	What are the risks and payoffs?
+	11	成本是多少？
+	12	How much will it cost?
+	13	要多久才會成功？
+	14	How long will it take?
+	15	期中和期末要如何檢驗，才能判斷是否成功？
+	16	What are the mid-term and final 「exams」 to check for success?
+
+* * * 
+
 收集一些輔助工具的筆記
 
 # Chrome remotedesttop 遠端桌面

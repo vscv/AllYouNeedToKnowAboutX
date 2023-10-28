@@ -294,6 +294,22 @@ def draw_box(im, np_boxes, labels, threshold=0.5):
 ```
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/913eac07-d849-4217-a238-2bbe3d92e15d)
 
+
+* 強制設定seaborn繪圖顯示特定中文字型
+```Python
+from matplotlib.font_manager import fontManager, FontProperties
+fontManager.addfont('/usr/share/fonts/truetype/font_local/edukai-4.0.ttf')
+prop = FontProperties(fname='/usr/share/fonts/truetype/font_local/edukai-4.0.ttf')
+sns.set(font=prop.get_name())
+```
+
+```Python
+sns.histplot(dataset_df['單價'], );
+```
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e63e0785-1743-4f2b-adf6-06f43a55cf78)
+
+
+
 * * *
 ## OpenCV與Numpy座標轉換
 

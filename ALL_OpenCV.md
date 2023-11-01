@@ -309,6 +309,13 @@ sns.histplot(dataset_df['單價'], );
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/e63e0785-1743-4f2b-adf6-06f43a55cf78)
 
 
+* 簡體
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.rc("font",family="SimHei",size="15")
+```
+
 
 * * *
 ## OpenCV與Numpy座標轉換

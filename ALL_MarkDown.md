@@ -312,6 +312,14 @@ markdown 註解 comment
 # Jupyter notebook, lab 快速切換markdown與code cell
 1. 在選擇到一個cell時：按`M`切換到markdown，按`Y`切換到code。
 2. 若已經在一個cell中：按`Ese`+`M`，反之按`Ese`+`Y`
+3. `A` insert cell above
+4. `B` insert cell below
+5. `X` cut selected cells
+6. `C` copy selected cells
+7. `V` paste cells below
+8. `Shift + V` paste cells above
+9. `DD` delete selected cells
 
-
+`Shift + Space` scroll notebook up ⬆️
+`Space`         scroll notebook down ⬇️
 

@@ -320,6 +320,7 @@ markdown 註解 comment
 8. `Shift + V` paste cells above
 9. `DD` delete selected cells
 
-`Shift + Space` scroll notebook up ⬆️
-`Space`         scroll notebook down ⬇️
+* `Shift + Space` scroll notebook up ⬆️
+
+* `Space`         scroll notebook down ⬇️
 

@@ -509,8 +509,44 @@ $ffmpeg -r 20 -f concat `-safe 0` -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yu
 
 `影像排序問題：不同OS系統或工具產生的檔案列表的檔名排序不盡相同，若輸出的影片出現跳格、插格現象，請檢查排序。`
 
+### 利用ls產生command列表.txt 取代手動選取複製
+
+	    input$tree -d
+    .
+    └── blood-vessel-segmentation
+        ├── test
+        │   ├── kidney_5
+        │   │   └── images
+        │   └── kidney_6
+        │       └── images
+        └── train
+            ├── kidney_1_dense
+            │   ├── images 2279
+            │   └── labels
+            ├── kidney_1_voi
+            │   ├── images 1397
+            │   └── labels
+            ├── kidney_2
+            │   ├── images 2217
+            │   └── labels
+            ├── kidney_3_dense
+            │   └── labels 501 (but the label is less than the image number!! 0496.tif~0996.tif 剛好501張！
+            └── kidney_3_sparse
+                ├── images 1035 files
+                └── labels 1035 files
+	
+	kidney_3_dense缺的images要重複使用自kidney_3_sparse/images/，除了手動選取0496.tif~0996.tif然後複製貼上外，另一個方法。雖然繞了遠路，在沒有UI下應急。
+ 
+        {半自動拷貝:製作所有拷貝的指令列表，已知labels跟images的檔名相同，只要從images中拷貝一樣的labels檔名即可。}
+        $cd kidney_3_dense/
+        $mkdir images
+        $cd labels
+        $ls *.tif | sort -V | xargs -I {} echo "cp ../kidney_3_sparse/images/{} ./images/" > ../tif_label_list.txt
+        $cd ..  
+	$bash -i tif_label_list.txt
 
 
+***
 
 
 ***

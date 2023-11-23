@@ -126,8 +126,10 @@ FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
 
 ### mask = [1 if x > 0.5 else 0 for x in mask]
 ###
-𝑓(𝑥)={█(1,  𝑖𝑓 𝑥≥0.5@0,            𝑒𝑙𝑠𝑒.)┤
-![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/5bb6aa6d-7f45-4a86-abae-e9bccd004243)
+𝑓(𝑥)={(1, 𝑖𝑓 𝑥≥0.5  0, 𝑒𝑙𝑠𝑒.)
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/04c672b0-31ae-49a6-bdd2-13bc3177c488)
+
+
 
 <img width="236" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/99f7ccc6-db44-45ac-a88a-0101f382c26a">
 

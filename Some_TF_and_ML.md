@@ -128,11 +128,11 @@ FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
 
 ##### mask = [1 if x > 0.5 else 0 for x in mask]
 𝑓(𝑥)={(1, 𝑖𝑓 𝑥≥0.5  0, 𝑒𝑙𝑠𝑒.)
-![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/04c672b0-31ae-49a6-bdd2-13bc3177c488)
+<img width="236" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/04c672b0-31ae-49a6-bdd2-13bc3177c488">
 
+上:輸入 中:分割結果 下:分割過濾
+<img width="236" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/23066424-a1f4-404a-a4de-4fffe7afc39a">
 
-
-<img width="236" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/99f7ccc6-db44-45ac-a88a-0101f382c26a">
 
 ```python
 a=tf.constant([[0.1,0.2,0.6,0.7], [0.5,0.7,0.3,0.4]])
@@ -148,6 +148,8 @@ tf.where(a > 0.5, 1, 0)
 array([[0, 0, 1, 1],
        [0, 1, 0, 0]], dtype=int32)>
 ```
+
+
 * * *
 
 * * *

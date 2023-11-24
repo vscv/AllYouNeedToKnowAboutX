@@ -133,22 +133,45 @@ FileLink(r'best_my_model_20230904_bs8_reduce_lr_efnv2xl_fine_tune_TPU.tar')
 上:輸入 中:分割結果 下:分割過濾
 <img width="236" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/23066424-a1f4-404a-a4de-4fffe7afc39a">
 
-
+`tf.where`
 ```python
-a=tf.constant([[0.1,0.2,0.6,0.7], [0.5,0.7,0.3,0.4]])
-tf.where(a >= 0.5, 1, 0)
+mask = tf.constant([[0.1,0.2,0.6,0.7], [0.5,0.7,0.3,0.4]])
+tf.where(mask >= 0.5, 1, 0)
 
 <tf.Tensor: shape=(2, 4), dtype=int32, numpy=
 array([[0, 0, 1, 1],
        [1, 1, 0, 0]], dtype=int32)>
        
-tf.where(a > 0.5, 1, 0)
+tf.where(mask > 0.5, 1, 0)
 
 <tf.Tensor: shape=(2, 4), dtype=int32, numpy=
 array([[0, 0, 1, 1],
        [0, 1, 0, 0]], dtype=int32)>
 ```
 
+`tf.cast`
+這是利用cast成整數型態時會~~自動四捨五入~~ ，算floor在轉型態。
+
+```python
+mask = tf.constant([[0.1,0.2,0.6,1.7], [0.5,0.7,0.3,0.4]])
+tf.cast(mask + 0.5, tf.int32)
+<tf.Tensor: shape=(2, 4), dtype=float32, numpy=
+array([[0., 0., 0., 1.],
+       [0., 0., 0., 0.]], dtype=float32)>
+```
+
+`tf.floor`取最大整數 1.7->1 # 捨去小數後最大整數
+```python
+tf.floor([0.1, 0.5, 0.9, 1.2, 1.9])
+<tf.Tensor: shape=(5,), dtype=float32, numpy=array([0., 0., 0., 1., 1.], dtype=float32)>
+```
+
+`tf.round` # 四捨六入五取偶，當小數為0.5若整數為偶數則捨去小數取偶數，若為奇數則進位。
+
+```python
+tf.round([0.1, 1.5, 2.5, 0.5, 0.6, 1.2, 1.9])
+<tf.Tensor: shape=(7,), dtype=float32, numpy=array([0., 2., 2., 0., 1., 1., 2.], dtype=float32)>
+```
 
 * * *
 

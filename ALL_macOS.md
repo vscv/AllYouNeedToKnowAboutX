@@ -115,3 +115,21 @@ iconutil -c icns icons.iconset -o icon.icns
 [Finder新增檔案.app](temp_imgs/Finder新增檔案.app)
 
 * * *
+
+#### A script runs in a subshell. Changing a directory in a subshell doesn't propagate to the parent shell.
+#### https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script
+
+`直接在shell script中放cd路徑的問題`
+
+```bash
+#!/bin/sh
+cd 2023_11_13_Segment_kidney_blood_vessel/notebooks/;
+```
+* * *
+
+* * *
+
+* * *
+
+* * *
+* * *

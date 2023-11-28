@@ -174,6 +174,23 @@ tf.round([0.1, 1.5, 2.5, 0.5, 0.6, 1.2, 1.9])
 ```
 
 * * *
+## kaggle 無網路環境下，預先下載套件再離線安裝
+https://www.kaggle.com/competitions/severstal-steel-defect-detection/discussion/113195
+
+* 取得wheel檔
+```bash
+#pip download [package_name], then you will get the whl file.
+
+""" put a lot of wheels in dir """
+mkdir wheels_dir
+cd wheels_dir/
+pip download segmentation-models
+```
+
+* 放入kaggle-> dataset自訂中，再由本地安裝
+```bash
+!pip install segmentation-models --no-index --find-links=file:///kaggle/input/wheels_dir/
+```
 
 * * *
 

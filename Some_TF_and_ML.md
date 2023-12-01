@@ -210,6 +210,43 @@ pip download segmentation-models
 
 * from tensorboard.backend.event_processing.event_file_loader import RawEventFileLoader
 https://github.com/tensorflow/tensorboard/issues/6388
+```python
+from tensorboardX import SummaryWriter
+from tensorboard.backend.event_processing.event_file_loader import RawEventFileLoader
+from tensorboard.compat.proto import event_pb2
 
+loader = RawEventFileLoader("{path_to_your_logdir}/events.out.tfevents.{old_suffix}.ps") # it is a file name, need to add "ps"
+events = []
+for raw_event in loader.Load():
+    e = event_pb2.Event.FromString(raw_event)
+    # print(e)
+    # print(e.step) # the "step" in my result is the index of training epoch, I want to choose the last 20 epochs.
+    if e.step <= 100 and e.step > 80:
+            events.append(e)
+
+tb_log = SummaryWriter(log_dir="{path_to_your_logdir}/events") # it is a path, not a file, I create a folder called events
+for e in events[1:]:   
+
+    # For me, the first element in "events" seems not the result data, you can print "events[0:2]" to check it.
+    # print(events[0:2])
+
+    # wall_time: 1684237044.4711838
+    # file_version: "brain.Event:2"
+
+    # wall_time: 1684237250.0319963
+    # step: 81
+    # summary {
+    #  value {
+               # tag: "recall/roi_0.3"
+               # simple_value: 0.9507125616073608
+    # }
+    # }
+
+    # print(e.summary.value)
+    # print(type(e.summary.value))
+    for value in e.summary.value:
+        # print(value.tag,value.simple_value, e.step)
+        tb_log.add_scalar(str(value.tag),value.simple_value, e.step)
+```
 * tfb with jupyter notebook
 * * *

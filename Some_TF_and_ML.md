@@ -206,6 +206,7 @@ pip download segmentation-models
 `2023/11/31終止該dev線上服務，請用回本地tensorboard！`
 
 * tensorboard.data.experimental.ExperimentFromDev()
+`僅支援讀取tensorboard dev的線上位址，因此也無法使用了。`
 
 * tfb with jupyter notebook
 * * *

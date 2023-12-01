@@ -201,5 +201,5 @@ pip download segmentation-models
 * * *
 # tensorboard dev
 `tensorboard dev upload --logdir {logs/}`
-
+`2023/11/31終止該dev線上服務，請用回本地tensorboard！`
 * * *

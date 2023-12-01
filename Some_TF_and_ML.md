@@ -208,5 +208,8 @@ pip download segmentation-models
 * tensorboard.data.experimental.ExperimentFromDev()
 `僅支援讀取tensorboard dev的線上位址，因此也無法使用了。`
 
+* from tensorboard.backend.event_processing.event_file_loader import RawEventFileLoader
+https://github.com/tensorflow/tensorboard/issues/6388
+
 * tfb with jupyter notebook
 * * *

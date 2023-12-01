@@ -193,6 +193,10 @@ pip download segmentation-models
 ```
 
 * * *
+# tf.image.resize, tf.image.resize_with_pad
+`todo:回傳dtype差異，以及原始
+
+
 
 * * *
 

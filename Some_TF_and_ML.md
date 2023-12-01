@@ -199,5 +199,7 @@ pip download segmentation-models
 
 
 * * *
+# tensorboard dev
+`tensorboard dev upload --logdir {logs/}`
 
 * * *

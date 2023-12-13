@@ -252,7 +252,7 @@ for e in events[1:]:
 
 
 * * *
-## PyTroch test
+## PyTorch test
 
 ```python
 import torch

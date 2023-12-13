@@ -248,5 +248,42 @@ for e in events[1:]:
         # print(value.tag,value.simple_value, e.step)
         tb_log.add_scalar(str(value.tag),value.simple_value, e.step)
 ```
+
+
+
+* * *
+## PyTroch test
+
+```python
+import torch
+import torch.nn as nn
+
+print(f"What about a GPU? {torch.cuda.is_available()}")
+
+print(f"Number about GPU? {torch.cuda.device_count()}")
+
+print(f"What current GPU? {torch.cuda.current_device()}")
+
+print(f"What name is GPU? {torch.cuda.get_device_name(torch.cuda.current_device())}")
+
+print(f"Set default tensor type to CUDA: {torch.set_default_tensor_type(torch.cuda.FloatTensor)}")
+
+print(f"Are tensors stored on GPU by default? {torch.rand(10).device}")
+```
+
+
+    What about a GPU? True
+    Number about GPU? 1
+    What current GPU? 0
+    What name is GPU? Tesla V100-SXM2-32GB
+    Set default tensor type to CUDA: None
+    Are tensors stored on GPU by default? cuda:0
+    torch_ver_major:1, dtype_index:torch.int64
+
+
+
+* * *
+
+* * *
 * tfb with jupyter notebook
 * * *

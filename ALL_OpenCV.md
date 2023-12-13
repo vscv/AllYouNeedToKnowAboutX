@@ -377,6 +377,34 @@ array([[0., 0., 0., 0., 0.],
 ```
 
 * * *
+## Some bugs
+
+```bash
+    import cv2
+  File "/usr/local/lib/python3.10/dist-packages/cv2/__init__.py", line 181, in <module>
+    bootstrap()
+  File "/usr/local/lib/python3.10/dist-packages/cv2/__init__.py", line 175, in bootstrap
+    if __load_extra_py_code_for_module("cv2", submodule, DEBUG):
+  File "/usr/local/lib/python3.10/dist-packages/cv2/__init__.py", line 28, in __load_extra_py_code_for_module
+    py_module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib/python3.10/dist-packages/cv2/typing/__init__.py", line 169, in <module>
+    LayerId = cv2.dnn.DictValue
+AttributeError: module 'cv2.dnn' has no attribute 'DictValue'
+```
+
+`do the same modification in the "/usr/local/lib/python3.10/dist-packages/cv2/typing/__init__.py" `
+
+```python
+@Scikud I was able to fix it by removing line 169 from "/Users/apple/anaconda3/lib/python3.11/site-packages/cv2/typing/init.py" file, it seems to be the problem
+
+comment out line 169 like so
+#  LayerId = cv2.dnn.DictValue
+```
+
+
+
 
 * * *
 * * *

@@ -397,6 +397,7 @@ AttributeError: module 'cv2.dnn' has no attribute 'DictValue'
 `do the same modification in the "/usr/local/lib/python3.10/dist-packages/cv2/typing/__init__.py" `
 
 ```python
+#https://github.com/facebookresearch/nougat/issues/40
 @Scikud I was able to fix it by removing line 169 from "/Users/apple/anaconda3/lib/python3.11/site-packages/cv2/typing/init.py" file, it seems to be the problem
 
 comment out line 169 like so

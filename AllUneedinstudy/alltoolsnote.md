@@ -25,7 +25,7 @@
 
 收集一些輔助工具的筆記
 
-# Chrome remotedesttop 遠端桌面
+# Chrome remote desktop 遠端桌面
 
 * host/client 僅需要安裝chrome瀏覽器以及google帳號。
 

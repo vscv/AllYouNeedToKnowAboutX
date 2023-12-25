@@ -201,6 +201,14 @@ pip download segmentation-models
 * * *
 # tensorboard
 
+```bash
+$tensorboard --logdir train_log/20231223-203132 --port 5000
+
+# --port 若在公有雲請設成
+#目標埠: 5000 (userdefine1)內部可見
+#對外埠: 55955 (外部可見)
+```
+
 * tensorboard dev
 `tensorboard dev upload --logdir {logs/}`
 `2023/11/31終止該dev線上服務，請用回本地tensorboard！`

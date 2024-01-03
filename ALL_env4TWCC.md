@@ -153,7 +153,7 @@ $python3
 Python 3.10.6 (main, May 29 2023, 11:10:38) [GCC 11.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import fnv
->>> OK! If not any error!
+>>> OK! If no any error!
 
 (5) 重啟jupyter-notebook載入新安裝的套件
 

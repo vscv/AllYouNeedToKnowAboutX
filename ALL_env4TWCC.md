@@ -97,6 +97,9 @@
 
 ***
 ## FLIR Science File SDK 
+
+用來開啟紅外線熱影像SEQ錄影與R.JPG影像檔案。
+
 ```bash
 FLIR Science File SDK 
 https://github.com/gcathelain/thermalcognition/tree/master/FLIR%20Science%20File%20SDK

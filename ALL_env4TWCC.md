@@ -93,3 +93,83 @@
 
 
 ##### dpkg: debian package. 
+
+
+***
+## FLIR Science File SDK 
+```bash
+FLIR Science File SDK 
+https://github.com/gcathelain/thermalcognition/tree/master/FLIR%20Science%20File%20SDK
+
+FLIR Science File SDK for Python
+https://flir.custhelp.com/app/answers/detail/a_id/3504/~/getting-started-with-flir-science-file-sdk-for-python
+
+Verifying archive integrity...  100%   All good.
+Uncompressing FLIR Science File SDK  100%  
+must be run as root
+
+(1) 直接開pytorch-23.11-py3:latest容器
+$cd 2023_08_14_FLIR_SDK/
+$ sudo sh FLIRScienceFileSDK-4.1.0+26-linux-x86_64.run (自下載的ZIP檔解開)
+
+Verifying archive integrity...  100%   All good.
+Uncompressing FLIR Science File SDK  100%  
+Installing FLIR Science File SDK to /opt/flir/sdks/file
+Add Desktop Entry [Yn]?Y
+
+Creating /usr/share/applications/flir-filesdk.desktop
+Creating /etc/profile.d/flir_filesdk.sh for FLIRFILESDKDIR environment variable.
+You may need to reboot to apply this change.
+
+(2)
+編譯給Python使用
+#安裝套件
+$sudo pip install setuptools cython wheel
+#後面會缺ffprobe
+$sudo pip install opencv-python ffprobe-python sk-video scikit-image spacy pytesseract
+
+$ sudo apt install ffmpeg #後面若要存新影片才要
+$ sudo apt install libimage-exiftool-perl #後面要開FLIR JPG才要
+
+
+(3)
+#把SDK安裝成py套件
+$cd /opt/flir/sdks/file/python
+python setup.py install --shadow-dir /path/to/temp/folder/filesdk
+注意：/path/to/temp/folder/filesdk是你本機有寫入權限的地方
+注意：setup.py位置在 /opt/flir/sdks/file/python
+$ sudo python setup.py install --shadow-dir /tmp/filesdk
+
+“error: shadow-dir: /tmp/filesdk/ must not exist.”不要先去mkdir資料夾，他自己會產生！
+有sudo才能安裝 
+Installed /usr/local/lib/python3.10/dist-packages/FileSDK-4.1.0-py3.10-linux-x86_64.egg
+Processing dependencies for FileSDK==4.1.0
+Finished processing dependencies for FileSDK==4.1.0
+
+
+(4) 測試fnv工具包
+$cd to somewhere not the opt/flir/sdks/file/python
+$python3
+Python 3.10.6 (main, May 29 2023, 11:10:38) [GCC 11.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import fnv
+>>> OK! If not any error!
+
+(5) 重啟jupyter-notebook載入新安裝的套件
+
+(6) 安裝thermalcognition包含API使用範例
+# demo jupyter
+git clone https://github.com/gcathelain/thermalcognition
+
+(7) 修bug
+AttributeError: module 'cv2.dnn' has no attribute 'DictValue'
+
+comment out line 169 like so
+#  LayerId = cv2.dnn.DictValue
+
+$sudo vim /usr/local/lib/python3.10/dist-packages/cv2/typing/__init__.py
+#  LayerId = cv2.dnn.DictValue (OK!)
+
+```
+
+***

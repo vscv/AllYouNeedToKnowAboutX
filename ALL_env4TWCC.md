@@ -129,7 +129,7 @@ You may need to reboot to apply this change.
 #安裝套件
 $sudo pip install setuptools cython wheel
 #後面會缺ffprobe
-$sudo pip install opencv-python ffprobe-python sk-video scikit-image spacy pytesseract
+$sudo pip install opencv-python ffprobe-python sk-video scikit-image spacy pytesseract ffmpeg tree libimage-exiftool-perl
 
 $ sudo apt install ffmpeg #後面若要存新影片才要
 $ sudo apt install libimage-exiftool-perl #後面要開FLIR JPG才要

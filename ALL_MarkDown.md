@@ -324,3 +324,7 @@ markdown 註解 comment
 
 * `Space`         scroll notebook down ⬇️
 
+[todo] 一次編輯多行
+Alt+mouse selection 然後 ←/→ 產生多行游標
+cmd+mouse clicks在想要的數個地方設游標
+

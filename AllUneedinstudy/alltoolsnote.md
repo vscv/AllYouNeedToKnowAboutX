@@ -4,6 +4,8 @@
 
 《DARPA 八問》George H. Heilmeier
  
+ https://www.darpa.mil/work-with-us/heilmeier-catechism
+ 
 	1	你想做什麼？用一般人看得懂的語言，清晰表述你的目標，而非用專業術語。
 	2	What are you trying to do? Articulate your objectives using absolutely no jargon.
 	3	現狀如何？現行做法的侷限是什麼？為什麼是現在要做？
@@ -20,6 +22,9 @@
 	14	How long will it take?
 	15	期中和期末要如何檢驗，才能判斷是否成功？
 	16	What are the mid-term and final 「exams」 to check for success?
+
+* * * 
+其實呢多數人都是普通人，好好做稍微有進步性的題目也就夠了，世界上的大師很多，拯救地球的事讓他們來就好。
 
 * * * 
 

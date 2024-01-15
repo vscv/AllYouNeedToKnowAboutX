@@ -87,6 +87,8 @@ You may still be able to access the file from the browser:
 
 	 https://drive.google.com/uc?id=1Z0ykjS0r-D8InbdkUF5RdIzBRTvVy0Yt 
 
+
+PS. cp -afpR 拷貝雲端硬碟到macOS外接碟會很慢，cp -r會快很多就是..
 * * *
 
 

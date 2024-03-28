@@ -1,3 +1,6 @@
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/370b1450-8752-4ff0-9c4b-a44f262d4f25)
+
+
 ## Mac 版 Microsoft 365 Word 字型「標楷體-繁」完全無法呈現
 https://answers.microsoft.com/zh-hant/msoffice/forum/all/mac-%E7%89%88-microsoft-365-word/1fdb9475-278e-4bee-8693-e36be8279f3c?page=1
 

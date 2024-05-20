@@ -317,6 +317,12 @@ plt.rc("font",family="SimHei",size="15")
 ```
 
 
+* 設定matplotlib預設使用本地中文字型
+https://github.com/ultralytics/ultralytics/issues/5803
+
+
+
+
 * * *
 ## OpenCV與Numpy座標轉換
 

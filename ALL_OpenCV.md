@@ -430,7 +430,9 @@ Hit:
 * 重新安裝opencv
   $sudo pip uninstall opencv-python
   $sudo pip uninstall python
-* 
+
+  sudo pip uninstall openecv opencv-python
+* $sudo pip install opencv-contrib-python
 * * *
 * * *
 * * *

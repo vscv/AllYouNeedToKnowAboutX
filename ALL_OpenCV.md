@@ -427,7 +427,10 @@ Hit:
 ## CV2無法讀取mp4檢查print("cap:", cap.isOpened())都是False?
 * 重複確認檔案絕對路徑
 * 重新安裝ffmpeg
-  
+* 重新安裝opencv
+  $sudo pip uninstall opencv-python
+  $sudo pip uninstall python
+* 
 * * *
 * * *
 * * *

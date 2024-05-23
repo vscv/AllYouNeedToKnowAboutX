@@ -321,6 +321,17 @@ plt.rc("font",family="SimHei",size="15")
 https://github.com/ultralytics/ultralytics/issues/5803
 https://dev.to/codemee/matplotlib-xian-shi-zhong-wen-4998
 
+強制加入字型
+```Shell
+from matplotlib.font_manager import fontManager
+fontManager.addfont('/home/u3148947/font_local/edukai-4.0.ttf')
+```
+設定使用該字型
+```
+import matplotlib
+matplotlib.rc('font', family='TW-MOE-Std-Kai', size=8)
+```
+
 
 
 * * *

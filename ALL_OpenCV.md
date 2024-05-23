@@ -321,11 +321,44 @@ plt.rc("font",family="SimHei",size="15")
 https://github.com/ultralytics/ultralytics/issues/5803
 https://dev.to/codemee/matplotlib-xian-shi-zhong-wen-4998
 
+測試沒有正確中文字型時
+```
+import matplotlib.pyplot as plt
+plt.pie(
+ [800, 300, 400],
+ labels=['交通', '娛樂', '教育'])
+#字會變成框框
+```
+
+
 強制加入字型
 ```Shell
 from matplotlib.font_manager import fontManager
 fontManager.addfont('/home/u3148947/font_local/edukai-4.0.ttf')
 ```
+檢查字型名稱
+```
+for i in sorted(fontManager.get_font_names()):
+    print(i)
+DejaVu Sans
+DejaVu Sans Display
+DejaVu Sans Mono
+DejaVu Serif
+DejaVu Serif Display
+Liberation Mono
+Liberation Sans
+Liberation Sans Narrow
+Liberation Serif
+STIXGeneral
+STIXNonUnicode
+STIXSizeFiveSym
+STIXSizeFourSym
+STIXSizeOneSym
+STIXSizeThreeSym
+STIXSizeTwoSym
+TW-MOE-Std-Kai
+```
+
 設定使用該字型
 ```
 import matplotlib

@@ -477,6 +477,8 @@ Hit:
 
   sudo pip uninstall openecv opencv-python
 * $sudo pip install opencv-contrib-python
+
+`如果是在TWCC PyTorch 24.02容器下發生的，可以改用Tensorflow 24.02版本的容器是可以的。
 * * *
 * * *
 * * *

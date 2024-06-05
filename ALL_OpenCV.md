@@ -482,6 +482,21 @@ Hit:
 * * *
 * * *
 * * *
+# Gradio
+python -m pip install gradio
+gradio-4.33.0
+AttributeError: module 'gradio' has no attribute 'inputs'   
+`舊版的inputs沒支援了pip install gradio==3.50 ==3.43.1`
+
+gradio deprecated gradio.inputs and gradio.ouputs. Use gradio.components for newer versions. See example:
+import gradio as gr
+
+# Component eg. Image, Label ...etc
+
+outputs=gr.components.<Component>(...) 
+inputs=gr.components.<Component>(...)
+
+
 * * *
 * * *
 * * *

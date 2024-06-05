@@ -504,6 +504,10 @@ inputs=gr.components.<Component>(...)
     ^^^^^^^^^^^^^^^
 NameError: name 'PencilScribbles' is not defined
 note  : PencilScribbles --> Scribbles, for augraphy="8.2.3" zytk-vm version.
+
+
+
+size_range=(100, 800),  ->> scribbles_size_range=(100, 500), # must smaller than text_image
 ```
 * * *
 * * *

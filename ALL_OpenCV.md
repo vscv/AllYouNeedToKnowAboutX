@@ -499,6 +499,12 @@ outputs=gr.components.<Component>(...)
 inputs=gr.components.<Component>(...)
 ```
 
+```Shell
+    PencilScribbles(
+    ^^^^^^^^^^^^^^^
+NameError: name 'PencilScribbles' is not defined
+note  : PencilScribbles --> Scribbles, for augraphy="8.2.3" zytk-vm version.
+```
 * * *
 * * *
 * * *

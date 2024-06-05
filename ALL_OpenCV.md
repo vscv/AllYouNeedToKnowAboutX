@@ -499,7 +499,7 @@ outputs=gr.components.<Component>(...)
 inputs=gr.components.<Component>(...)
 ```
 
-```Shell
+```Python
     PencilScribbles(
     ^^^^^^^^^^^^^^^
 NameError: name 'PencilScribbles' is not defined
@@ -508,6 +508,15 @@ note  : PencilScribbles --> Scribbles, for augraphy="8.2.3" zytk-vm version.
 
 
 size_range=(100, 800),  ->> scribbles_size_range=(100, 500), # must smaller than text_image
+
+
+  File "/xxxx/2024_06_06__Gradio_DEMO_page_edge2MacOS/2-DCC_app.py", line 134
+    model_path_20K-CAE = Path("xx/best_model/ir_512_20K-CAE/CAE-64-128_512x512_32_0050.xml")
+    ^^^^^^^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+
+"這是因為20K'-'CAE對python來說是一個'減'號而不是符號。"
+
 ```
 * * *
 * * *

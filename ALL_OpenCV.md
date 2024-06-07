@@ -575,10 +575,14 @@ with gr.Blocks(theme='freddyaboulton/dracula_revamped', title=" Document Enhance
 if __name__ == "__main__":
     demo.launch(server_name="127.0.0.1",server_port=6666,)
 ```
-   
-3. https://imgsli.com/
+
 
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/9b1b78d6-0e1e-420f-af80-4bb98ee16a07)
+
+   
+2. https://imgsli.com/
+
+
 
 
 * * *

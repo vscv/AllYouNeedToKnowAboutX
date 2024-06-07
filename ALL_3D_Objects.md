@@ -417,3 +417,31 @@ The interface enables landmark pair placement and displays the effects of the wa
 * [Tutorial: Re-orientation of 3D volumes in 3DSlicer by Dr Jeremy Shaw
 ](https://www.youtube.com/watch?v=GkPHEsB9rOI)
 * * *
+
+# 對破碎的三維組件進行接合面距離計算以找出最相似周圍
+
+* directed Hausdorff distance
+
+```
+scipy.spatial.distance.directed_hausdorff
+scipy: 是指兩個2D array座標 [ x,y x,y, ...]
+
+skimage.metrics.hausdorff_distance
+skimage: 是指2D影像上像素點 ([True True xxx ])
+```
+雖然可以量測兩個曲面的距離，但由於兩個曲面需要在空間中不斷嘗試逼近，因此需有一個機制每次依據距離結果來調整其中一個曲面的位置，每次更新位置、距離直到無法找到更小的距離停止。
+
+<img width="326" alt="image" src="https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/f23a823f-75b8-4db4-a200-cf598b2262fd">
+
+* * *
+
+
+
+* * *
+
+* * *
+* * *
+* * *
+
+
+

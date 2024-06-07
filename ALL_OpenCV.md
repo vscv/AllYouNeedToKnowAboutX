@@ -518,6 +518,69 @@ SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '
 "這是因為20K'-'CAE對python來說是一個'減'號而不是符號。"
 
 ```
+
+### Gradio_ImagSlider_
+#### 兩張影像之滑動比對
+
+1. https://github.com/pngwn/gradio-imageslider
+   
+```Python
+# ImageSlider
+from gradio_imageslider import ImageSlider
+from PIL import ImageFilter
+
+# a pass fun
+def make_output_for_ImgSli(img1, img2):
+    return (img1, img2)
+
+
+with gr.Blocks(theme='freddyaboulton/dracula_revamped', title=" Document Enhancement") as demo:
+    gr.Markdown(head_line)
+    gr.Markdown(head_description)
+    
+    with gr.Row():
+        inp = gr.components.Image(type="filepath", label="Input degraded doc.")
+        out = gr.components.Image(type="pil", label="Output clean doc.")
+    
+    with gr.Row():
+        btn_Reset = gr.ClearButton([inp,out,]) #gr.Button("Reset Input")
+        btn_Clean = gr.Button("Clean Doc.")
+
+
+    # Image Slider Compare #
+    #with gr.Group():
+    with gr.Column():
+        # for dynaminc input "AFTER" processed the input and output images
+        ImgSli = ImageSlider(
+        label="Image slider comparing", type="pil", slider_color="pink",
+        width=800, height=800,
+        )
+        
+        # for static two image input
+        #ImgSli = ImageSlider(value=[inp,out],
+        #label="Blur image", type="pil", slider_color="pink",
+        #width=512, height=512,
+        #)
+        
+        #ImgSli.upload(fn, inputs=img1, outputs=img1)
+        #ImgSli.input(inputs=img1, outputs=img1)
+        
+        with gr.Row():
+            btn_Reset2 = gr.ClearButton([ImgSli,])
+            btn_ImgSli = gr.Button("ImgSli")
+
+    btn_Clean.click(fn=inference, inputs=[inp,ver], outputs=out)
+    btn_ImgSli.click(fn=make_output_for_ImgSli, inputs=[inp,out], outputs=ImgSli)
+
+if __name__ == "__main__":
+    demo.launch(server_name="127.0.0.1",server_port=6666,)
+```
+   
+3. https://imgsli.com/
+
+![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/9b1b78d6-0e1e-420f-af80-4bb98ee16a07)
+
+
 * * *
 * * *
 * * *

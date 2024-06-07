@@ -579,6 +579,7 @@ if __name__ == "__main__":
 
 ![image](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/9b1b78d6-0e1e-420f-af80-4bb98ee16a07)
 
+![螢幕錄影 2024-06-07 10 14 55 (1)](https://github.com/vscv/AllYouNeedToKnowAboutX/assets/18000764/ffbbbc77-b4d8-4f84-b9ef-b2bf4a3a2892)
    
 2. https://imgsli.com/
 

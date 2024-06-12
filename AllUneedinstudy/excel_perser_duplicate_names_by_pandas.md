@@ -1,4 +1,4 @@
-"""Python
+```Python
 
 #讀取excel，將重複的名稱由主要sheet中移除。
 
@@ -42,7 +42,7 @@ df_clear.to_csv("六月現職同仁名單_without_comma_header.csv", index=False
 #df_clear.to_csv("六月現職同仁名單.csv", index=False)
 #df_clear.to_string("六月現職同仁名單.txt", index=False)
 
-"""
+```
 
 
 

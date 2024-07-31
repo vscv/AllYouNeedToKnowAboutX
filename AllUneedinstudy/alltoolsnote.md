@@ -2,29 +2,7 @@
 
 * * *
 
-《DARPA 八問》George H. Heilmeier
- 
- https://www.darpa.mil/work-with-us/heilmeier-catechism
- 
-	1	你想做什麼？用一般人看得懂的語言，清晰表述你的目標，而非用專業術語。
-	2	What are you trying to do? Articulate your objectives using absolutely no jargon.
-	3	現狀如何？現行做法的侷限是什麼？為什麼是現在要做？
-	4	How is it done today, and what are the limits of current practice?
-	5	為什麼是你？你的研究有什麼不同之處，你相信它能成功的理由是什麼？
-	6	What is new in your approach and why do you think it will be successful?
-	7	誰會受益？如果你成功了，會帶來什麼改變？
-	8	Who cares? If you are successful, what difference will it make?
-	9	風險有哪些？效益又有哪些？
-	10	What are the risks and payoffs?
-	11	成本是多少？
-	12	How much will it cost?
-	13	要多久才會成功？
-	14	How long will it take?
-	15	期中和期末要如何檢驗，才能判斷是否成功？
-	16	What are the mid-term and final 「exams」 to check for success?
 
-* * * 
-其實呢多數人都是普通人，好好做稍微有進步性的題目也就夠了，世界上的大師很多，拯救地球的事讓他們來就好。
 
 * * * 
 
@@ -462,6 +440,16 @@ ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -
 ```
 
 ### 靜態影像轉成影片;影片轉影像
+
+```
+Select an example video
+We assume that the video is stored as a list of JPEG frames with filenames like <frame_index>.jpg.
+
+For your custom videos, you can extract their JPEG frames using ffmpeg (https://ffmpeg.org/) as follows:
+
+ffmpeg -i <your_video>.mp4 -q:v 2 -start_number 0 <output_dir>/'%05d.jpg'
+where -q:v generates high-quality JPEG frames and -start_number 0 asks ffmpeg to start the JPEG file from 00000.jpg.
+```
 
 ```shell
 ffmpeg -i  5000_cycle.mp4  -vf fps=1 -qscale 0 5000_cycle/5000_cycle_%05d.jpg

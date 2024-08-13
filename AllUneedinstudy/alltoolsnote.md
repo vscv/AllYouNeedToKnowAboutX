@@ -583,5 +583,20 @@ TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺�
   ```Bash
   Host *
     SendEnv LANG LC_*
-    ServerAliveInterval 120```
+    ServerAliveInterval 120
+```
   
+***
+## 會議時間調查工具、線上喬時間工具、約時間
+
+以Google Forms進行會議時間調查
+https://www.process.st/templates/%E4%BB%A5google-forms%E9%80%B2%E8%A1%8C%E6%9C%83%E8%AD%B0%E6%99%82%E9%96%93%E8%AA%BF%E6%9F%A5/
+https://www.playpcesor.com/2017/08/google-forms-meeting-time.html
+
+## 使用 Google 日曆的預約時間表
+
+這個是一對一預約時間時
+https://workspace.google.com/intl/zh-TW/resources/appointment-scheduling/
+
+
+***

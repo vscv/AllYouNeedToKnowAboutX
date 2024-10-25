@@ -177,8 +177,16 @@ $sudo vim /usr/local/lib/python3.10/dist-packages/cv2/typing/__init__.py
 
 ***
 
+# 手動可以遠端使用的方法
 
 # TensorBoard in notebooks
 https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks
+
 只能用在local機器上，CCS因為port有重新導向，在CCS用cmd下tensorboard --host 0.0.0.0 --port 5000 再用網頁開:CCS對外IP:對外PORT即可！
+
+CCS
+$tensorboard --port 5000 --logdir xxxxx/fit/20241025-131659
+
+your browser
+http://203.145.216.xxx:58425/ 
 

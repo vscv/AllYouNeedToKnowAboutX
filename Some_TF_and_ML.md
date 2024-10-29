@@ -295,3 +295,36 @@ print(f"Are tensors stored on GPU by default? {torch.rand(10).device}")
 * * *
 * tfb with jupyter notebook
 * * *
+
+
+***
+[TODO test]
+
+
+https://www.tensorflow.org/guide/distributed_training
+將 tf.distribute.Strategy 與自訂訓練循環結合使用
+如上所示，tf.distribute.Strategy與 Keras 一起使用Model.fit只需更改幾行程式碼。只要多一點努力，您還可以使用自訂訓練循環。tf.distribute.Strategy
+
+如果您需要比 Estimator 或 Keras 更大的靈活性和對訓練循環的控制，您可以編寫自訂訓練循環。例如，當使用 GAN 時，您可能希望每輪採用不同數量的生成器或判別器步驟。同樣，高階框架也不太適合強化學習訓練。
+
+
+
+然後，定義訓練的一個步驟。用於tf.GradientTape計算梯度和最佳化器應用這些梯度來更新模型的變數。若要分發此訓練步驟，請將其放入函數中並將其與從先前建立的資料集輸入一起train_step傳遞：tf.distribute.Strategy.rundist_dataset
+
+
+
+
+https://link.springer.com/article/10.1007/s11227-022-04354-1
+
+https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11227-022-04354-1/MediaObjects/11227_2022_4354_Fig1_HTML.png![image](https://github.com/user-attachments/assets/09ff402a-8d8b-4d41-a630-4fbcefae5e17)
+
+Fig. 1
+
+
+
+如上所述，執行影像變換任務的生成對抗神經網路至少包含多個神經網路以及多個損失函數。這使得這些網路的訓練相當昂貴。為了減少訓練時間，[ 21 ]中提出了一種演化演算法，它可以穩定第一次迭代中的權重，以避免崩潰（總是從輸入影像產生相同的輸出）和不收斂（變換永遠不會發生）問題。該方法實現了更快的收斂。然而，該解決方案並沒有顯著提高系統的訓練速度，因為它沒有利用主要為系統提供速度的硬體資源。在[ 22 ]中，作者訓練了 Lapras-GAN，這是一種利用 SSIM 和 L1 來獲得逼真影像的影像超解析度方法。為了執行 PyTorch 訓練，使用多個具有多個 GPU 的節點，將訓練時間減少多達 4 倍。在VAE-GAN[ 23 ]中，TensorFlow用於執行多GPU訓練。簡而言之，多個 GPU 的結合可以顯著提高訓練速度。然而，上述的解決方案（Pix2Pix、CycleGAN、BicycleGAN）不包括多 GPU 訓練。
+
+因此，為了利用訓練速度，有必要增加訓練批次的大小。此參數在訓練中非常重要，因為非常大的批量大小可以使訓練速度更快，但可能會導致模型過度泛化並且無法轉換影像細節。在一些工作中，提出了一些根據非生成對抗網絡中的紀元 [ 24 , 25 ] 和網絡層 [ 26 ] 改變批量大小的策略。
+
+然而，先前尚未研究過 GAN（Pix2Pix 或 CycleGAN）中批量大小增加的影響。在這些解決方案中，在不同論文中建立了批量大小，但不建議增加批量大小。
+***

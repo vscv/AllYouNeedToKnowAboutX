@@ -106,6 +106,19 @@ ERROR: Unable to extract uploader id; please report this issue on https://yt-dl.
 目前master已經修正，但Mac的homebrew仍然是舊版無解中。https://github.com/ytdl-org/youtube-dl/issues/31530
 可以改用pypy版本使用： pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git" 
 
+完整重新安裝流程：
+1.安裝 git （如果未安裝 | 檢查指令：$ git --version）
+sudo apt install git
+
+2.安裝 pip （Python 套件管理器，如果未安裝）
+sudo apt install pip
+
+3. 直接從 git 儲存庫重新安裝 youtube-dl
+sudo pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git"
+
+
+
+
 * * *
 
 # Voideo editor

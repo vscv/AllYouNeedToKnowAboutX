@@ -117,6 +117,11 @@ sudo apt install pip
 sudo pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git"
 
 
+[2024-12-26] 看來youtube又更改了他們的網頁配置，所以現在ydl又無法使用了！！
+```Bash
+WARNING: [youtube] Falling back to generic n function search
+ERROR: Unable to extract nsig function code (caused by RegexNotFoundError('Unable to extract \x1b[0;34mInitial JS player n function name\x1b[0m; please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.')); please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.    
+```
 
 
 * * *

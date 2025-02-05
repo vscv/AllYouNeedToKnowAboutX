@@ -1,6 +1,6 @@
-範本來自 https://hackmd.io/@tedchen107/H1bm7Hbpd#/ 
+範本來自 https://hackmd.io/@tedchen107/H1bm7Hbpd#/ https://hackmd.io/@tedchen107/ByFgWPWVY#/
 
-簡報語法只能在mackmd.io上使用
+簡報語法只能在hackmd.io上使用
 
 # 8_Object-Oriented Programming
 

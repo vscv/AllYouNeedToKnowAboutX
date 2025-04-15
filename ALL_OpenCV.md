@@ -589,6 +589,10 @@ if __name__ == "__main__":
 # mptplotlib的中文字型
 這裡有完整解法 注意 要照裡面全部 全部步驟
 
+## 下載字型
+
+edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00) https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
+
 ```
 # 找到mptplotlib的字型位置
 import matplotlib

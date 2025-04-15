@@ -593,6 +593,8 @@ if __name__ == "__main__":
 
 edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00) https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
 
+
+## 方法一：拷貝字型到系統中
 ```
 # 找到mptplotlib的字型位置
 import matplotlib
@@ -605,8 +607,8 @@ print(matplotlib.matplotlib_fname())
 !cp font_local/edukai-4.0.ttf /home/your_DIR/.local/lib/python3.xx/site-packages/matplotlib/mpl-data/fonts/ttf
 ```
 
-## 或是強制設定
-## 設定MPL使用中文字型 (# MPL每次都要重新執行一次自行設定)
+## 方法二：或是強制設定字型路徑
+#### 設定MPL使用中文字型 (# MPL每次都要重新執行一次自行設定)
 ```
 from matplotlib.font_manager import fontManager
 

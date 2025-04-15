@@ -591,8 +591,12 @@ if __name__ == "__main__":
 
 ## 下載字型
 
-edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00) https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip
+edukai-4.0.ttf 教育部標準楷書字形檔(Version 4.00) https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-4.0.zip 已失效
 
+edukai-5.0.ttf 教育部標準楷書字形檔(Version 5.00) 13,084字 https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/edukai-5.0.zip
+
+
+教育部標準宋體 UN for Unicode版 24,034字  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/eduSong_Unicode.zip
 
 ## 方法一：拷貝字型到系統中
 ```

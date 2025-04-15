@@ -584,6 +584,85 @@ if __name__ == "__main__":
 2. https://imgsli.com/
 
 
+* * *
+
+# mptplotlib的中文字型
+這裡有完整解法 注意 要照裡面全部 全部步驟
+
+```
+# 找到mptplotlib的字型位置
+import matplotlib
+print(matplotlib.matplotlib_fname())
+```
+
+
+```
+#將你的中文字體拷貝進去
+!cp font_local/edukai-4.0.ttf /home/your_DIR/.local/lib/python3.xx/site-packages/matplotlib/mpl-data/fonts/ttf
+```
+
+## 或是強制設定
+## 設定MPL使用中文字型 (# MPL每次都要重新執行一次自行設定)
+```
+from matplotlib.font_manager import fontManager
+
+fontManager.addfont('/home/your_dir/your_font_local/edukai-4.0.ttf')
+```
+
+```
+# 檢查一下字型有沒有進去
+for i in sorted(fontManager.get_font_names()):
+    print(i)
+```
+
+```
+DejaVu Sans
+DejaVu Sans Display
+DejaVu Sans Mono
+DejaVu Serif
+DejaVu Serif Display
+STIXGeneral
+STIXNonUnicode
+STIXSizeFiveSym
+STIXSizeFourSym
+STIXSizeOneSym
+STIXSizeThreeSym
+STIXSizeTwoSym
+TW-MOE-Std-Kai # 這個是教育部字型別名
+cmb10
+cmex10
+cmmi10
+cmr10
+cmss10
+cmsy10
+cmtt10
+```
+
+```
+# 測試
+
+import matplotlib
+matplotlib.rc('font', family='TW-MOE-Std-Kai', size=28)
+
+
+import matplotlib.pyplot as plt
+plt.pie(
+ [800, 300, 400],
+ labels=['交通', '娛樂', '教育'])
+plt.title("中文測試")
+plt.show()
+```
+![image](https://github.com/user-attachments/assets/b57dde90-6f10-4f6d-b3bd-f58a196de64b)
+
+
+
+
+* * *
+
+
+* * *
+
+* * *
 
 
 * * *

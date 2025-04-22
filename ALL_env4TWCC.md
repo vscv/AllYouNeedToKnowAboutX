@@ -188,5 +188,44 @@ CCS
 $tensorboard --port 5000 --logdir xxxxx/fit/20241025-131659
 
 your browser
+
+
+***
+### 基本linux檔案空間指令
+
+ref : https://www.dreamjtech.com/content/31
+
+磁碟空間： df -h (容器主機裡顯示的是整體共享磁區，所以你/home/xxxxx顯示的不是喔！)
+
+du: 計算目錄所使用的空間
+
+指令 du -h –max-depth=1
+
+–max-depth是表示查詢子目錄的層級
+
+sort: 將輸入的資料排序
+head: 將輸入資料的最開頭幾行資料輸出
+
+找出最大的檔案：
+
+du -a /path_to_u | sort -n -r | head -n 5
+
+
+
+
+ 利用 find指令如
+
+ find / –type f –size +5G
+
+ 我們可以利用此種方式找出大於5G 的檔案
+
+ 
+
+
+
+***
+
+
+***
 http://203.145.216.xxx:58425/ 
 

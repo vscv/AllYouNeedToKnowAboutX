@@ -617,4 +617,25 @@ https://www.playpcesor.com/2017/08/google-forms-meeting-time.html
 https://workspace.google.com/intl/zh-TW/resources/appointment-scheduling/
 
 
+
+
 ***
+### Jupyter notebook 開terminal字體間隔過大問題
+![image](https://github.com/user-attachments/assets/150d7770-cd0a-4859-88b0-61a43621c328)
+
+這是因為chrome字型設定問題，去chrome://settings/fonts，或是 設定->外觀->自訂字型，找到`固定寬度字型`，Monaco, Courier, PT Mono等字型確認OK，其他字型請自行嘗試。
+
+![image](https://github.com/user-attachments/assets/3f6d8c50-74fe-4a4e-bb7f-ab216b880392)
+
+
+![image](https://github.com/user-attachments/assets/385b5db6-9649-451c-a709-d42af3938756)
+
+
+
+
+
+***
+
+***
+
+

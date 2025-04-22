@@ -570,6 +570,13 @@ $ffmpeg -r 20 -f concat `-safe 0` -i jpg_list.txt -c:v libx264 -r 20 -pix_fmt yu
 ▶ ffmpeg -i Input_video.mp4 -ss 00:07:40 -to 00:09:19 -acodec copy -vcodec copy Output_cut.mp4   
 ```
 
+# `find + convert` 轉換影像尺寸
+
+* 所有jpg檔案轉成寬度為2048，長度則照比例。
+* 
+find . -name "*.JPG" -exec convert {}[2048x] /PATH_TO/data/CropLandImage/img_2048x/banana/{} \;&
+
+
 
 ***
 # `Overleaf` 寫paper的好幫手，研究生必備！

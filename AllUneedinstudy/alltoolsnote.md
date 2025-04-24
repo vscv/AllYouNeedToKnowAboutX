@@ -480,6 +480,39 @@ ffmpeg -y -framerate 1/5 -i img_%02d.jpg -r 20 -qscale 0 vid.mpg
 小缺點是畫面大小會有調整現象，造成畫面跳動，將輸出改成avi即可解決。
 ```
 
+
+#### others
+
+```
+#  .\ffmpeg.exe -i out_tag_renum_image/image_%05d.jpg video.mp4
+
+
+# 2023-07-27 流場顯像範例 GenAI
+WaterWaveViz$ffmpeg -start_number 50 -i output/WW_45M5000cycle+45M3000cycle_640x480_%05d.jpg in-prd-gt_mask.mp4
+
+ffmpeg -start_number 50 -i output/WW_45M5000cycle+45M3000cycle_640x480_%05d.jpg -vf fps=5 in-prd-gt_mask_r5.mp4
+
+# 設定輸入時的framerate限制，而不是輸出的-r or fps=!!
+$ffmpeg -start_number 50 -framerate 10 -i output/WW_45M5000cycle+45M3000cycle_640x480_%05d.jpg in-prd-gt_mask_fr10.mp4
+
+
+# crop out to inp_pred
+"""Crop area with size 100x100 at position (12,34).
+crop=100:100:12:34
+
+100:100 希望crop保留的大小
+12:34 裁剪起點x:y
+"""
+ffmpeg -i in-prd-gt_mask.mp4 -vf crop=iw-110:ih-860:55:430 in-prd-gt_mask_crop-in-prd-gt.mp4 -y
+
+ffmpeg -i in-prd-gt_mask.mp4 -vf crop=3115:ih-860:55:430 in-prd-gt_mask_crop-in-prd.mp4 -y
+
+ffmpeg -i in-prd-gt_mask_fr10.mp4 -vf crop=3115:ih-860:55:430 in-prd-gt_mask_fr10_crop-in-prd.mp4 -y
+```
+
+
+
+
 #### 當檔案沒有預先製作成name_%05d.jpg格式時:
 
 * Python產生list檔名列表再排序後改名，Python: natsort 排序套件，重新將取得的list排序。

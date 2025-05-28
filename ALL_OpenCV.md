@@ -717,6 +717,32 @@ dpi 沒有限制視覺大小（通常不用改）。
 * * *
 # ipywidgets的[GridspecLayout](https://ipywidgets.readthedocs.io/en/7.x/examples/Layout%20Templates.html#Grid-layout)編排
 
+```
+from ipywidgets import GridspecLayout
+
+grid = GridspecLayout(4, 3)
+
+for i in range(4):
+    for j in range(3):
+        grid[i, j] = create_expanded_button('Button {} - {}'.format(i, j), 'warning')
+grid
+```
+![image](https://github.com/user-attachments/assets/f0cf1380-1708-4f07-9796-b863d8963d75)
+
+
+
+```
+grid = GridspecLayout(4, 3, height='300px')
+grid[:3, 1:] = create_expanded_button('One', 'success')
+grid[:, 0] = create_expanded_button('Two', 'info')
+grid[3, 1] = create_expanded_button('Three', 'warning')
+grid[3, 2] = create_expanded_button('Four', 'danger')
+grid
+```
+![image](https://github.com/user-attachments/assets/a2c80c20-22ef-4e74-a04c-d3851a1fe903)
+
+
+
 
 
 

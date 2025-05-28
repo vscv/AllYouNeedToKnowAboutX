@@ -715,6 +715,11 @@ dpi 沒有限制視覺大小（通常不用改）。
 
 
 * * *
+# ipywidgets的[GridspecLayout](https://ipywidgets.readthedocs.io/en/7.x/examples/Layout%20Templates.html#Grid-layout)編排
+
+
+
+
 
 * * *
 

@@ -742,8 +742,35 @@ grid
 ![image](https://github.com/user-attachments/assets/a2c80c20-22ef-4e74-a04c-d3851a1fe903)
 
 
+# GridLayout置中
 
+    self.grid[2:10, 0] = ipyw.HBox([self.class_list], layout=ipyw.Layout(justify_content='flex-end', width='100%'))
 
+    
+
+    import ipywidgets as ipyw
+    from IPython.display import display
+    
+    #  class_list 定義
+    class_list = ipyw.RadioButtons(
+        options=["0 robot", "1 clamp", "2 camera", "3 scanner", "4 control_panel", "5 ROS_panel", "6 object"],
+        description='Labels:',
+        layout=ipyw.Layout(height='auto', width='auto'), # 建議設置為 auto
+        disabled=False
+    )
+    
+    # --- GridspecLayout 中置中對齊 ---
+    grid_center = ipyw.GridspecLayout(1, 3, width='500px', height='100px', border='2px solid red')
+    # 將 class_list 放入一個 HBox 並置中，然後將 HBox 放入 grid
+    grid_center[0, 1] = ipyw.HBox([class_list], layout=ipyw.Layout(justify_content='center', width='100%'))
+    display(grid_center)
+    
+    
+    # --- GridspecLayout 中靠右對齊 ---
+    grid_right = ipyw.GridspecLayout(1, 3, width='500px', height='100px', border='2px solid blue')
+    # 將 class_list 放入一個 HBox 並靠右，然後將 HBox 放入 grid
+    grid_right[0, 2] = ipyw.HBox([class_list], layout=ipyw.Layout(justify_content='flex-end', width='100%'))
+    display(grid_right)
 
 
 

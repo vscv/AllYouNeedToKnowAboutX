@@ -794,6 +794,18 @@ grid
     display(grid_right)
 
 
+# Button icon
+
+```
+pts_save_button = ipyw.Button(description=" Save pts by frame", button_style='primary', icon='floppy-o',
+                             layout={'border': '2px solid gray', 'width': 'auto'})
+pts_save_button_output = ipyw.Output()
+
+pts_clear_button = ipyw.Button(description=" Clear pts", button_style='warning', icon='eraser',
+                               layout={'border': '2px solid gray', 'width': '60%'})
+pts_clear_button_output = ipyw.Output()
+```
+
 
 * * *
 

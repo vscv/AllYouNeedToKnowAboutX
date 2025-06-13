@@ -480,6 +480,66 @@ Hit:
 
 `如果是在TWCC PyTorch 24.02容器下發生的，可以改用Tensorflow 24.02版本的容器是可以的。
 * * *
+
+# 
+# render the segmentation results every few frames for save time and space
+vis_frame_stride = 5 #50 #1 # %05d 沒連號的ffmpeg不能轉 ffmpeg -f image2 -i %*.png out.avi WILL NOT WORK! 
+讀檔還是用out_frame_idx（讀入固定的檔名），但是就把寫檔時的out_frame_idx（讀入固定的檔名）改成count填充，因為檔名也是`%05d`.jpg格式，可以直接換掉作用一樣。
+
+```
+def nas_draw_and_save_masklets_cv2(video_dir, frame_names, vis_frame_stride, out_mask_path, video_segments):
+    
+    count=0
+    for out_frame_idx in tqdm(range(0, len(frame_names), vis_frame_stride)):
+        """
+        直接在 cv2 image 上畫出 mask + 輪廓 + obj_id 標籤文字。
+        """
+
+        image = cv2.imread(os.path.join(video_dir, frame_names[out_frame_idx]), cv2.IMREAD_UNCHANGED)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2BGRA)  # 轉換成 BGRA 色彩模式
+
+        # add frame number
+        # font
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        # org
+        #org = (round(W/2)-100, round(H/8))
+        org = (25, 25)
+
+        # fontScale
+        fontScale = 1.
+        # Blue color in BGR
+        color = (255, 255, 255)
+        # Line thickness of 2 px
+        thickness = 2
+        # Using cv2.putText() method
+        image = cv2.putText(image, f'frame {out_frame_idx}', org, font,
+                           fontScale, color, thickness, cv2.LINE_AA)
+
+        try :
+            for out_obj_id, out_mask in video_segments[out_frame_idx].items():
+                image = nas_draw_masklets_cv2(out_mask, image, obj_id=out_obj_id)
+            cv2.imwrite(f"./{out_mask_path}/{count:05}.jpg", image)
+        except Exception as e:
+            cv2.imwrite(f"./{out_mask_path}/{count:05}.jpg", image)
+            print(f'missing mask: {e}')
+            
+        count+=1
+
+```
+
+
+# FFmpeg 轉檔時只顯示進度
+
+`frame=  270 fps=164 q=2.0 Lsize=N/A time=00:00:54.00 bitrate=N/A dup=0 drop=1340 speed=32.9x`
+```
+-loglevel quiet -stats
+
+!ffmpeg -i {video_path} -q:v 2 -r {framerate} -start_number 0 {video_dir}/%05d.jpg -loglevel quiet -stats
+```
+
+
+
+
 * * *
 * * *
 # Gradio

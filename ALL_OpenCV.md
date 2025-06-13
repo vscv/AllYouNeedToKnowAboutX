@@ -763,7 +763,7 @@ grid
 ![image](https://github.com/user-attachments/assets/a2c80c20-22ef-4e74-a04c-d3851a1fe903)
 
 
-# GridLayout置中
+# GridLayout 內容置中、靠右
 
     self.grid[2:10, 0] = ipyw.HBox([self.class_list], layout=ipyw.Layout(justify_content='flex-end', width='100%'))
 

@@ -795,6 +795,7 @@ grid
 
 
 # Button icon
+![Jupyter_Widgets_button_icon](https://github.com/user-attachments/assets/191de4e8-2d94-4c9c-9941-ab499c043223)
 
 ```
 pts_save_button = ipyw.Button(description=" Save pts by frame", button_style='primary', icon='floppy-o',

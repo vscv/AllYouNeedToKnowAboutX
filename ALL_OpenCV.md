@@ -528,7 +528,7 @@ def nas_draw_and_save_masklets_cv2(video_dir, frame_names, vis_frame_stride, out
 ```
 
 
-# FFmpeg 轉檔時只顯示進度
+# FFmpeg 轉檔時只顯示進度 不顯示header、video等資訊
 
 `frame=  270 fps=164 q=2.0 Lsize=N/A time=00:00:54.00 bitrate=N/A dup=0 drop=1340 speed=32.9x`
 ```

@@ -123,7 +123,11 @@ WARNING: [youtube] Falling back to generic n function search
 ERROR: Unable to extract nsig function code (caused by RegexNotFoundError('Unable to extract \x1b[0;34mInitial JS player n function name\x1b[0m; please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.')); please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.    
 ```
 
-#### 改用 Official repository: https://github.com/yt-dlp/yt-dlp
+# 改用https://github.com/yt-dlp/yt-dlp
+
+pip install -U yt-dlp `不能下載時請更新版本`    
+brew install ffmpeg `轉mp3`
+
 
 下載 YouTube 影片的 MP3
 假設你有一個 YouTube 影片的網址，例如 https://www.youtube.com/watch?v=VIDEO_ID，以下是下載 MP3 的命令：

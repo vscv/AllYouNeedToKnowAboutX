@@ -139,7 +139,136 @@ yt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=
 --audio-format mp3：指定輸出格式為 MP3。
 --audio-quality 0：設置最佳音質（0 表示最高質量）。
 "https://www.youtube.com/watch?v=VIDEO_ID"：替換為你要下載的 YouTube 影片網址。
+
+指定輸出檔名： 如果想自訂檔名，可以使用 -o 參數：例如：-o "my_music.%(ext)s" 會將檔案命名為 my_music.mp3。
+嵌入元數據（如標題、作者）： 添加 --add-metadata 來保留影片的元數據（例如歌曲標題、藝術家等）
+
 ```
+
+使用 `yt-dlp` 下載 YouTube 影片為 MP4 ：
+
+### 1. 確認環境
+- **已安裝 yt-dlp**：確保已透過 `pip install -U yt-dlp` 安裝最新版本。
+- **已安裝 ffmpeg**：雖然 MP4 下載通常不強制需要 ffmpeg，但若涉及合併視頻/音頻流或轉換格式，ffmpeg 是必需的（安裝方式參見前述 MP3 指南）。
+- **網路連線**：確保能正常訪問 YouTube。
+
+### 2. 基本下載 MP4 指令
+假設 YouTube 影片網址為 `https://www.youtube.com/watch?v=VIDEO_ID`，基本下載 MP4 的命令如下：
+
+```bash
+yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]" "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+#### 參數說明：
+- `-f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]"`：
+  - `bestvideo[ext=mp4]`：選擇最佳的 MP4 格式視頻流。
+  - `bestaudio[ext=m4a]`：選擇最佳的 M4A 格式音頻流（YouTube 常見音頻格式）。
+  - `+`：合併視頻和音頻流（需要 ffmpeg）。
+  - `/best[ext=mp4]`：若無法合併，則選擇最佳的單一 MP4 檔案（已包含音頻）。
+- 網址：替換為目標 YouTube 影片的實際網址。
+
+這條命令會下載最高質量的 MP4 影片（視頻+音頻）。
+
+### 3. 重要參數考量
+以下是下載 MP4 時常用的參數，根據需求選擇：
+
+#### 3.1 選擇特定畫質
+YouTube 提供多種解析度（如 720p、1080p、4K）。若想指定畫質，可用 `-f` 參數結合格式代碼：
+
+- **列出可用格式**：
+  先檢查影片支援的格式：
+  ```bash
+  yt-dlp -F "https://www.youtube.com/watch?v=VIDEO_ID"
+  ```
+  這會顯示格式代碼（format code），例如：
+  ```
+  136          mp4        1280x720   720p
+  137          mp4        1920x1080  1080p
+  140          m4a        audio only
+  ```
+
+- **下載特定畫質**（例如 720p）：
+  ```bash
+  yt-dlp -f "136+bestaudio[ext=m4a]/best[ext=mp4]" "https://www.youtube.com/watch?v=VIDEO_ID"
+  ```
+  這裡 `136` 是 720p 視頻的格式代碼，`bestaudio[ext=m4a]` 確保音頻合併。
+
+#### 3.2 自訂輸出檔名
+使用 `-o` 參數指定輸出檔案名稱：
+```bash
+yt-dlp -f "best[ext=mp4]" -o "影片名稱.%(ext)s" "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+- `%(ext)s`：自動填入檔案副檔名（例如 mp4）。
+- 其他可用變數：`%(title)s`（影片標題）、`%(id)s`（影片 ID）等。
+
+#### 3.3 下載播放清單
+若要下載整個播放清單的 MP4 影片：
+```bash
+yt-dlp -f "best[ext=mp4]" "https://www.youtube.com/playlist?list=PLAYLIST_ID"
+```
+- 可結合 `--playlist-start` 和 `--playlist-end` 指定範圍，例如：
+  ```bash
+  yt-dlp -f "best[ext=mp4]" --playlist-start 1 --playlist-end 5 "https://www.youtube.com/playlist?list=PLAYLIST_ID"
+  ```
+
+#### 3.4 嵌入字幕
+若影片有字幕，可下載並嵌入 MP4：
+```bash
+yt-dlp -f "best[ext=mp4]" --embed-subs --sub-lang zh-TW,en "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+- `--embed-subs`：將字幕嵌入 MP4 檔案（需要 ffmpeg）。
+- `--sub-lang`：指定字幕語言（例如 `zh-TW` 為繁體中文，`en` 為英文）。
+
+#### 3.5 限制下載速度
+若網路不穩定，可用 `--limit-rate` 限制速度：
+```bash
+yt-dlp -f "best[ext=mp4]" --limit-rate 1M "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+- `1M` 表示 1MB/s，可調整數值。
+
+#### 3.6 嵌入元數據
+添加 `--embed-metadata` 保留影片資訊（如標題、作者）：
+```bash
+yt-dlp -f "best[ext=mp4]" --embed-metadata "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+### 4. 進階情境
+- **下載 4K 影片**：
+  4K 影片通常需要合併視頻和音頻流：
+  ```bash
+  yt-dlp -f "bestvideo[height=2160][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]" "https://www.youtube.com/watch?v=VIDEO_ID"
+  ```
+  - `height=2160`：指定 4K（2160p）解析度。
+
+- **下載僅視頻（無音頻）**：
+  ```bash
+  yt-dlp -f "bestvideo[ext=mp4]" "https://www.youtube.com/watch?v=VIDEO_ID"
+  ```
+
+- **下載特定時間段**：
+  使用 `--download-sections` 截取影片片段：
+  ```bash
+  yt-dlp -f "best[ext=mp4]" --download-sections "*00:30-01:30" "https://www.youtube.com/watch?v=VIDEO_ID"
+  ```
+  - `*00:30-01:30`：下載從 30 秒到 1 分 30 秒的片段。
+
+### 5. 執行與檢查
+- **切換儲存路徑**：在終端機中使用 `cd 資料夾路徑` 進入目標資料夾。
+- **執行命令**：複製貼上指令，等待下載完成。
+- **檢查檔案**：下載的 MP4 檔案會儲存在當前資料夾，確認是否可正常播放。
+
+### 6. 常見問題
+- **錯誤：無法合併視頻/音頻**：
+  確保 ffmpeg 已正確安裝並加入系統路徑。
+- **格式不可用**：
+  使用 `yt-dlp -F` 檢查可用格式，選擇合適的格式代碼。
+- **地區限制**：
+  若影片受地區限制，可嘗試使用代理或 VPN。
+- **下載速度慢**：
+  檢查網路，或更新 yt-dlp：
+  ```bash
+  pip install -U yt-dlp
+  ```
 
 
 

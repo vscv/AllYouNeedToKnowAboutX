@@ -131,7 +131,9 @@ brew install ffmpeg `轉mp3`
 
 下載 YouTube 影片的 MP3
 假設你有一個 YouTube 影片的網址，例如 https://www.youtube.com/watch?v=VIDEO_ID，以下是下載 MP3 的命令：
-```yt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+yt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=VIDEO_ID"
+
 參數說明：
 -x：提取音頻。
 --audio-format mp3：指定輸出格式為 MP3。

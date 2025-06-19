@@ -123,7 +123,11 @@ WARNING: [youtube] Falling back to generic n function search
 ERROR: Unable to extract nsig function code (caused by RegexNotFoundError('Unable to extract \x1b[0;34mInitial JS player n function name\x1b[0m; please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.')); please report this issue on https://github.com/ytdl-org/youtube-dl/issues , using the appropriate issue template. Make sure you are using the latest version; see  https://github.com/ytdl-org/youtube-dl/#user-content-installation  on how to update. Be sure to call youtube-dl with the --verbose option and include the complete output.    
 ```
 
-# 改用https://github.com/yt-dlp/yt-dlp
+* * *
+
+# yt-dlp
+# $\color{#58A6FF}\textsf{\large yt-dlp}$
+## 改用https://github.com/yt-dlp/yt-dlp
 
 pip install -U yt-dlp `不能下載時請更新版本`    
 brew install ffmpeg `轉mp3`
@@ -269,7 +273,7 @@ yt-dlp -f "best[ext=mp4]" --embed-metadata "https://www.youtube.com/watch?v=VIDE
   ```bash
   pip install -U yt-dlp
   ```
-
+* * *
 
 
 * * *

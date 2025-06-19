@@ -126,7 +126,7 @@ ERROR: Unable to extract nsig function code (caused by RegexNotFoundError('Unabl
 * * *
 
 # yt-dlp
-# $\color{#58A6FF}\textsf{\large yt-dlp}$
+# $\color{#ff5858}\textsf{\large yt-dlp}$
 ## 改用https://github.com/yt-dlp/yt-dlp
 
 pip install -U yt-dlp `不能下載時請更新版本`    

@@ -334,7 +334,7 @@ plt.pie(
 強制加入字型
 ```Shell
 from matplotlib.font_manager import fontManager
-fontManager.addfont('/home/u3148947/font_local/edukai-4.0.ttf')
+fontManager.addfont('/home/u3/font_local/edukai-4.0.ttf')
 ```
 檢查字型名稱
 ```

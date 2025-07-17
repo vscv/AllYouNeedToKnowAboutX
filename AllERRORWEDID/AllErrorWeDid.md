@@ -38,4 +38,4 @@ from ZhuYin.zytk.zytk import transforms_pixel_level,transforms_spatial_level
 
 雲端主機連不上
 
-[](https://tws.twcc.ai/vcs-safe-mode/)
+[從安全模式進入 VCS 個體](https://tws.twcc.ai/vcs-safe-mode/)

@@ -32,3 +32,10 @@ TypeError: PencilScribbles() got an unexpected keyword argmunet "size_range"
 from ZhuYin.zytk.zytk import transforms_pixel_level,transforms_spatial_level
 ```
 `can not import "xxxx fun or var" from $your_local_script_py/local.py`
+
+
+* * * 
+
+雲端主機連不上
+
+[](https://tws.twcc.ai/vcs-safe-mode/)

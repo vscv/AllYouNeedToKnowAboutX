@@ -61,3 +61,6 @@ from ZhuYin.zytk.zytk import transforms_pixel_level,transforms_spatial_level
 * 建議備份 /etc/ssh/sshd_config 和 ~/.ssh/authorized_keys。
 
 
+【如果 authorized_keys 檔案不見怎麼辦？】
+若本地還有對應的私鑰（.pem/.ppk），可以把對應的 public key 內容再補進去。
+若所有 key 都遺失，只能用密碼登入或透過 Console、single-user mode、救援模式重新配置。

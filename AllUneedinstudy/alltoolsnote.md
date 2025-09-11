@@ -795,6 +795,23 @@ TLDR:Overleaf支援各大期刊、研討會範本，可直接使用，唯一缺�
     SendEnv LANG LC_*
     ServerAliveInterval 120
 ```
+
+# 程式背景持續執行
+
+`screen`
+
+創立新會話：使用 Ctrl + A 再按 C
+
+分離會話: 按 Ctrl+a，然後按 d。
+
+連接中斷的會話: 執行 screen -r。
+
+切换窗口: Ctrl + A 后按 N 或 P 分别切换到下一个或上一个窗口。 
+
+screen -ls 
+
+刪除指定名稱之會話：screen -S session_name -X quit
+
   
 ***
 ## 會議時間調查工具、線上喬時間工具、約時間

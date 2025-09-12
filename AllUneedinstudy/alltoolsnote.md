@@ -841,7 +841,10 @@ https://workspace.google.com/intl/zh-TW/resources/appointment-scheduling/
 
 
 
-
+***
+### 取出Excel中插入的圖片
+只要另存成網頁就可以取得所有圖片
+<img width="764" height="330" alt="image" src="https://github.com/user-attachments/assets/e9a32c04-40c0-4686-a41e-32212ae833d2" />
 
 ***
 

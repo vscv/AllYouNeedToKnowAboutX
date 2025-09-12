@@ -846,6 +846,47 @@ https://workspace.google.com/intl/zh-TW/resources/appointment-scheduling/
 只要另存成網頁就可以取得所有圖片
 <img width="764" height="330" alt="image" src="https://github.com/user-attachments/assets/e9a32c04-40c0-4686-a41e-32212ae833d2" />
 
+```python
+"""由於原始檔案過大將原有png格式另存jpg減少空間。
+"""
+from PIL import Image
+import os
+
+# 定義資料夾路徑
+folder_path = "webpage/Robot Classification.fld"
+
+# 確保資料夾存在
+if not os.path.exists(folder_path):
+    print(f"資料夾 {folder_path} 不存在！")
+    exit()
+
+# 遍歷資料夾中的檔案
+for filename in os.listdir(folder_path):
+    if filename.endswith(".png") and filename.startswith("Robot Classification_2914_image"):
+        # 構建完整檔案路徑
+        old_path = os.path.join(folder_path, filename)
+        
+        # 打開圖片
+        with Image.open(old_path) as img:
+            # 保持比例縮放到寬度 800 像素
+            width, height = img.size
+            new_height = int(height * (800 / width))
+            resized_img = img.resize((800, new_height), Image.Resampling.LANCZOS)
+            
+            # 轉換為 RGB 模式（JPG 要求）
+            rgb_img = resized_img.convert("RGB")
+            
+            # 生成新的檔案名稱（替換副檔名為 .jpg）
+            new_filename = filename.replace(".png", ".jpg")
+            new_path = os.path.join(folder_path, new_filename)
+            
+            # 儲存為 JPG
+            rgb_img.save(new_path, "JPEG", quality=95)
+            print(f"已轉換並儲存: {new_filename}")
+
+print("所有圖片轉換完成！")
+```
+
 ***
 
 ***

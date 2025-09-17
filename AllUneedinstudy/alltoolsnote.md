@@ -938,6 +938,13 @@ diskutil secureErase 2 /dev/diskN
 diskutil secureErase 3 /dev/diskN
 ```
 
+## 用dd複寫
+- dd 2TB zero複寫大約5分鐘5% `3.49GiB 0:03:47 [15.9MiB/s]`
+
+```
+~ ▶ sudo dd if=/dev/zero | pv | sudo dd of=/dev/diskNN bs=1m
+```
+
 ***
 
 

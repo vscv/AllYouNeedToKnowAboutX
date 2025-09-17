@@ -940,10 +940,13 @@ diskutil secureErase 3 /dev/diskN
 
 ## 用dd複寫
 - dd 2TB zero複寫大約5分鐘5% `3.49GiB 0:03:47 [15.9MiB/s]`
+- if=/dev/urandom 隨機資料來覆蓋舊資料，讓復原更加困難。不過，這個過程會比使用零值慢得多。
+- 使用 pv：你可以安裝 pv（Pipe Viewer）工具來顯示進度，指令會變成：
 
 ```
 ~ ▶ sudo dd if=/dev/zero | pv | sudo dd of=/dev/diskNN bs=1m
 ```
+- 格式化：dd 指令執行完畢後，硬碟會變成一個沒有分割區和格式的原始狀態。你需要再次使用「磁碟工具程式」或 diskutil 來重新建立分割區並格式化，才能正常使用。
 
 ***
 

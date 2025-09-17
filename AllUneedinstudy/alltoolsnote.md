@@ -888,6 +888,53 @@ print("所有圖片轉換完成！")
 ```
 
 ***
+# 使用 diskutil 執行安全抹除 (格式化硬碟、刪除硬碟、硬碟報廢)
+
+如果你在「磁碟工具程式」中找不到安全抹除選項，可以使用 macOS 內建的 diskutil 命令列工具來執行。這個方法能讓你強制執行多重覆寫，徹底清除資料，不給復原工具任何機會。
+
+
+- 第一步：找到正確的磁碟標識符
+ - 打開「終端機」（Terminal），輸入以下指令來列出所有連接的磁碟。
+```
+diskutil list
+```
+
+ - 終端機將顯示一個列表，看起來像這樣：
+```
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:                        EFI ⁨EFI⁩                     209.7 MB   disk0s1
+   2:                 APFS Container ⁨disk1⁩                  500.1 GB   disk0s2
+
+/dev/disk2 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                         *1.0 TB     disk2
+   1:                        APFS Container ⁨disk3⁩                  1.0 TB     disk2s1
+```
+ -  仔細檢查列表，找到你的外接硬碟。根據硬碟大小和名稱，確認它的磁碟標識符（Identifier），例如 disk2。
+
+- 第二步：執行安全抹除命令
+ - 一旦你確認了正確的磁碟標識符，就可以執行安全抹除命令了。diskutil 提供不同的安全抹除等級，數字越大代表覆寫次數越多，安全性也越高，但會花費更長的時間。
+
+ - 選項一：單次覆寫（最快）
+  - 這個選項會用單次隨機數據覆寫整個磁碟。比單純的格式化安全，但仍有可能被高級復原技術還原。
+
+```
+diskutil zeroDisk /dev/diskN
+```
+
+  - 選項二：三次覆寫（推薦）
+   - 這個選項符合美國國防部的安全標準，會覆寫磁碟三次。在安全性和時間上取得了很好的平衡，足以應對大多數資料復原情況。
+```
+diskutil secureErase 2 /dev/diskN
+```
+
+  - 選項三：七次覆寫（最安全，耗時最長）
+   - 這個選項會覆寫磁碟七次，提供最高的安全性，幾乎不可能被復原。但請注意，這將是一個非常耗時的過程。
+```
+diskutil secureErase 3 /dev/diskN
+```
 
 ***
 

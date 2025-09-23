@@ -23,3 +23,15 @@
 - PyQT5
 
 <img width="1482" height="1126" alt="image" src="https://github.com/user-attachments/assets/b5358e2d-5527-459b-9ce8-775f54e58c14" />
+
+
+## exe or app
+
+### Mac
+```bash
+▶ pip install pyinstaller
+
+pyinstaller  --onefile --noconsole --icon=clock.png clock_pyqt5.py
+```
+<img width="390" height="140" alt="image" src="https://github.com/user-attachments/assets/150ecf70-40dc-4e85-9984-fecb1eb9ca3a" />
+<img width="390" height="246" alt="image" src="https://github.com/user-attachments/assets/cea262db-5e76-47c4-aecf-74710b995e45" />

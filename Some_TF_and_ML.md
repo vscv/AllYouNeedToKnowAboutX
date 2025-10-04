@@ -361,7 +361,7 @@ Fig. 1
 總結來說，從單 GPU 轉多 GPU 時，重點是保持**有效總 batch size** 不變或適度放大，並同步調整 LR 和 warmup，以確保模型效能一致。建議先小規模測試（例如 COCO 子集），並參考 Ultralytics 的 hyperparameter tuning 工具自動優化。若遇特定硬體問題，可查詢 GitHub issues 求助。
 
 
---
+---
 # Ultralytics 套件能否跑Kaggle 提供免費的 TPU 資源
 
 Ultralytics 套件（包括 YOLOv8、YOLOv11 等模型）能夠在 Kaggle 的 TPU 加速器上運行和訓練。Kaggle 提供免費的 TPU 資源（如 TPU v2-8 或 v3-8），Ultralytics 透過 PyTorch/XLA 整合來支援 TPU，這使得訓練大型物件偵測模型變得高效且無需額外硬體成本。
@@ -389,9 +389,9 @@ Ultralytics 套件（包括 YOLOv8、YOLOv11 等模型）能夠在 Kaggle 的 TP
 - 若遇問題，可參考 Ultralytics GitHub issues 或 Kaggle 論壇討論 TPU 特定設定。
 
 總之，Ultralytics 在 Kaggle TPU 上運行順暢，是免費訓練 YOLO 模型的絕佳選擇。若需完整 Notebook 範例，建議直接在 Kaggle 搜尋「Ultralytics YOLO TPU」。
-```
---
---
+
+---
+---
 
 
 ---

@@ -328,3 +328,40 @@ Fig. 1
 
 然而，先前尚未研究過 GAN（Pix2Pix 或 CycleGAN）中批量大小增加的影響。在這些解決方案中，在不同論文中建立了批量大小，但不建議增加批量大小。
 ***
+
+
+---
+### 訓練 Ultralytics YOLOv12 模型的單 GPU 與多 GPU 超參數考量
+
+在 Ultralytics 套件中訓練 YOLOv12 模型時，使用單張 GPU 與多張 GPU 加速的主要差異在於並行計算的規模，這會影響超參數的設定，尤其是 batch size 和 learning rate（學習率）。單 GPU 訓練受限於單一 GPU 的記憶體和計算資源，適合小規模實驗；多 GPU 則透過 Data Parallelism（資料並行）分擔負載，能大幅縮短訓練時間，但需調整超參數以維持模型收斂穩定性。以下重點說明關鍵考量，基於 Ultralytics 官方文件和社區討論。
+
+#### 1. **Batch Size 的考量**
+   - **單 GPU**：Batch size 直接受 GPU 記憶體限制（例如 A100 約 40GB，可支援較大 batch 如 32~64，視模型和資料集而定）。建議使用最大可容納的 batch size 以充分利用 GPU，利用率可達 60%~80%，避免記憶體溢出（Out of Memory, OOM）。在 Ultralytics 中，可設 `batch=-1` 自動計算（預設 60% 記憶體利用率）。
+   - **多 GPU**：總 batch size 可線性增加（例如 2 張 GPU 時，總 batch = 每 GPU batch × GPU 數），但每張 GPU 的實際 batch size 需維持一致，以確保梯度同步。建議先在單 GPU 找到穩定 batch size（如 16），然後在多 GPU 時將總 batch size 放大（例如 32），而非每 GPU 都用原大小。這能加速訓練（例如 8 張 GPU 可加速 6.5 倍），但若總 batch 過大，可能導致梯度估計不準確，影響泛化。
+   - **調整建議**：從單 GPU 的 batch size 開始，逐步測試多 GPU 設定。若記憶體不足，降低每 GPU batch 或使用混合精度訓練（AMP）。小 batch（<64）時，需累積梯度（gradient accumulation）以模擬大 batch 效果。
+
+#### 2. **Learning Rate (LR) 的考量**
+   - **單 GPU**：預設初始 LR 為 0.01（SGD）或 0.001（Adam），最終 LR 為初始的 0.01 倍。使用 cosine scheduler（`cos_lr=True`）可平滑調整，避免過度振盪。
+   - **多 GPU**：由於總 batch size 增加，建議**線性縮放規則（Linear Scaling Rule）**：新 LR = 原 LR × (總 batch size / 單 GPU batch size)。例如，從單 GPU batch=16 轉到 4 張 GPU（總 batch=64），則 LR 放大 4 倍。這能維持梯度更新的一致性，防止訓練不穩定。同時，延長 warmup epochs（預設 3 epochs）至 5~10，以漸進式從低 LR 暖機。
+   - **調整建議**：監控損失曲線，若多 GPU 時損失上升過快，降低 LR 10%~20%；反之若收斂慢，則微增。Weight decay（權重衰減）也需隨 batch size 縮放（例如放大 batch 時，weight decay 也線性放大）。
+
+#### 3. **其他相關超參數的考量**
+   - **Warmup Epochs**：多 GPU 時建議增加（例如從 3 至 5），以適應更大 batch 的梯度變異。
+   - **Momentum 和 Weight Decay**：隨 batch size 縮放（例如 momentum 預設 0.937，weight decay 預設 0.0005），大 batch 時可略增以穩定訓練。
+   - **Epochs 和 Optimizer**：多 GPU 不需變 epochs（預設 100~300），但 AdamW 常優於 SGD 在大 batch 情境。總訓練時間會縮短，但總計算量（FLOPs）相似。
+   - **通用提示**：使用 `device=[0,1,2]` 指定 GPU（或 `device=-1` 自動選閒置 GPU）。在 YAML 設定檔（如 `hyp.scratch-high.yaml`）中調整這些參數，並透過 Weights & Biases (W&B) 記錄實驗比較單/多 GPU 效果。
+
+| 超參數       | 單 GPU 建議                  | 多 GPU 建議（以 4 張為例）          | 主要考量                  |
+|--------------|------------------------------|------------------------------------|---------------------------|
+| **Batch Size** | 16~32（依記憶體）           | 總 64（每 GPU 16）                 | 線性放大總大小，避免 OOM |
+| **Learning Rate (lr0)** | 0.01                        | 0.04（×4 縮放）                    | 線性縮放，配 warmup       |
+| **Warmup Epochs** | 3                           | 5~10                               | 穩定大 batch 梯度         |
+| **Weight Decay** | 0.0005                      | 0.002（×4 縮放）                   | 維持正則化一致            |
+
+總結來說，從單 GPU 轉多 GPU 時，重點是保持**有效總 batch size** 不變或適度放大，並同步調整 LR 和 warmup，以確保模型效能一致。建議先小規模測試（例如 COCO 子集），並參考 Ultralytics 的 hyperparameter tuning 工具自動優化。若遇特定硬體問題，可查詢 GitHub issues 求助。
+
+
+
+
+---
+---

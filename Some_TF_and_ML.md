@@ -361,6 +361,37 @@ Fig. 1
 總結來說，從單 GPU 轉多 GPU 時，重點是保持**有效總 batch size** 不變或適度放大，並同步調整 LR 和 warmup，以確保模型效能一致。建議先小規模測試（例如 COCO 子集），並參考 Ultralytics 的 hyperparameter tuning 工具自動優化。若遇特定硬體問題，可查詢 GitHub issues 求助。
 
 
+--
+# Ultralytics 套件能否跑Kaggle 提供免費的 TPU 資源
+
+Ultralytics 套件（包括 YOLOv8、YOLOv11 等模型）能夠在 Kaggle 的 TPU 加速器上運行和訓練。Kaggle 提供免費的 TPU 資源（如 TPU v2-8 或 v3-8），Ultralytics 透過 PyTorch/XLA 整合來支援 TPU，這使得訓練大型物件偵測模型變得高效且無需額外硬體成本。
+
+### 主要支援細節：
+- **官方確認**：Ultralytics 的官方文件明確指出，可以使用 Kaggle 的 GPU/TPU 資源來訓練 YOLO 模型。Kaggle 環境預裝 PyTorch 和 TensorFlow，讓安裝 Ultralytics 變得簡單。
+- **執行時間限制**：每個 TPU 工作階段最多 9 小時，適合中大型資料集訓練，但若需更長時間，可分階段執行或使用 GPU 替代。
+- **安裝與使用步驟**（在 Kaggle Notebook 中）：
+  1. 建立新 Notebook，並在右側面板選擇「TPU」加速器。
+  2. 安裝 Ultralytics：`!pip install ultralytics`。
+  3. 載入 PyTorch/XLA（若需）：`!pip install cloud-tpu-client`（Kaggle 通常預裝）。
+  4. 範例訓練程式碼：
+     ```python:disable-run
+     from ultralytics import YOLO
+     import torch_xla.core.xla_model as xm  # 若需 TPU 特定設定
+
+     model = YOLO('yolo11n.pt')  # 或其他模型
+     results = model.train(data='your_dataset.yaml', epochs=100, device='tpu')  # 指定 device='tpu'
+     ```
+     注意：需確保資料集上傳至 Kaggle Datasets，並在 YAML 檔中指定路徑。TPU 訓練時，batch size 需調整以適應 TPU 叢集（例如使用 `batch=16` 起），並啟用混合精度（AMP）以優化效能。
+
+### 注意事項：
+- **相容性**：Ultralytics 主要基於 PyTorch，TPU 支援良好，但若使用進階功能（如自訂 Tracker），可能需額外調整程式碼。官方建議從小規模測試開始，避免記憶體溢出。
+- **效能**：TPU 在大 batch 訓練時表現優異，能加速 YOLO 模型的收斂，但不如 GPU 靈活於小模型推論。
+- 若遇問題，可參考 Ultralytics GitHub issues 或 Kaggle 論壇討論 TPU 特定設定。
+
+總之，Ultralytics 在 Kaggle TPU 上運行順暢，是免費訓練 YOLO 模型的絕佳選擇。若需完整 Notebook 範例，建議直接在 Kaggle 搜尋「Ultralytics YOLO TPU」。
+```
+--
+--
 
 
 ---
